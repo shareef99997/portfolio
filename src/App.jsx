@@ -6,11 +6,11 @@ function App() {
   return (
     <div className="App">
       <Header/>
+      <Home/>
       <About/>
       <Contact/>
       <Experiance/>
       <Footer/>
-      <Home/>
       <Projects/>
     </div>
   );
