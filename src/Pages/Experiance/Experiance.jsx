@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Experiance()  {
+const Experiance=()=> {
     return (
       <div>Experiance</div>
     )
