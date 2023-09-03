@@ -6,8 +6,8 @@ const Menu = () => (
   <>
         <p><a href="#home" className="active">Home</a></p>
         <p><a href="#about">About</a></p>
-        <p><a href="#services">Services</a></p>
-        <p><a href="#portfolio">Portfolio</a></p>
+        <p><a href="#Experiance">Experiance</a></p>
+        <p><a href="#Projects">Projects</a></p>
         <p><a href="#contact">Contact</a></p>
   </>
 )
@@ -19,10 +19,10 @@ const Header = () => {
     <header className="header">
       <a href="#" className="logo">Portfolio</a>
       <nav className="navbar">
-        <a href="#home" className="active">Home</a>
+      <a href="#home" className="active">Home</a>
         <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
+        <a href="#Experiance">Experiance</a>
+        <a href="#Projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
       <div className="navbar-menu">

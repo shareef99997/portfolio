@@ -1,8 +1,20 @@
 import React from 'react'
+import './About.css'
 
 const About=()=>{
     return (
-      <div>I am a frontend developer and UI UX designer who loves creating beautiful and user-friendly web experiences. I have over 3 years of experience in using HTML, CSS, JavaScript, React, Bootstrap, WordPress, Figma, Sketch, and Adobe XD to design and develop websites and web applications for various domains. I am passionate about solving problems, learning new things, and collaborating with other developers and designers. I also have a keen eye for design and get inspired by art, animation, and games. I am ambitious and always looking for new challenges and opportunities to grow as a professional123</div>
+      <section class="about" id="about">
+        <div class="about-img">
+            <img src={require('../../assets/personal_pic2.png')} alt=""/>
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Frontend Developer!</h3>
+            <p>I am a fresh Graduate with a bacholor of Information Technology and a frontend developer and UI UX designer who loves creating beautiful and user-friendly web experiences. I have practicle experience in using HTML, CSS, JavaScript, React, Bootstrap, Figma, to design and develop websites and web applications for various domains. I am passionate about solving problems, learning new things, and collaborating with other developers and designers. I also have a keen eye for design and get inspired by art, animation. I am ambitious and always looking for new challenges and opportunities to grow as a professional.</p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+    </section>
     )
   }
 

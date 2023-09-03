@@ -17,7 +17,7 @@ const Home =()=> {
             loop={true}
           />
           </span></h3>
-          <p> Ambishios Developer With magical hands that can make Modern responsive websites and web apps. </p>
+          <p> Ambishios Developer With magical hands that can create and design Modern responsive websites and web apps. </p>
           <div class="social-media">
               <a href="https://www.linkedin.com/in/shareef-ali" target="_blank"><i class='bx bxl-linkedin'></i></a>
               <a href="https://github.com/shareef99997" target="_blank"><i class='bx bxl-github'></i></a>
