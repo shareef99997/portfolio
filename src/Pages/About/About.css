@@ -8,10 +8,10 @@
 
 .about-img {
   width: 400px;
-  animation: floatImage 3s ease-in-out infinite;
+  animation: floatImage 8s ease-in-out infinite;
   filter: drop-shadow(0px 0px 30px var(--main-color));
   transition: .5s ease;
-  border-radius: 650px;
+  border-radius: 750px;
 }
 
 .heading {
@@ -69,8 +69,7 @@
   font-size: 10px;
 }
 .about-img{
-  width: 100px;
-  transform: scale(0.6)
+  transform: scale(0.5)
   translateY(-250px);
 }
 }
