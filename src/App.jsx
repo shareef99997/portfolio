@@ -8,10 +8,10 @@ function App() {
       <Header/>
       <Home/>
       <About/>
-      <Contact/>
       <Experiance/>
-      <Footer/>
       <Projects/>
+      <Contact/>
+      <Footer/>
     </div>
   );
 }

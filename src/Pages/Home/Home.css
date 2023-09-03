@@ -9,10 +9,11 @@
   animation: floatImage 3s ease-in-out infinite;
   filter: drop-shadow(0px 0px 30px var(--main-color));
   transition: .5s ease;
+  border-radius: 200px;
 }
 
 .home-img img:hover {
-  width: 500px;
+  width: 450px;
   animation: floatImage 5s ease-in-out infinite;
   filter: drop-shadow(0px 0px 0px var(--main-color));
 }
