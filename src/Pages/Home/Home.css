@@ -101,12 +101,20 @@ span {
 @media (max-width: 765px) {
   .home {
   flex-direction: column;
+  transform: scale(1)
+  translateY(-120px);
   }
 
   .home-content p {
     font-size: 16px;
   }
 
+  .social-media a {
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+
+  }
   .home-content h3 {
     font-size: 20px;
   }
@@ -116,6 +124,12 @@ span {
   }
   .btn{
     margin-bottom: 30px;
+    transform: scale(0.8)
+  }
+
+  .home-img img {
+    margin-top: 20px;
+    width: 300px;
   }
 }
 

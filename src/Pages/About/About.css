@@ -6,13 +6,28 @@
   background: var(--second-bg-color);
 }
 
-.about-img img {
-  width: 250px;
+.about-img {
+  width: 200px;
 }
 
 .heading {
   text-align: center;
   font-size: 40px;
+}
+.about-content .btna{
+  display: inline-block;
+  padding: 15px 28px ;
+  background: var(--main-color);
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem var(--main-color);
+  font-size: 14px;
+  color: black;
+  letter-spacing: .1rem;
+  font-weight: 600;
+  transition: .5s ease;
+}
+.about-content .btna:hover {
+  box-shadow: none;
 }
 
 .about-content h2 {
@@ -27,4 +42,31 @@
 .about-content p {
   font-size: 15px;
   margin: 2rem 0 3rem;
+}
+
+@media (max-width: 768px){
+  .about {
+  flex-direction: column-reverse;
+  gap: 0px;
+}
+.about-content h2{
+  font-size: 25px;
+}
+
+.about-content .btna{
+  font-size: 10px;
+  padding: 10px 20px ;
+}
+
+.about-content h3{
+  font-size: 20px;
+}
+.about-content p {
+  font-size: 10px;
+}
+.about-img{
+  width: 100px;
+  transform: scale(0.6)
+  translateY(-250px);
+}
 }
