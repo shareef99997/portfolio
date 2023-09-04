@@ -37,6 +37,7 @@ body {
     background: var(--bg-color);
     color: var(--text-color);
 }
+/*  */
 
 section {
     min-height: 100vh;
