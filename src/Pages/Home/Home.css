@@ -46,7 +46,9 @@
 }
 
 span {
-  color: var(--main-color);
+  background: var(--main-gradient-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .home-content h1 {
@@ -70,7 +72,9 @@ span {
   border: 3px solid var(--main-color);
   border-radius: 50%;
   font-size: 2rem;
-  color: var(--main-color);
+  background: var(--main-gradient-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin: 30px 24px 30px 0;
   transition: .5s ease;
 }
@@ -84,7 +88,7 @@ span {
 .btn {
   display: inline-block;
   padding: 0.9rem 2.4rem ;
-  background: var(--main-color);
+  background: var(--main-gradient-color);
   border-radius: 4rem;
   box-shadow: 0 0 1rem var(--main-color);
   font-size: 14px;

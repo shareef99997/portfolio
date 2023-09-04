@@ -30,7 +30,9 @@
 
 .Experiance-box i {
   font-size: 70px;
-  color: var(--main-color);
+  background: var(--main-gradient-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .Experiance-box h3 {

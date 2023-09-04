@@ -7,11 +7,12 @@
 }
 
 .about-img {
-  width: 400px;
+  width: 300px;
   animation: floatImage 8s ease-in-out infinite;
   filter: drop-shadow(0px 0px 30px var(--main-color));
   transition: .5s ease;
-  border-radius: 750px;
+  border-radius: 100px;
+  margin-right: 20px;
 }
 
 .heading {
@@ -21,7 +22,7 @@
 .about-content .btna{
   display: inline-block;
   padding: 15px 28px ;
-  background: var(--main-color);
+  background: var(--main-gradient-color);
   border-radius: 4rem;
   box-shadow: 0 0 1rem var(--main-color);
   font-size: 14px;
@@ -55,11 +56,12 @@
 }
 .about-content h2{
   font-size: 25px;
+  margin-bottom: 15px;
 }
 
 .about-content .btna{
   font-size: 10px;
-  padding: 10px 20px ;
+  padding: 15px 25px ;
 }
 
 .about-content h3{
@@ -69,7 +71,7 @@
   font-size: 10px;
 }
 .about-img{
-  transform: scale(0.5)
-  translateY(-250px);
+  width: 250px;
+  margin-top: 100px;
 }
 }

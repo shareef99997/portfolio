@@ -7,7 +7,27 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+::-webkit-scrollbar{
+   width: 15px;
+}
+
+::-webkit-scrollbar-track{
+  background-color: rgb(86, 68, 97);
+}
+
+::-webkit-scrollbar-thumb{
+  background: var(--main-gradient-color);
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: linear-gradient(to bottom right, #6d07c5 0%, #5e03f0 100%);
+  border-radius: 15px;
+}
+
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+

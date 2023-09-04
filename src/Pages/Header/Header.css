@@ -14,7 +14,7 @@
 .logo {
   font-size: 25px;
   background: 
-  linear-gradient(90deg, rgba(173, 99, 255, 1) 0%, rgba(255, 218, 255, 1) 83%);
+  linear-gradient(90deg, rgb(201, 37, 246) 0%, rgb(82, 73, 255) 83%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   font-weight: 600;
