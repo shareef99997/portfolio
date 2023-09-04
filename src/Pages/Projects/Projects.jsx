@@ -34,7 +34,7 @@ const Projects=()=> {
             <div class="Projects-box">
                 <img className='project-img' src={require('../../assets/estore.jpeg')} alt=""/>
                 <div class="Projects-layer">
-                    <h4>Web Design</h4>
+                    <h4>E-Store</h4>
                     <div className='l'>
                         <img class="tool" src={require('../../assets/html.png')} alt=""/>
                         <img class="tool" src={require('../../assets/css.png')} alt=""/>
@@ -48,7 +48,7 @@ const Projects=()=> {
             <div class="Projects-box">
                 <img className='project-img' src={require('../../assets/Semsar.png')} alt=""/>
                 <div class="Projects-layer">
-                    <h4>Web Design</h4>
+                    <h4>Semsar</h4>
                     <div className='l'>
                         <img class="tool" src={require('../../assets/flutter.png')} alt=""/>
                         <img class="tool" src={require('../../assets/firebase.png')} alt=""/>
@@ -61,7 +61,7 @@ const Projects=()=> {
             <div class="Projects-box">
                 <img className='project-img' src={require('../../assets/info.jpeg')} alt=""/>
                 <div class="Projects-layer">
-                    <h4>Web Design</h4>
+                    <h4>Info-App</h4>
                     <div className='l'>
                         <img class="tool" src={require('../../assets/html.png')} alt=""/>
                         <img class="tool" src={require('../../assets/css.png')} alt=""/>
@@ -75,7 +75,7 @@ const Projects=()=> {
             <div class="Projects-box">
                 <img className='project-img' src={require('../../assets/youtube.jpeg')} alt=""/>
                 <div class="Projects-layer">
-                    <h4>Web Design</h4>
+                    <h4>Youtube Clone</h4>
                     <div className='l'>
                         <img class="tool" src={require('../../assets/html.png')} alt=""/>
                         <img class="tool" src={require('../../assets/css.png')} alt=""/>

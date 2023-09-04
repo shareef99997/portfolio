@@ -3,6 +3,12 @@
   padding-bottom: 7rem;
 }
 
+.contact p{
+  color: blueviolet;
+  font-size: larger;
+  margin-left: 225px;
+}
+
 .contact h2 {
   margin-bottom: 30px;
 }
@@ -48,5 +54,12 @@
 @media (max-width: 450px) {
   .contact form .input-box input {
       width: 100%;
+  }
+
+}
+
+@media(max-width:1050px){
+  .contact p{
+    margin-left: 50px;
   }
 }

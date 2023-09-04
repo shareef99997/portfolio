@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap');
+
+
 .header {
   position: fixed;
   top: 0;
@@ -12,7 +15,8 @@
 }
 
 .logo {
-  font-size: 25px;
+  font-family: 'Neonderthaw';
+  font-size: 35px;
   background: 
   linear-gradient(90deg, rgb(201, 37, 246) 0%, rgb(82, 73, 255) 83%);
     -webkit-background-clip: text;

@@ -4,7 +4,7 @@ const Footer=()=> {
     return (
       <footer class="footer">
         <div class="footer-text">
-            <p>Copyright &copy; 2023 by Codehal | All Rights Reserved.</p>
+            <p>Copyright &copy; 2023 by Shareef Ali | All Rights Reserved.</p>
         </div>
 
         <div class="footer-iconTop">

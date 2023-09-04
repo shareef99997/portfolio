@@ -22,6 +22,7 @@ const Contact=()=>{
     return (
       <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me!</span></h2>
+        <p>this message will be sent to my personal email</p>
         <form ref={form} onSubmit={sendEmail}>
             <div class="input-box">
                 <input type="text" name='user_name' placeholder="Full Name"/>

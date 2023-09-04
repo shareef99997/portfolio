@@ -21,7 +21,7 @@ const Experiance=()=> {
             </div>
             <div class="Experiance-box">
                 <i class='bx bx-code-alt'></i>
-                <h3>Mobail Apps development</h3>
+                <h3>Mobile Apps development</h3>
                     <div>
                         <ul>
                         <img className='app-img' src={require('../../assets/flutter.png')} alt=""/> 
