@@ -25,8 +25,6 @@ const Experiance=()=> {
                     <div>
                         <ul>
                         <img className='app-img' src={require('../../assets/flutter.png')} alt=""/> 
-                        <img className='app-img' src={require('../../assets/dart.png')} alt=""/> 
-                        <img className='app-img' src={require('../../assets/react.png')} alt=""/> 
                         </ul>
                     </div>
             </div>
