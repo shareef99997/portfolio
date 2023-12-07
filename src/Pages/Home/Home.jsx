@@ -10,14 +10,14 @@ const Home =()=> {
           <h1>Shareef Ali</h1>
           <h3>And I'm a 
             <span class="multiple-text"> &nbsp;
-            <Typed strings={['Frontend Developer', 'UI/UX Designer']}
+            <Typed strings={['Mobile Apps Developer', 'Frontend Developer']}
             typeSpeed={100}
             backSpeed={50}
             backDelay={1000}
             loop={true}
           />
           </span></h3>
-          <p>An Ambishios Developer With magical hands that can create and design Modern responsive websites and web apps. </p>
+          <p>An Ambishios Developer With magical hands that can create and design Modern responsive websites and Mobile apps. </p>
           <div class="social-media">
               <a href="https://www.linkedin.com/in/shareef-ali" target="_blank"><i class='bx bxl-linkedin'></i></a>
               <a href="https://github.com/shareef99997" target="_blank"><i class='bx bxl-github'></i></a>
