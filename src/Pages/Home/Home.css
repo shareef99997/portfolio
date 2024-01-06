@@ -7,15 +7,15 @@
 .home-img img {
   width: 400px;
   animation: floatImage 3s ease-in-out infinite;
-  filter: drop-shadow(0px 0px 30px var(--main-color));
+  filter: drop-shadow(0px 0px 15px var(--main-color-hover));
   transition: .5s ease;
   border-radius: 200px;
 }
 
 .home-img img:hover {
-  width: 450px;
-  animation: floatImage 5s ease-in-out infinite;
-  filter: drop-shadow(0px 0px 0px var(--main-color));
+  width: 420px;
+  
+  filter: drop-shadow(0px 0px 0px var(--main-color-hover));
 }
 
 @keyframes floatImage {
@@ -69,7 +69,7 @@ span {
   width: 50px;
   height: 50px;
   background: transparent;
-  border: 3px solid var(--main-color);
+  border: 3px solid var(--main-color-hover);
   border-radius: 50%;
   font-size: 2rem;
   background: var(--main-gradient-color);
@@ -82,7 +82,7 @@ span {
 .social-media a:hover {
   background: var(--main-gradient-color);
   -webkit-text-fill-color: var(--second-bg-color);
-  box-shadow: 0 0 1rem var(--main-color);
+  box-shadow: 0 0 10px var(--main-color);
   transition: .5s ease;
 }
 
@@ -91,7 +91,7 @@ span {
   padding: 0.9rem 2.4rem ;
   background: var(--main-gradient-color);
   border-radius: 4rem;
-  box-shadow: 0 0 1rem var(--main-color);
+  box-shadow: 0 0 10px var(--main-color-hover);
   font-size: 14px;
   color: var(--second-text-color);
   letter-spacing: .1rem;

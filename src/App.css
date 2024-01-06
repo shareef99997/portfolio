@@ -17,10 +17,10 @@
     --bg-color: #f0f0f0;
     --second-bg-color: #d5d5d5;
     --text-color: #000000;
-    --second-text-color: #ffffff;
+    --second-text-color: #dadada ;
     --main-color: #1b1b1b;
     --main-color-hover: #717171;
-    --main-gradient-color: linear-gradient(90deg, rgb(71, 71, 71) 0%, rgb(120, 120, 120) 100%);
+    --main-gradient-color: linear-gradient(90deg, rgb(91, 91, 91) 0%, rgb(120, 120, 120) 100%);
     --main-gradient-color-hover: linear-gradient(90deg, rgb(46, 46, 46) 0%, rgb(126, 126, 126) 100%);
     /* -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; */
@@ -30,7 +30,7 @@
     --bg-color: #f0f0f0;
     --second-bg-color: #d5d5d5;
     --text-color: #000000;
-    --second-text-color: #ffffff;
+    --second-text-color: #dadada;
     --main-color: #1b1b1b;
     --main-color-hover: #717171;
     --main-gradient-color: linear-gradient(90deg, rgb(91, 91, 91) 0%, rgb(120, 120, 120) 100%);
@@ -45,7 +45,7 @@
     --text-color: #ffffff;
     --second-text-color: #232323;
     --main-color: #c2c2c2;
-    --main-color-hover: #d8d8d8;
+    --main-color-hover: #7e7e7e;
     --main-gradient-color: linear-gradient(90deg, rgb(145, 145, 145) 0%, rgb(216, 216, 216) 100%);
     --main-gradient-color-hover: linear-gradient(90deg, rgb(197, 197, 197) 0%, rgb(173, 173, 173) 100%);
     /* -webkit-background-clip: text;
