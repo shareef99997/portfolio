@@ -18,7 +18,7 @@
   font-family: 'Neonderthaw';
   font-size: 35px;
   background: 
-  linear-gradient(90deg, rgb(201, 37, 246) 0%, rgb(82, 73, 255) 83%);
+  var(--main-gradient-color);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   font-weight: 600;

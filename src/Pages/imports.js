@@ -5,5 +5,5 @@ import Experiance from './Experiance/Experiance';
 import Footer from './Footer/Footer';
 import Home from './Home/Home';
 import Projects from './Projects/Projects';
-
-export { Header, About, Contact, Experiance, Footer, Home, Projects };
+import DarkMode from '../DarkMode/DarkMode';
+export { Header, About, Contact, Experiance, Footer, Home, Projects,DarkMode };

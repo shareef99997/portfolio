@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import './Header.css';
+import { DarkMode } from '../imports';
 
 const Menu = () => (
   <>
@@ -18,6 +19,7 @@ const Header = () => {
   return (
     <header className="header">
       <a  href="#" className="logo">Shareef Dev</a>
+      <DarkMode/>
       <nav className="navbar">
       <a href="#home" >Home</a>
         <a href="#about">About</a>

@@ -5,7 +5,7 @@ const About=()=>{
     return (
       <section class="about" id="about">
 
-            <img className='about-img' src={require('../../assets/personal_pic_purple.png')} alt=""/>
+            <img className='about-img' src={require('../../assets/pp.png')} alt=""/>
         
 
         <div class="about-content">

@@ -11,9 +11,9 @@ const Home =()=> {
           <h3>And I'm a 
             <span class="multiple-text"> &nbsp;
             <Typed strings={['Mobile Apps Developer', 'Frontend Developer']}
-            typeSpeed={100}
-            backSpeed={50}
-            backDelay={1000}
+            typeSpeed={80}
+            backSpeed={30}
+            backDelay={100}
             loop={true}
           />
           </span></h3>
@@ -32,7 +32,7 @@ const Home =()=> {
           class="btn">Download CV</a>
       </div>
       <div class="home-img">
-          <img src={require('../../assets/personal_pic2_purple.png')} alt="" />
+          <img src={require('../../assets/pp.png')} alt="" />
       </div>
   </section>
     )

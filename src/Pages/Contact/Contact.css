@@ -4,7 +4,7 @@
 }
 
 .contact p{
-  color: blueviolet;
+  color: var(--text-color);
   font-size: larger;
   margin-left: 225px;
 }
