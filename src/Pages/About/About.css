@@ -19,21 +19,6 @@
   text-align: center;
   font-size: 40px;
 }
-.about-content .btna{
-  display: inline-block;
-  padding: 15px 28px ;
-  background: var(--main-gradient-color);
-  border-radius: 4rem;
-  box-shadow: 0 0 1rem var(--main-color);
-  font-size: 14px;
-  color: black;
-  letter-spacing: .1rem;
-  font-weight: 600;
-  transition: .5s ease;
-}
-.about-content .btna:hover {
-  box-shadow: none;
-}
 
 .about-content h2 {
   text-align: left;
