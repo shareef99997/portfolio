@@ -26,9 +26,7 @@ const Home =()=> {
               <a href="https://api.whatsapp.com/send?phone=966582635947&text=Hello%20Shareef%20%F0%9F%91%8B" target="_blank"><i class='bx bxl-whatsapp'></i></a>
           </div>
           <a href={require('../../assets/shareefs_CV.pdf' )} 
-          
           download="Shareef's_CV" 
-          
           class="btn">Download CV</a>
       </div>
       <div class="home-img">

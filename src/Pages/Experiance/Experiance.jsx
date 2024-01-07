@@ -37,6 +37,7 @@ const Experiance=()=> {
                         <img className='other-img' src={require('../../assets/firebase.png')} alt=""/> 
                         <img className='other-img' src={require('../../assets/git.png')} alt=""/> 
                         <img className='other-img' src={require('../../assets/github.png')} alt=""/> 
+                        <img className='other-img' src={require('../../assets/sql.png')} alt=""/> 
                         </ul>
                     </div>
             </div>

@@ -132,13 +132,18 @@ span {
     margin-bottom: 30px;
     transform: scale(0.8);
     text-align: center;
-    margin-left: auto;
+    margin-left: 70px;
     margin-right: auto;
-  }
+}
 
   .home-img img {
-    margin-top: 30px;
-    width: 300px;
+    margin-top: 50px;
+    width: 250px;
+  }
+  .home-img img:hover {
+    width: 280px;
+    
+    filter: drop-shadow(0px 0px 0px var(--main-color-hover));
   }
 }
 
@@ -147,6 +152,22 @@ span {
 
   .home-img img,
   .about-img img {
-      width: 80vw;
+      width: 200px;
+      margin-top: 30px;
   }
+  .social-media a {
+    margin: 30px 15px 30px 0;
+  }
+  .btn{
+    margin-bottom: 30px;
+    transform: scale(0.8);
+    text-align: center;
+    margin-left: 40px;
+    margin-right: auto;
+}
+.home-img img:hover {
+  width: 230px;
+  
+  filter: drop-shadow(0px 0px 0px var(--main-color-hover));
+}
 }

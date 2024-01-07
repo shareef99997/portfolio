@@ -10,9 +10,11 @@ const About=()=>{
 
         <div class="about-content">
             <h2 class="heading">About <span>Me</span></h2>
-            <h3>Frontend Developer!</h3>
-            <p>I am a fresh graduate with a bachelor’s degree in Information Technology , and i would discribe myself as a frontend developer and Mobile apps developer who creates beautiful and user-friendly websites ,Mobile apps . I have practical experience in using HTML, CSS, JavaScript, React, Bootstrap, Figma,flutter,firebase, etc. to design and develop websites and Mobile applications for various domains. I am passionate about solving problems, learning new things, and collaborating with other developers and designers. I also have a keen eye for design and get inspired by art and animation. I am ambitious and always looking for new challenges and opportunities to grow as a professional.</p>
-            <a href="#" class="btn">Read More</a>
+            <h3>Sowftware Developer!</h3>
+            <p>Experienced Software Developer specializing in frontend and mobile app development. Known for delivering creative solutions that surpass client expectations. Dedicated to ongoing learning and staying current with emerging technologies. Great Experiance in frontend Development and creating responsive and user freindly web apps and mobile apps.</p>
+           
+            <a href="#Experiance" class="btn about-btn">Read More</a>
+            
         </div>
     </section>
     )
