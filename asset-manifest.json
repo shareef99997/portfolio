@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.d6ad0cd1.css",
-    "main.js": "/static/js/main.8fc5a199.js",
-    "static/media/personal_pic2_purple.png": "/static/media/personal_pic2_purple.f81e57a4092c9158ba36.png",
-    "static/media/personal_pic_purple.png": "/static/media/personal_pic_purple.601f902bebf9c136d05b.png",
-    "static/media/youtube.jpeg": "/static/media/youtube.84dcca31dd772267205b.jpeg",
-    "static/media/estore.jpeg": "/static/media/estore.6427917e9926bd0d7690.jpeg",
-    "static/media/shareefs_CV.pdf": "/static/media/shareefs_CV.461e9a41a9df777c416b.pdf",
+    "main.css": "/static/css/main.ecea9130.css",
+    "main.js": "/static/js/main.4708b7ab.js",
+    "static/media/shareefs_CV.pdf": "/static/media/shareefs_CV.700829f2bd078cb1b3ad.pdf",
+    "static/media/TooDoo.png": "/static/media/TooDoo.b00db1e3fff661cf777a.png",
+    "static/media/pp.png": "/static/media/pp.94a827a9fcc8b3ca453d.png",
     "static/media/qpt.jpeg": "/static/media/qpt.81cdab1eeae873c81c23.jpeg",
     "static/media/Semsar.png": "/static/media/Semsar.29a9d7c5ffca28d0efa7.png",
     "static/media/qbank.jpeg": "/static/media/qbank.ed30d3ba6c370505e26d.jpeg",
     "static/media/info.jpeg": "/static/media/info.73f99fc306548084a133.jpeg",
+    "static/media/Drip.png": "/static/media/Drip.2291a3b8e645e05eca75.png",
+    "static/media/Sun.svg": "/static/media/Sun.681607dcda2a01539a9a8a157ae74e6e.svg",
+    "static/media/Moon.svg": "/static/media/Moon.0a6a2b75ac51157455302ddcfca385c0.svg",
     "index.html": "/index.html",
-    "main.d6ad0cd1.css.map": "/static/css/main.d6ad0cd1.css.map",
-    "main.8fc5a199.js.map": "/static/js/main.8fc5a199.js.map"
+    "main.ecea9130.css.map": "/static/css/main.ecea9130.css.map",
+    "main.4708b7ab.js.map": "/static/js/main.4708b7ab.js.map"
   },
   "entrypoints": [
-    "static/css/main.d6ad0cd1.css",
-    "static/js/main.8fc5a199.js"
+    "static/css/main.ecea9130.css",
+    "static/js/main.4708b7ab.js"
   ]
 }
