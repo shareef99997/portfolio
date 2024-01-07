@@ -55,11 +55,21 @@
   .contact form .input-box input {
       width: 100%;
   }
+  .contact form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
+    margin-right: 20px;
+  }
 
 }
 
 @media(max-width:1050px){
   .contact p{
     margin-left: 50px;
+  }
+  .contact form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
+    margin-right: 70px;
   }
 }
