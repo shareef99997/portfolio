@@ -6,6 +6,20 @@ const Experiance=()=> {
       <section class="Experiance" id="Experiance">
         <h2 class="heading">My <span>Experiances</span></h2>
         <div class="Experiance-container">
+
+            <div class="Experiance-box">
+                <i class='bx bx-code-alt'></i>
+                <h3>Data Analysis</h3>
+                    <div>
+                        <ul>
+                        <img className='web-img' src={require('../../assets/excel.png')} alt=""/> 
+                        <img className='web-img' src={require('../../assets/sql.png')} alt=""/> 
+                        <img className='web-img' src={require('../../assets/bi.png')} alt=""/> 
+                        <img className='web-img' src={require('../../assets/pandas.png')} alt=""/> 
+                        <img className='web-img' src={require('../../assets/python.png')} alt=""/> 
+                        </ul>
+                    </div>
+            </div>
             <div class="Experiance-box">
                 <i class='bx bx-code-alt'></i>
                 <h3>Web Development</h3>

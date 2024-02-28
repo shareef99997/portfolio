@@ -5,6 +5,48 @@ const Projects=()=> {
     return (
       <section class="Projects" id="Projects">
         <h2 class="heading">Latest <span>Projects</span></h2>
+
+
+        <h3 class="Projects-Category">Data Analysis 🔢</h3>
+        <div class="Projects-container">
+            {/*/////////////// bikes ///////////////*/}
+            <div class="Projects-box">
+                <img className='project-img' src={require('../../assets/Bikes.png')} alt=""/>
+                <div class="Projects-layer">
+                    <h4>Bikes Sales Dashboard</h4>
+                    <div class ="l">
+                    <img class="tool" src={require('../../assets/excel.png')} alt=""/>
+                    </div>
+                    <p>Cleaning and organizing Big Data and visualization using Excel</p>
+                    <a href={require('../../assets/Excel_Project_Dataset.xlsx' )} download={'Bikes Sales'}><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            {/*/////////////// Data Survay ///////////////*/}
+            <div class="Projects-box">
+                <img className='project-img' src={require('../../assets/power.png')} alt=""/>
+                <div class="Projects-layer">
+                    <h4>Data Professional Survey</h4>
+                    <div className='l'><img class="tool" src={require('../../assets/bi.png')} alt=""/>
+                    <img class="tool" src={require('../../assets/excel.png')} alt=""/></div>
+                    <p>visualizing and analyzing of Data Professional Survey </p>
+                    <a href={require('../../assets/Power-Bi.zip' )} download={'Data Survey'}><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            {/*/////////////// Covid ///////////////*/}
+            <div class="Projects-box">
+                <img className='project-img' src={require('../../assets/covids.png')} alt=""/>
+                <div class="Projects-layer">
+                    <h4>Covid-19</h4>
+                    <div className='l'>
+                        <img class="tool" src={require('../../assets/sql.png')} alt=""/>
+                    </div>
+                    <p>Cleaning and organizing Big Data using SQL</p>
+                    <a href={require('../../assets/COVID.zip' )} download={'Covid'}><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+        </div>
+        <div class ="line"></div>
+
         <h3 class="Projects-Category">WebSites 🖥️</h3>
         <div class="Projects-container">
             {/*/////////////// QPT ///////////////*/}
@@ -45,6 +87,7 @@ const Projects=()=> {
             </div>
         </div>
         <div class ="line"></div>
+
         <h3 class="Projects-Category">Mobile Apps 📱</h3>
         <div class="Projects-container">
             {/*/////////////// Drip ///////////////*/}
