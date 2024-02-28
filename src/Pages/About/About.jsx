@@ -10,8 +10,8 @@ const About=()=>{
 
         <div class="about-content">
             <h2 class="heading">About <span>Me</span></h2>
-            <h3>Sowftware Developer!</h3>
-            <p>Experienced Software Developer specializing in frontend and mobile app development. Known for delivering creative solutions that surpass client expectations. Dedicated to ongoing learning and staying current with emerging technologies. Great Experiance in frontend Development and creating responsive and user freindly web apps and mobile apps.</p>
+            <h3>Sowftware Developer / Data Analyst</h3>
+            <p>I'm an experienced Software Developer and Data Analyst specializing in frontend and mobile app development. I'm known for delivering creative solutions that impress clients. I'm dedicated to learning and staying up-to-date with new technologies. I excel in frontend development, creating user-friendly web and mobile apps. Plus, I'm skilled in data analysis, using insights to improve development strategies and user experiences.</p>
            
             <a href="#Experiance" class="btn about-btn">Read More</a>
             

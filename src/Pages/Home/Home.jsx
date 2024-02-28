@@ -10,7 +10,7 @@ const Home =()=> {
           <h1>Shareef Ali</h1>
           <h3>And I'm a 
             <span class="multiple-text"> &nbsp;
-            <Typed strings={['Mobile Apps Developer', 'Frontend Developer']}
+            <Typed strings={['Mobile Apps Developer', 'Frontend Developer','Data Analyst']}
             typeSpeed={80}
             backSpeed={30}
             backDelay={100}
