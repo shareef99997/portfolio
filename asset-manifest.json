@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/static/css/main.2f66290d.css",
-    "main.js": "/static/js/main.d8bc556a.js",
+    "main.js": "/static/js/main.ab35bd7d.js",
     "static/media/COVID.zip": "/static/media/COVID.fcaab72517e059455dd8.zip",
     "static/media/TooDoo.png": "/static/media/TooDoo.b00db1e3fff661cf777a.png",
     "static/media/Excel_Project_Dataset.xlsx": "/static/media/Excel_Project_Dataset.44fdd3d354b333984cf1.xlsx",
     "static/media/pp.png": "/static/media/pp.94a827a9fcc8b3ca453d.png",
-    "static/media/Shareef-Huzaifa-Resume.pdf": "/static/media/Shareef-Huzaifa-Resume.376a4da0e6eae9bb0624.pdf",
+    "static/media/Shareef-Huzaifa-Resume.pdf": "/static/media/Shareef-Huzaifa-Resume.f17dfb1da62214030a17.pdf",
     "static/media/qpt.jpeg": "/static/media/qpt.81cdab1eeae873c81c23.jpeg",
     "static/media/Semsar.png": "/static/media/Semsar.29a9d7c5ffca28d0efa7.png",
     "static/media/qbank.jpeg": "/static/media/qbank.ed30d3ba6c370505e26d.jpeg",
@@ -23,10 +23,10 @@
     "static/media/Moon.svg": "/static/media/Moon.0a6a2b75ac51157455302ddcfca385c0.svg",
     "index.html": "/index.html",
     "main.2f66290d.css.map": "/static/css/main.2f66290d.css.map",
-    "main.d8bc556a.js.map": "/static/js/main.d8bc556a.js.map"
+    "main.ab35bd7d.js.map": "/static/js/main.ab35bd7d.js.map"
   },
   "entrypoints": [
     "static/css/main.2f66290d.css",
-    "static/js/main.d8bc556a.js"
+    "static/js/main.ab35bd7d.js"
   ]
 }
