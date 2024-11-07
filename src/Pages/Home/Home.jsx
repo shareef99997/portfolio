@@ -1,6 +1,8 @@
 import React from 'react';
-import Typed from 'react-typed';
 import './Home.css';
+import { Typed } from 'react-typed';
+import { Typewriter } from 'react-simple-typewriter';
+
 const Home =()=> {
     return (
       <section class="home" id="home">
@@ -18,13 +20,14 @@ const Home =()=> {
             
             <h3>And I'm a 
               <span class="multiple-text"> &nbsp;
-              <Typed strings={['Software Developer','Data Analyst']}
-              typeSpeed={20}
-              backSpeed={20}
-              backDelay={2000}
-
-              loop={true}
-            />
+              <Typewriter
+                words={['Software Developer', 'Data Analyst']}
+                loop={true}
+                cursor
+                typeSpeed={20} // Adjust typing speed
+                deleteSpeed={20} // Adjust deleting speed
+                delaySpeed={3000} // Delay before starting the next word
+              />
             </span></h3>
             <div class="social-media">
                 <a href="https://www.linkedin.com/in/shareef-ali" target="_blank"><i class='bx bxl-linkedin'></i></a>
