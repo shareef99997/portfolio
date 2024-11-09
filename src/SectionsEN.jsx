@@ -8,14 +8,17 @@ import Contact_EN from "./Sections/EN/Contact_EN"
 
 function SectionsEN() {
     return(
-        <div>
+        <div className="max-w-screen flex">
+            <div className="overflow-hidden w-full">
+                <Hero_EN/>
+                <About_EN/>
+                <Resume_EN/>
+                <Skills_EN/>
+                <Projects_EN/>
+                <Contact_EN/> 
+            </div>
             <NavBar_EN/>
-            <Hero_EN/>
-            <About_EN/>
-            <Resume_EN/>
-            <Skills_EN/>
-            <Projects_EN/>
-            <Contact_EN/>
+            
         </div>
     )
 }

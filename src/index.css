@@ -8,7 +8,7 @@
   --primary: #89DB7E ;
   --primary-gradient:linear-gradient(180deg,  #89DB7E 0%, #66E778 100%);
   --text:#e9e9f1;
-  --text-light:#aeaeae;
+  --text-light:#3f3f3f;
   --background: #29292a;
   --background-gradient: linear-gradient(135deg, #29292a 0%, #181818 100%);;
 }
@@ -30,11 +30,16 @@ a {
 }
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  padding: 2.5rem;
+  padding-inline-end:5rem ;
+  width: 100%;
   min-height: 100vh;
-  background: var(--background-gradient);
+  background: var(--background);
   color: var(--text);
+  overflow-x: hidden;
+  text-overflow: ellipsis;
 }
 
+.trans{
+  transition:0.2s ease-in-out;
+}

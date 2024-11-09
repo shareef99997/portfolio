@@ -1,8 +1,7 @@
 function Hero_EN(){
     return(
-        <div className="text-text text-Header">This is 
-            <span className="text-primary text-Headline">Shareef Ali</span>
-            <div className="w-12 h-12 bg-white"></div>
+        <div className="min-h-screen w-full text-text text-Header overflow-hidden">This is
+            <div className="h-10 w-full bg-white"></div>
         </div>
     )
 }
