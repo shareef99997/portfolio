@@ -1,6 +1,6 @@
 function Projects_EN(){
     return(
-        <div className="min-h-screen text-text text-Header">This is 
+        <div id="projects" className="min-h-screen text-text text-Header">This is 
             <span className="text-primary text-Headline">Projects</span>
             <div className="w-12 h-12 bg-white"></div>
         </div>
