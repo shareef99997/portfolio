@@ -1,6 +1,6 @@
 function Projects_AR(){
     return(
-        <div className="text-text text-Header"> اهلا 
+        <div id="projects" className="text-text text-Header"> اهلا 
             <span className="text-primary text-Headline"> المشاريع </span>
             <div className="w-12 h-12 bg-white"></div>
         </div>

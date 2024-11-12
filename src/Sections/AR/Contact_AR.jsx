@@ -1,6 +1,6 @@
 function Contact_AR(){
     return(
-        <div className="text-text text-Header"> اهلا 
+        <div id="contact" className="text-text text-Header"> اهلا 
             <span className="text-primary text-Headline"> تواصل </span>
             <div className="w-12 h-12 bg-white"></div>
         </div>

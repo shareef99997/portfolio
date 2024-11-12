@@ -8,14 +8,16 @@ import Contact_AR from "./Sections/AR/Contact_AR"
 
 function SectionsAR() {
     return(
-        <div>
+        <div className="max-w-screen flex">
+            <div className="overflow-hidden w-full">
+                <Hero_AR/>
+                <About_AR/>
+                <Resume_AR/>
+                <Skills_AR/>
+                <Projects_AR/>
+                <Contact_AR/>
+            </div>
             <NavBar_AR/>
-            <Hero_AR/>
-            <About_AR/>
-            <Resume_AR/>
-            <Skills_AR/>
-            <Projects_AR/>
-            <Contact_AR/>
         </div>
     )
 }
