@@ -1,7 +1,7 @@
 function Hero_AR(){
     return(
         <div  className="text-text text-Header"> اهلا 
-            <span className="text-primary text-Headline"> انا شريف حذيفه </span>
+            <span className="text-primary text-header"> انا شريف حذيفه </span>
             <div className="w-12 h-12 bg-white"></div>
         </div>
     )

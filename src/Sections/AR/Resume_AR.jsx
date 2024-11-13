@@ -1,7 +1,7 @@
 function Resume_AR(){
     return(
         <div id="resume" className="text-text text-Header"> اهلا 
-            <span className="text-primary text-Headline"> السيرة </span>
+            <span className="text-primary text-header"> السيرة </span>
             <div className="w-12 h-12 bg-white"></div>
         </div>
     )

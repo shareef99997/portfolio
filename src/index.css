@@ -8,15 +8,16 @@
   --primary: #89DB7E ;
   --primary-gradient:linear-gradient(180deg,  #89DB7E 0%, #66E778 100%);
   --text:#e9e9f1;
-  --text-light:#3f3f3f;
+  --text-light:#969696;
   --background: #29292a;
   --background-gradient: linear-gradient(135deg, #29292a 0%, #181818 100%);;
+  --border: #707070b7;
 }
 
 
 
 :root {
-  font-family: "Syne", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Syne", system-ui, Avenir, Helvetica, Arial, sans-serif, verdana, arial, helvetica,;
   scroll-behavior: smooth;
   transition: 0.3s ease;
   font-synthesis: none;
@@ -30,7 +31,6 @@ a {
 }
 body {
   margin: 0;
-  padding: 2.5rem;
   padding-inline-end:5rem ;
   width: 100%;
   min-height: 100vh;
@@ -42,4 +42,15 @@ body {
 
 .trans{
   transition:0.2s ease-in-out;
+}
+
+
+@media (max-width: 1104px) {
+  body {
+    padding-inline-end: 0rem;
+  }
+
+  :root{
+    font-size: 80%;
+  }
 }

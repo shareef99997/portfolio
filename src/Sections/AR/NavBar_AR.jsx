@@ -33,11 +33,11 @@ function NavBar_AR() {
         <div className="fixed justify-between flex flex-col items-center min-h-screen py-10 pe-6 right-0 top-0">
             {/* Sidebar / Language Switcher */}
             {isTabletOrMobile ? (
-                <button onClick={toggleSidebar} className="z-10 w-12 h-12 flex items-center justify-center bg-background border border-text-light rounded-full hover:text-primary hover:border-primary trans">
+                <button onClick={toggleSidebar} className="z-10 w-12 h-12 flex items-center justify-center bg-background border border-border rounded-full hover:text-primary hover:border-primary trans">
                     {isOpen ? <FiX className="text-xl" /> : <FiMenu className="text-xl" />}
                 </button>
             ) : (
-                <button onClick={() => navigate("/")} className="w-12 h-12 flex items-center justify-center bg-background border border-text-light rounded-full text-text-light hover:text-primary hover:border-primary trans">
+                <button onClick={() => navigate("/")} className="w-12 h-12 flex items-center justify-center bg-background border border-border rounded-full text-text-light hover:text-primary hover:border-primary trans">
                     <span className="text-xl font-semibold">E</span>
                 </button>
             )}
@@ -94,7 +94,7 @@ function NavBar_AR() {
             
 
             {/* Navigation Menu */}
-            <ul className="hidden lg:flex flex-col items-center gap-6 py-6 px-4 bg-background text-lg border border-text-light rounded-full text-text-light ">
+            <ul className="hidden lg:flex flex-col items-center gap-6 py-6 px-4 bg-background text-lg border border-border rounded-full text-text-light ">
                 <li>
                     <a href="#" className="hover:text-primary trans"><AiOutlineHome className="text-xl" /></a>
                 </li>
