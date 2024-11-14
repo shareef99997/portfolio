@@ -7,6 +7,7 @@ import TextTransition, { presets } from 'react-text-transition';
 import { useState, useEffect } from 'react';
 import CountUp from 'react-countup';
 import Section_Header from '../../components/section_header';
+import CV from'../../assets/Shareefs_CV.pdf'
 const titles = ['Data Analyst', 'Frontend Developer', 'Business Intelligence Analyst'];
 
 
@@ -64,7 +65,7 @@ function Hero_EN(){
                         </a>
                     </div>
                     {/* Resume Button */}
-                    <a href="https://www.dropbox.com/s/j9b97c8726d4i9p/Shareef_Huzaifa_Resume_EN.pdf?dl=0" target="_blank" className="text-xl hover:text-primary trans w-full">
+                    <a href={CV} download={"Shareef's CV"} target="_blank" className="text-xl hover:text-primary trans w-full">
                         <button className="text-lg font-semibold border-[0.15rem] border-primary  rounded-full bg-primary text-background hover:text-primary hover:bg-background trans w-full py-2">
                             Download CV
                         </button>
