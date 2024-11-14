@@ -40,11 +40,6 @@ body {
   text-overflow: ellipsis;
 }
 
-.trans{
-  transition:0.2s ease-in-out;
-}
-
-
 @media (max-width: 1104px) {
   body {
     padding-inline-end: 0rem;
