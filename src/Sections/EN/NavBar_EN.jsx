@@ -38,7 +38,7 @@ function NavBar_EN() {
                 </button>
             ) : (
                 <button onClick={() => navigate("/ar")} className="w-12 h-12 flex items-center justify-center bg-background border border-border rounded-full text-text-light hover:text-primary hover:border-primary trans">
-                    <span className="text-xl font-semibold">ع</span>
+                    <span className="text-xl">ع</span>
                 </button>
             )}
 
@@ -50,7 +50,7 @@ function NavBar_EN() {
                     transition={{ type: "spring", stiffness: 300, damping: 40 }}
                     className={`fixed  items-start flex flex-col top-0 right-0 h-full w-[60%] bg-background-gradient border-l border-background shadow-xl gap-32 p-12`}
                 >
-                    <p className="text-xl font-semibold text-text-light">Menu</p>
+                    <p className="text-xl text-text-light">Menu</p>
                     <ul className="flex flex-col items-start gap-6 text-md text-text-light">
                         <li>
                             <a href="#" onClick={toggleSidebar} className="hover:text-primary trans flex items-center gap-2"><AiOutlineHome className="text-xl" />Home</a>
@@ -71,7 +71,7 @@ function NavBar_EN() {
                             <a href="#contact" onClick={toggleSidebar} className="hover:text-primary trans flex items-center gap-2"><FiMail className="text-xl" />Contact</a>
                         </li>
                         <li>
-                            <Link to="/ar" onClick={toggleSidebar} className="hover:text-primary trans flex items-center gap-2 font-semibold"><GrLanguage className="text-xl" />العربية</Link>
+                            <Link to="/ar" onClick={toggleSidebar} className="hover:text-primary trans flex items-center gap-2"><GrLanguage className="text-xl" />العربية</Link>
                         </li>
                     </ul>
                     {/* social media */}

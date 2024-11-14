@@ -24,15 +24,19 @@ function Hero_AR() {
 
     return (
         // hero section
-        <div className="flex flex-col lg:flex-row-reverse gap-10 section p-8 min-h-screen overflow-hidden" dir="rtl">
+        <div className="flex flex-col lg:flex-row-reverse gap-10 section p-10 min-h-screen overflow-hidden" dir="rtl">
 
             {/* Shareef's Profile Card */}
-            <div className='flex flex-col justify-center'>
+            <div className='flex flex-col justify-center gap-8 lg:gap-0'>
+                {/* Section Title */}
+                <div className='flex lg:hidden'>
+                    <Section_Header title="مقدمة" icon={AiOutlineHome} />
+                </div>
                 <div className='flex flex-col gap-8 items-center border border-border rounded-3xl p-8'>
                     {/* Name and Image */}
                     <div className="flex flex-col gap-6">
                         <div className='flex flex-col justify-between items-center'>
-                            <h1 className="text-[1.8rem] font-bold text-text">شريف حذيفه</h1>
+                            <h1 className="text-[1.8rem]  text-text">شريف حذيفه</h1>
                             <h2 className="text-[1rem] text-primary">
                                 <TextTransition springConfig={presets.wobbly}>
                                     {titles[index % titles.length]}
@@ -46,16 +50,16 @@ function Hero_AR() {
                     <div className='flex flex-col items-center gap-1'>
                         {/* Email */}
                         <a href="mailto:shareef.99997@gmail.com">
-                            <button className="text-[1.4rem] font-[400] hover:text-primary trans font-sans">
+                            <button className="text-[1.4rem] hover:text-primary trans font-sans">
                                 Shareef.99997@gmail.com
                             </button>
                         </a>
                         {/* Address - Contact Number */}
-                        <h2 className='text-text font-[400] text-[1rem]'>
+                        <h2 className='text-text-light text-[0.9rem]'>
                             <span className='font-sans' dir='ltr'>+966 58 263 5947</span> - الرياض
                         </h2>
                     </div>
-                    <h2 className='text-text-light font-[500] text-description font-sans'>© 2024 Shareef. جميع الحقوق محفوظة</h2>
+                    <h2 className='text-text-light  text-description font-sans'>© 2024 Shareef. جميع الحقوق محفوظة</h2>
                     {/* Social Media Icons */}
                     <div className="flex justify-center gap-2">
                         <a href={CV} download={"Shareef's CV"} className="p-3 flex items-center justify-center border-[0.15rem] border-border rounded-full text-text-light hover:text-primary hover:border-primary trans">
@@ -73,7 +77,7 @@ function Hero_AR() {
                     </div>
                     {/* Resume Button */}
                     <a href={CV} download={"Shareef's CV"} className="text-xl hover:text-primary trans w-full">
-                        <button className="text-lg font-semibold border-[0.15rem] border-primary rounded-full bg-primary text-background hover:text-primary hover:bg-background trans w-full py-2">
+                        <button className="text-lg  border-[0.15rem] border-primary rounded-full bg-primary text-background hover:text-primary hover:bg-background trans w-full py-2">
                             تحميل السيرة الذاتية
                         </button>
                     </a>
@@ -83,25 +87,28 @@ function Hero_AR() {
             {/* Shareef's Introduction */}
             <div className='flex flex-col gap-10'>
                 {/* Section Title */}
-                <Section_Header title="مقدمة" icon={AiOutlineHome} />
+                <div className='hidden lg:flex'>
+                   <Section_Header title="مقدمة" icon={AiOutlineHome} /> 
+                </div>
+                
                 {/* Section Headline */}
                 <h1 className='text-text text-Header lg:text-[4rem]'>
                     تحويل <span className='text-primary'>البيانات</span> إلى رؤى، <span className='text-primary'>البرمجة</span> إلى إبداع، و<span className='text-primary'>المشاكل</span> إلى حلول!
                 </h1>
                 {/* Small description */}
-                <p className='text-text-light font-normal text-title'>
+                <p className='text-text-light text-description'>
                     إحياء <span className='text-primary'>البيانات</span> من خلال الرؤية والتصميم.
                 </p>
                 {/* Accomplishments Numbers */}
                 <div className='flex gap-10'>
                     <div>
                         <span className='text-primary text-Headline'><CountUp start={0} end={2} />+</span>
-                        <h2 className='text-text-light font-semibold text-title'>سنوات من الخبرة</h2>
+                        <h2 className='text-text-light  text-title'>سنوات من الخبرة</h2>
                     </div>
 
                     <div>
                         <span className='text-primary text-Headline'><CountUp start={0} end={10} />+</span>
-                        <h2 className='text-text-light font-semibold text-title'>المشاريع المنجزة</h2>
+                        <h2 className='text-text-light text-title'>المشاريع المنجزة</h2>
                     </div>
                 </div>
 

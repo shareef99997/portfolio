@@ -38,6 +38,7 @@ body {
   color: var(--text);
   overflow-x: hidden;
   text-overflow: ellipsis;
+  font-weight: 500;
 }
 
 .trans{

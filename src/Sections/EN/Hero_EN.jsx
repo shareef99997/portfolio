@@ -14,24 +14,23 @@ const titles = ['Data Analyst', 'Frontend Developer', 'Business Intelligence Ana
 function Hero_EN(){
     const [index, setIndex] = useState(0);
 
-  useEffect(() => {
-    const intervalId = setInterval(
-      () => setIndex((index) => index + 1),
-      3000, // every 3 seconds
-    );
-    return () => clearTimeout(intervalId);
-  }, []);
+    useEffect(() => {
+        const intervalId = setInterval(() => setIndex((prevIndex) => prevIndex + 1), 3000);
+        return () => clearInterval(intervalId); // Improved cleanup
+    }, []);
+    
     return(
         // hero section
-        <div className="flex flex-col lg:flex-row gap-10 section p-8 min-h-screen overflow-hidden">
+        <div className="flex flex-col lg:flex-row gap-10 section p-10 min-h-screen overflow-hidden">
 
             {/* Shareef's Profile Card */}
-            <div className='flex flex-col justify-center'>
+            <div className='flex flex-col gap-8'>
+                <Section_Header title="Introduction" icon={AiOutlineHome} />
                 <div className='flex flex-col gap-8 items-center border border-border rounded-3xl p-8'>
                     {/* Name and Image */}
                     <div className="flex flex-col gap-6 ">
                         <div className='flex flex-col justify-between items-center'>
-                            <h1 className="text-[1.8rem] font-bold text-text">Shareef Huzaifa</h1>
+                            <h1 className="text-[1.8rem] text-text">Shareef Huzaifa</h1>
                             <h2 className="text-[1rem] text-primary"><TextTransition springConfig={presets.wobbly}>{titles[index % titles.length]}</TextTransition></h2>
                         </div>
                         <img className="w-64 rounded-2xl object-cover self-center" src={profile_image} alt="Shareef's Profile Pic"/>
@@ -41,32 +40,37 @@ function Hero_EN(){
                     <div className='flex flex-col items-center gap-1'>
                         {/* Email */}
                         <a href="mailto:shareef.99997@gmail.com">
-                            <button className="text-[1.4rem] font-[400] hover:text-primary trans font-sans">
+                            <button className="text-[1.4rem]  hover:text-primary trans font-sans">
                             Shareef.99997@gmail.com
                             </button>
                         </a>
                         {/* Address - Contact Number */}
-                        <h2 className='text-text font-[400] text-[1rem]'><span className='font-sans'>+966 58 263 5947</span> - Riyadh, Saudi Arabia</h2>
+                        <h2 className='text-text-light text-[0.9rem]'><span className='font-sans'>+966 58 263 5947</span> - Riyadh, Saudi Arabia</h2>
                     </div>
-                    <h2 className='text-text-light font-[500] text-description font-sans'>© 2024 Shareef. All Rights Reserved</h2>
+                    <h2 className='text-text-light text-description font-sans'>© 2024 Shareef. All Rights Reserved</h2>
+
                     {/* Social Media Icons */}
                     <div className="flex justify-center gap-2">
-                        <a href="https://api.whatsapp.com/send?phone=966582635947&text=Hello%20Shareef%20%F0%9F%91%8B" className="p-3 flex items-center justify-center border-[0.15rem] border-border rounded-full text-text-light hover:text-primary hover:border-primary trans">
+                        <a href="https://api.whatsapp.com/send?phone=966582635947&text=Hello%20Shareef%20%F0%9F%91%8B" 
+                        className="social-icon" aria-label="WhatsApp">
                             <BsWhatsapp className="text-2xl" />
                         </a>
-                        <a href="mailto:shareef.99997@gmail.com" className="p-3 flex items-center justify-center border-[0.15rem] border-border rounded-full text-text-light hover:text-primary hover:border-primary trans">
+                        <a href="mailto:shareef.99997@gmail.com" 
+                        className="social-icon" aria-label="Email">
                             <MdEmail className="text-2xl" />
                         </a>
-                        <a href="https://www.linkedin.com/in/shareef-ali" className="p-3 flex items-center justify-center border-[0.15rem] border-border rounded-full text-text-light hover:text-primary hover:border-primary trans">
+                        <a href="https://www.linkedin.com/in/shareef-ali" 
+                        className="social-icon" aria-label="LinkedIn">
                             <AiFillLinkedin className="text-2xl" />
                         </a>
-                        <a href="https://github.com/shareef99997" className="p-3 flex items-center justify-center border-[0.15rem] border-border rounded-full text-text-light hover:text-primary hover:border-primary trans">
+                        <a href="https://github.com/shareef99997" 
+                        className="social-icon" aria-label="GitHub">
                             <FiGithub className="text-2xl" />
                         </a>
                     </div>
                     {/* Resume Button */}
                     <a href={CV} download={"Shareef's CV"} target="_blank" className="text-xl hover:text-primary trans w-full">
-                        <button className="text-lg font-semibold border-[0.15rem] border-primary  rounded-full bg-primary text-background hover:text-primary hover:bg-background trans w-full py-2">
+                        <button className="text-lg border-[0.15rem] border-primary  rounded-full bg-primary text-background hover:text-primary hover:bg-background trans w-full py-2">
                             Download CV
                         </button>
                     </a>
@@ -76,27 +80,25 @@ function Hero_EN(){
   
             </div>
             {/* Shareef's Introduction */}
-            <div className='flex flex-col gap-10'>
-                {/* Section Title */}
-                <Section_Header title="Introduction" icon={AiOutlineHome} />
+            <div className='flex flex-col gap-10 pt-12'>
                 {/* Section Headline */}
-                <h1 className='text-text text-Header lg:text-[4rem]'>
+                <h1 className='text-text text-Header lg:text-[4rem] '>
                     Transforming <span className='text-primary'>Data</span> into Insight, <span className='text-primary'>Code</span> into Creativity, and <span className='text-primary'>Problems</span> into Solutions!
                 </h1>
                 {/* small description */}
-                <p className='text-text-light font-normal text-title'>
+                <p className='text-text-light  text-description'>
                 Bringing <span className='text-primary'>Data</span> to Life through Insight and Design.
                 </p>
                 {/* Accomplishments Numbers */}
                 <div className=' flex gap-10'>
                     <div>
                         <span className='text-primary text-Headline'><CountUp start={0} end={2}/>+</span>
-                        <h2 className='text-text-light font-semibold text-title'>Years of Experience</h2>
+                        <h2 className='text-text-light  text-title'>Years of Experience</h2>
                     </div>
                     
                     <div>
                         <span className='text-primary text-Headline'><CountUp start={0} end={10}/>+</span>    
-                        <h2 className='text-text-light font-semibold text-title'>Projects Completed</h2>
+                        <h2 className='text-text-light  text-title'>Projects Completed</h2>
                     </div>
                 </div>
                 

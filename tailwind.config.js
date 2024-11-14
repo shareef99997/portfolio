@@ -21,7 +21,7 @@ export default {
         'Headline': '4.875rem',   
         'Header': '3rem',             
         'title': '1.5rem',            
-        'description': '0.875rem',             
+        'description': '1rem',             
       },
       screens: {
         'sm': '640px',

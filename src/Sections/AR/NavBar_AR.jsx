@@ -38,7 +38,7 @@ function NavBar_AR() {
                 </button>
             ) : (
                 <button onClick={() => navigate("/")} className="w-12 h-12 flex items-center justify-center bg-background border border-border rounded-full text-text-light hover:text-primary hover:border-primary trans">
-                    <span className="text-xl font-semibold">E</span>
+                    <span className="text-xl ">E</span>
                 </button>
             )}
 
@@ -50,28 +50,28 @@ function NavBar_AR() {
                     transition={{ type: "spring", stiffness: 300, damping: 40 }}
                     className={`fixed  items-start flex flex-col top-0 right-0 h-full w-[60%] bg-background-gradient border-l border-background shadow-xl gap-32 p-12`}
                 >
-                    <p className="text-xl font-semibold text-text-light">القائمة</p>
+                    <p className="text-xl  text-text-light">القائمة</p>
                     <ul className="flex flex-col items-start gap-6 text-md text-text-light">
                         <li>
-                            <a href="#" onClick={toggleSidebar} className="hover:text-primary trans flex items-center gap-2 font-semibold"><AiOutlineHome className="text-xl" />الرئيسية</a>
+                            <a href="#" onClick={toggleSidebar} className="hover:text-primary trans flex items-center gap-2 "><AiOutlineHome className="text-xl" />الرئيسية</a>
                         </li>
                         <li>
-                            <a href="#about" onClick={toggleSidebar} className="hover:text-primary trans flex items-center gap-2 font-semibold"><FiUser className="text-xl" />عني</a>
+                            <a href="#about" onClick={toggleSidebar} className="hover:text-primary trans flex items-center gap-2 "><FiUser className="text-xl" />عني</a>
                         </li>
                         <li>
-                            <a href="#resume" onClick={toggleSidebar} className="hover:text-primary trans flex items-center gap-2 font-semibold"><HiOutlineBriefcase className="text-xl" />السيرة الذاتية</a>
+                            <a href="#resume" onClick={toggleSidebar} className="hover:text-primary trans flex items-center gap-2 "><HiOutlineBriefcase className="text-xl" />السيرة الذاتية</a>
                         </li>
                         <li>
-                            <a href="#skills" onClick={toggleSidebar} className="hover:text-primary trans flex items-center gap-2 font-semibold"><BiBrain className="text-xl" />المهارات</a>
+                            <a href="#skills" onClick={toggleSidebar} className="hover:text-primary trans flex items-center gap-2 "><BiBrain className="text-xl" />المهارات</a>
                         </li>
                         <li>
-                            <a href="#projects" onClick={toggleSidebar} className="hover:text-primary trans flex items-center gap-2 font-semibold"><AiOutlineProject className="text-xl" />المشاريع</a>
+                            <a href="#projects" onClick={toggleSidebar} className="hover:text-primary trans flex items-center gap-2 "><AiOutlineProject className="text-xl" />المشاريع</a>
                         </li>
                         <li>
-                            <a href="#contact" onClick={toggleSidebar} className="hover:text-primary trans flex items-center gap-2 font-semibold"><FiMail className="text-xl" />تواصل معي</a>
+                            <a href="#contact" onClick={toggleSidebar} className="hover:text-primary trans flex items-center gap-2 "><FiMail className="text-xl" />تواصل معي</a>
                         </li>
                         <li>
-                            <Link to="/" onClick={toggleSidebar} className="hover:text-primary trans flex items-center gap-2 font-semibold"><GrLanguage className="text-xl" />English</Link>
+                            <Link to="/" onClick={toggleSidebar} className="hover:text-primary trans flex items-center gap-2 "><GrLanguage className="text-xl" />English</Link>
                         </li>
                     </ul>
                     {/* social media */}
