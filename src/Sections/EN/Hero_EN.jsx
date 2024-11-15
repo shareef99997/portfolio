@@ -51,20 +51,16 @@ function Hero_EN(){
 
                     {/* Social Media Icons */}
                     <div className="flex justify-center gap-2">
-                        <a href="https://api.whatsapp.com/send?phone=966582635947&text=Hello%20Shareef%20%F0%9F%91%8B" 
-                        className="social-icon" aria-label="WhatsApp">
+                        <a href="https://api.whatsapp.com/send?phone=966582635947&text=Hello%20Shareef%20%F0%9F%91%8B" className="p-3 flex items-center justify-center border-[0.15rem] border-border rounded-full text-text-light hover:text-primary hover:border-primary trans">
                             <BsWhatsapp className="text-2xl" />
                         </a>
-                        <a href="mailto:shareef.99997@gmail.com" 
-                        className="social-icon" aria-label="Email">
+                        <a href="mailto:shareef.99997@gmail.com" className="p-3 flex items-center justify-center border-[0.15rem] border-border rounded-full text-text-light hover:text-primary hover:border-primary trans">
                             <MdEmail className="text-2xl" />
                         </a>
-                        <a href="https://www.linkedin.com/in/shareef-ali" 
-                        className="social-icon" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/in/shareef-ali" className="p-3 flex items-center justify-center border-[0.15rem] border-border rounded-full text-text-light hover:text-primary hover:border-primary trans">
                             <AiFillLinkedin className="text-2xl" />
                         </a>
-                        <a href="https://github.com/shareef99997" 
-                        className="social-icon" aria-label="GitHub">
+                        <a href="https://github.com/shareef99997" className="p-3 flex items-center justify-center border-[0.15rem] border-border rounded-full text-text-light hover:text-primary hover:border-primary trans">
                             <FiGithub className="text-2xl" />
                         </a>
                     </div>
@@ -87,7 +83,7 @@ function Hero_EN(){
                 </h1>
                 {/* small description */}
                 <p className='text-text-light  text-description'>
-                Bringing <span className='text-primary'>Data</span> to Life through Insight and Design.
+                Fueled by unwavering <span className='text-primary'>ambition</span> and steadfast perseverance, committed to delivering exceptional results with excellence.
                 </p>
                 {/* Accomplishments Numbers */}
                 <div className=' flex gap-10'>

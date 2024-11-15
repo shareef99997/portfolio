@@ -62,7 +62,7 @@ function Hero_AR() {
                     <h2 className='text-text-light  text-description font-sans'>© 2024 Shareef. جميع الحقوق محفوظة</h2>
                     {/* Social Media Icons */}
                     <div className="flex justify-center gap-2">
-                        <a href={CV} download={"Shareef's CV"} className="p-3 flex items-center justify-center border-[0.15rem] border-border rounded-full text-text-light hover:text-primary hover:border-primary trans">
+                        <a href="https://api.whatsapp.com/send?phone=966582635947&text=Hello%20Shareef%20%F0%9F%91%8B" className="p-3 flex items-center justify-center border-[0.15rem] border-border rounded-full text-text-light hover:text-primary hover:border-primary trans">
                             <BsWhatsapp className="text-2xl" />
                         </a>
                         <a href="mailto:shareef.99997@gmail.com" className="p-3 flex items-center justify-center border-[0.15rem] border-border rounded-full text-text-light hover:text-primary hover:border-primary trans">
@@ -93,7 +93,7 @@ function Hero_AR() {
                 
                 {/* Section Headline */}
                 <h1 className='text-text text-Header lg:text-[4rem]'>
-                    تحويل <span className='text-primary'>البيانات</span> إلى رؤى، <span className='text-primary'>البرمجة</span> إلى إبداع، و<span className='text-primary'>المشاكل</span> إلى حلول!
+                مدفوعًا بـ<span className='text-primary'>طموح</span> لا حدود له وإصرار راسخ، ملتزم بتقديم نتائج استثنائية بأعلى درجات الإتقان.
                 </h1>
                 {/* Small description */}
                 <p className='text-text-light text-description'>
