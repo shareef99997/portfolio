@@ -26,6 +26,26 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Hide the scrollbar arrows */
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* Customize scrollbar track (background) */
+::-webkit-scrollbar {
+  width: 0.6rem; /* Set width for vertical scrollbar */
+  height: 0.6rem; /* Set height for horizontal scrollbar */
+  background-color: transparent; /* Background color of the scrollbar track */
+}
+
+/* Customize the scrollbar thumb (scroller) */
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary); /* Color of the scrollbar thumb */
+  border-radius: 0.4rem; /* Make it rounded */
+  border: 3px solid var(--primary); /* Add some padding to the thumb */
+  transition: ease 0.3s;
+}
+
 a {
   text-decoration: none;
 }

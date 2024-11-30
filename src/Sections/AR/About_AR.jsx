@@ -23,7 +23,7 @@ function About_AR() {
                     </p>
                     
                     {/* Optional Key Values or Strengths */}
-                    <ul className="list-disc pl-5 text-text-light text-description">
+                    <ul className="list-disc pr-5 text-text-light text-description">
                         <li>نهج دقيق وتحليلي في كل مشروع</li>
                         <li>مهارة في <span className="text-primary">تنظيف البيانات</span>، <span className="text-primary">تصور البيانات</span>، و<span className="text-primary">تطوير الويب</span></li>
                         <li>شغف بالتعلم المستمر والنمو الشخصي</li>

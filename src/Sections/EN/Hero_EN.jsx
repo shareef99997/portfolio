@@ -1,12 +1,11 @@
 import profile_image from '../../assets/personal_image.png'
 import { FiGithub } from "react-icons/fi";
-import { AiFillLinkedin, AiOutlineHome } from "react-icons/ai";
+import { AiFillLinkedin } from "react-icons/ai";
 import { BsWhatsapp } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import TextTransition, { presets } from 'react-text-transition';
 import { useState, useEffect } from 'react';
 import CountUp from 'react-countup';
-import Section_Header from '../../components/section_header';
 import CV from'../../assets/Shareefs_CV.pdf'
 const titles = ['Data Analyst', 'Frontend Developer', 'Business Intelligence Analyst'];
 
@@ -25,7 +24,7 @@ function Hero_EN(){
 
             {/* Shareef's Profile Card */}
             <div className='flex flex-col gap-8'>
-                <Section_Header title="Introduction" icon={AiOutlineHome} />
+                {/* <Section_Header title="Introduction" icon={AiOutlineHome} /> */}
                 <div className='flex flex-col gap-8 items-center border border-border rounded-3xl p-8'>
                     {/* Name and Image */}
                     <div className="flex flex-col gap-6 ">
