@@ -1,4 +1,4 @@
-import profile_image from '../../assets/personal_image.png'
+import profile_image from '../assets/personal_image.png'
 import { FiGithub } from "react-icons/fi";
 import { AiFillLinkedin } from "react-icons/ai";
 import { BsWhatsapp } from "react-icons/bs";
@@ -6,11 +6,11 @@ import { MdEmail } from "react-icons/md";
 import TextTransition, { presets } from 'react-text-transition';
 import { useState, useEffect } from 'react';
 import CountUp from 'react-countup';
-import CV from'../../assets/Shareefs_CV.pdf'
+import CV from'../assets/Shareefs_CV.pdf'
 const titles = ['Data Analyst', 'Frontend Developer', 'Business Intelligence Analyst'];
 
 
-function Hero_EN(){
+function Hero(){
     const [index, setIndex] = useState(0);
 
     useEffect(() => {
@@ -102,4 +102,4 @@ function Hero_EN(){
     )
 }
 
-export default Hero_EN;
+export default Hero;

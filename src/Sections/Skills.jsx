@@ -1,6 +1,6 @@
 import { BiBrain } from "react-icons/bi";
-import Section_Header from "../../components/section_header";
-import react_icon from "../../assets/react.svg";
+import SectionHeader from "../components/SectionHeader";
+import react_icon from "../assets/react.svg";
 
 
 const SkillsSection = () => {
@@ -46,7 +46,7 @@ const SkillsSection = () => {
 
     return (
         <div id="skills" className="section p-10 overflow-hidden flex flex-col gap-10">
-            <Section_Header title="Skills" icon={BiBrain} />
+            <SectionHeader title="Skills" icon={BiBrain} />
             {/* Content */}
             <div className="flex flex-col gap-20">
 

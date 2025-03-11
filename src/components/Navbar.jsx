@@ -10,7 +10,7 @@ import { BsWhatsapp } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import { GrLanguage } from "react-icons/gr";
 
-function NavBar_AR() {
+function NavBar() {
     const navigate = useNavigate();
     const [isTabletOrMobile, setIsTabletOrMobile] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
@@ -37,8 +37,8 @@ function NavBar_AR() {
                     {isOpen ? <FiX className="text-xl" /> : <FiMenu className="text-xl" />}
                 </button>
             ) : (
-                <button onClick={() => navigate("/")} className="w-12 h-12 flex items-center justify-center bg-background border border-border rounded-full text-text-light hover:text-primary hover:border-primary trans">
-                    <span className="text-xl ">E</span>
+                <button onClick={() =>{}} className="w-12 h-12 flex items-center justify-center bg-background border border-border rounded-full text-text-light hover:text-primary hover:border-primary trans">
+                    <span className="text-xl">ع</span>
                 </button>
             )}
 
@@ -50,28 +50,28 @@ function NavBar_AR() {
                     transition={{ type: "spring", stiffness: 300, damping: 40 }}
                     className={`fixed  items-start flex flex-col top-0 right-0 h-full w-[60%] bg-background-gradient border-l border-background shadow-xl gap-32 p-12`}
                 >
-                    <p className="text-xl  text-text-light">القائمة</p>
+                    <p className="text-xl text-text-light">Menu</p>
                     <ul className="flex flex-col items-start gap-6 text-md text-text-light">
                         <li>
-                            <a href="#" onClick={toggleSidebar} className="hover:text-primary trans flex items-center gap-2 "><AiOutlineHome className="text-xl" />الرئيسية</a>
+                            <a href="#" onClick={toggleSidebar} className="hover:text-primary trans flex items-center gap-2"><AiOutlineHome className="text-xl" />Home</a>
                         </li>
                         <li>
-                            <a href="#about" onClick={toggleSidebar} className="hover:text-primary trans flex items-center gap-2 "><FiUser className="text-xl" />عني</a>
+                            <a href="#about" onClick={toggleSidebar} className="hover:text-primary trans flex items-center gap-2"><FiUser className="text-xl" />About</a>
                         </li>
                         <li>
-                            <a href="#resume" onClick={toggleSidebar} className="hover:text-primary trans flex items-center gap-2 "><HiOutlineBriefcase className="text-xl" />السيرة الذاتية</a>
+                            <a href="#resume" onClick={toggleSidebar} className="hover:text-primary trans flex items-center gap-2"><HiOutlineBriefcase className="text-xl" />Resume</a>
                         </li>
                         <li>
-                            <a href="#skills" onClick={toggleSidebar} className="hover:text-primary trans flex items-center gap-2 "><BiBrain className="text-xl" />المهارات</a>
+                            <a href="#skills" onClick={toggleSidebar} className="hover:text-primary trans flex items-center gap-2"><BiBrain className="text-xl" />Skills</a>
                         </li>
                         <li>
-                            <a href="#projects" onClick={toggleSidebar} className="hover:text-primary trans flex items-center gap-2 "><AiOutlineProject className="text-xl" />المشاريع</a>
+                            <a href="#projects" onClick={toggleSidebar} className="hover:text-primary trans flex items-center gap-2"><AiOutlineProject className="text-xl" />Projects</a>
                         </li>
                         <li>
-                            <a href="#contact" onClick={toggleSidebar} className="hover:text-primary trans flex items-center gap-2 "><FiMail className="text-xl" />تواصل معي</a>
+                            <a href="#contact" onClick={toggleSidebar} className="hover:text-primary trans flex items-center gap-2"><FiMail className="text-xl" />Contact</a>
                         </li>
                         <li>
-                            <Link to="/" onClick={toggleSidebar} className="hover:text-primary trans flex items-center gap-2 "><GrLanguage className="text-xl" />English</Link>
+                            <Link to="/ar" onClick={toggleSidebar} className="hover:text-primary trans flex items-center gap-2"><GrLanguage className="text-xl" />العربية</Link>
                         </li>
                     </ul>
                     {/* social media */}
@@ -121,4 +121,4 @@ function NavBar_AR() {
     );
 }
 
-export default NavBar_AR;
+export default NavBar;

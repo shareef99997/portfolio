@@ -1,8 +1,8 @@
 import { FiUser } from "react-icons/fi";
-import Section_Header from "../../components/section_header";
-import About_img from "../../assets/About-image.png";
+import Section_Header from "../components/SectionHeader";
+import About_img from "../assets/About-image.png";
 
-function About_EN() {
+function About() {
     return (
         <section id="about" className="section p-10 overflow-hidden flex flex-col gap-10">
             <Section_Header title="About Me" icon={FiUser} />
@@ -45,4 +45,4 @@ function About_EN() {
     );
 }
 
-export default About_EN;
+export default About;

@@ -1,5 +1,4 @@
-import SectionsEN from './SectionsEN';
-import SectionsAR from './SectionsAR';
+import Sections from './Sections';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -7,8 +6,7 @@ function App() {
     <>
       <Router future={{ v7_startTransition: true }}>
         <Routes>
-          <Route path="/" element={<SectionsEN />} />
-          <Route path="/ar" element={<SectionsAR />} />
+          <Route path="/" element={<Sections />} />
         </Routes>
       </Router>
     </>

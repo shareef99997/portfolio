@@ -1,4 +1,4 @@
-function Projects_EN(){
+function Projects(){
     return(
         <div id="projects" className="min-h-screen text-text text-Header">This is 
             <span className="text-primary text-header">Projects</span>
@@ -7,4 +7,4 @@ function Projects_EN(){
     )
 }
 
-export default Projects_EN; 
+export default Projects; 

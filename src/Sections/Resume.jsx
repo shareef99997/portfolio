@@ -1,11 +1,11 @@
 import { HiOutlineBriefcase } from "react-icons/hi";
-import Section_Header from "../../components/section_header";
+import Section_Header from "../components/SectionHeader";
 import { PiCertificate } from "react-icons/pi";
 import { IoBookOutline } from "react-icons/io5";
 import { FaUniversity } from "react-icons/fa";
 import { SlArrowRight } from "react-icons/sl";
 
-function Resume_EN() {
+function Resume() {
 
     const workExperience = [
         {
@@ -94,7 +94,7 @@ function Resume_EN() {
                     </ol>
                 </div>
                 {/* Learning Section */}
-                <div className="flex flex-col lg:flex-row w-full">
+                <div className="flex flex-col lg:flex-row w-full border-b-[0.1rem] border-text-light">
                     {/* Education */}
                     <div className="w-full p-4 flex flex-col gap-5 border-b-[0.1rem] lg:border-r-[0.1rem] lg:border-b-0 border-text-light">
                         <Section_Header title="Education" icon={FaUniversity} />
@@ -173,5 +173,5 @@ function Resume_EN() {
     );
 }
 
-export default Resume_EN;
+export default Resume;
 

@@ -1,4 +1,4 @@
-function Contact_EN(){
+function Contact(){
     return(
         <div id="contact" className="min-h-screen text-text text-Header"> hey 
             <span className="text-primary text-header"> Contact Us</span>
@@ -7,4 +7,4 @@ function Contact_EN(){
     )
 }
 
-export default Contact_EN;
+export default Contact;
