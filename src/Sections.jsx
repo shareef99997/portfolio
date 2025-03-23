@@ -6,9 +6,10 @@ import Skills from "./Sections/Skills"
 import Projects from "./Sections/Projects"
 import Contact from "./Sections/Contact"
 
-function SectionsEN() {
+function Sections() {
     return(
-        <div className="max-w-screen flex">
+        <div>
+            <NavBar/>
             <div className="overflow-hidden w-full">
                 <Hero/>
                 <About/>
@@ -17,10 +18,10 @@ function SectionsEN() {
                 <Projects/>
                 <Contact/> 
             </div>
-            <NavBar/>
+            
             
         </div>
     )
 }
 
-export default SectionsEN;
+export default Sections;

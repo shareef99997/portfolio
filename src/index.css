@@ -5,18 +5,6 @@
 @tailwind utilities;
 
 :root {
-  --primary: #89DB7E ;
-  --primary-gradient:linear-gradient(180deg,  #89DB7E 0%, #66E778 100%);
-  --text:#e9e9f1;
-  --text-light:#969696;
-  --background: #29292a;
-  --background-gradient: linear-gradient(135deg, #29292a 0%, #181818 100%);;
-  --border: #707070b7;
-}
-
-
-
-:root {
   font-family: "Syne", system-ui, Avenir, Helvetica, Arial, sans-serif, verdana, arial, helvetica,;
   scroll-behavior: smooth;
   transition: 0.3s ease;
@@ -26,52 +14,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Hide the scrollbar arrows */
-::-webkit-scrollbar-button {
-  display: none;
-}
-
-/* Customize scrollbar track (background) */
-::-webkit-scrollbar {
-  width: 0.6rem; /* Set width for vertical scrollbar */
-  height: 0.6rem; /* Set height for horizontal scrollbar */
-  background-color: transparent; /* Background color of the scrollbar track */
-}
-
-/* Customize the scrollbar thumb (scroller) */
-::-webkit-scrollbar-thumb {
-  background-color: var(--primary); /* Color of the scrollbar thumb */
-  border-radius: 0.4rem; /* Make it rounded */
-  border: 3px solid var(--primary); /* Add some padding to the thumb */
-  transition: ease 0.3s;
-}
-
 a {
   text-decoration: none;
-}
-body {
-  margin: 0;
-  padding-inline-end:5rem ;
-  width: 100%;
-  min-height: 100vh;
-  background: var(--background);
-  color: var(--text);
-  overflow-x: hidden;
-  text-overflow: ellipsis;
-  font-weight: 500;
-}
-
-.trans{
-  transition:0.2s ease-in-out;
-}
-
-
-@media (max-width: 1104px) {
-  body {
-    padding-inline-end: 0rem;
-  }
-
-  :root{
-    font-size: 80%;
-  }
 }

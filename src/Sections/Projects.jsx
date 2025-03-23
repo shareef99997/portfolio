@@ -1,8 +1,7 @@
 function Projects(){
     return(
-        <div id="projects" className="min-h-screen text-text text-Header">This is 
-            <span className="text-primary text-header">Projects</span>
-            <div className="w-12 h-12 bg-white"></div>
+        <div id="projects" className="h-screen">
+            <span>Projects</span>
         </div>
     )
 }
