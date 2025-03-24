@@ -5,10 +5,12 @@ import Resume from "./Sections/Resume"
 import Skills from "./Sections/Skills"
 import Projects from "./Sections/Projects"
 import Contact from "./Sections/Contact"
+import Background from "./components/Background"
 
 function Sections() {
     return(
-        <div>
+        <div className="px-4 md:px-8 lg:px-16">
+            <Background />
             <NavBar/>
             <div className="overflow-hidden w-full">
                 <Hero/>
@@ -18,8 +20,6 @@ function Sections() {
                 <Projects/>
                 <Contact/> 
             </div>
-            
-            
         </div>
     )
 }
