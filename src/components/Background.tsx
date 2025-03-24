@@ -14,16 +14,19 @@ function Background() {
     }, []);
 
     return (
-        <div className="fixed inset-0">
+        <div className="fixed inset-0 -z-10">
             {/* Base black background */}
             <div className="absolute inset-0 bg-black" />
-
+            
+            {/* Purple gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-purple-900/10" />
+            
             {/* Grid pattern */}
-            <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
 
             {/* Mouse following glow */}
             <motion.div
-                className="fixed w-[400px] h-[400px] bg-[#ffffff13] rounded-full blur-3xl"
+                className="fixed w-[400px] h-[400px] bg-purple-500/10 rounded-full blur-3xl"
                 animate={{
                     x: mousePosition.x - 150,
                     y: mousePosition.y - 150,
@@ -40,9 +43,10 @@ function Background() {
                 {[...Array(64)].map((_, i) => (
                     <motion.div
                         key={i}
-                        className="relative border border-white/5"
+                        className="relative border border-purple-500/5"
                         animate={{
                             opacity: [0.3, 0.5, 0.3],
+                            borderColor: ["rgba(168, 85, 247, 0.05)", "rgba(168, 85, 247, 0.1)", "rgba(168, 85, 247, 0.05)"],
                         }}
                         transition={{
                             duration: 2 + Math.random() * 2,
