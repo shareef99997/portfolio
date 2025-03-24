@@ -8,7 +8,8 @@ import datacamp from "../assets/datacamp.jpeg";
 import ibm from "../assets/ibm.png";
 import pl300 from "../assets/pl300.webp";
 import { PrimaryButton, SecondaryButton } from "../components/buttons";
-import { ArrowDown, Code2, BarChart, LineChart } from "lucide-react";
+import { ArrowDown, Code2, BarChart, LineChart, Sparkles } from "lucide-react";
+import SectionHeader from "../components/SectionHeader";
 
 function Hero() {
     const [currentRole, setCurrentRole] = useState(0);
@@ -46,7 +47,7 @@ function Hero() {
     return (
         <section id="hero" className="relative overflow-hidden min-h-screen flex items-center justify-center">
             {/* Content */}
-            <div className="relative z-10 w-full max-w-6xl mx-auto mt-20 md:mt-20">
+            <div className="relative z-10 w-full max-w-6xl mx-auto mt-20 md:mt-10">
                 <div className="flex flex-col items-center text-center gap-8">
                     {/* Main Content */}
                     <motion.div
@@ -63,16 +64,11 @@ function Hero() {
                         className="w-full md:order-1"
                     >
                         <div className="flex flex-col items-center gap-6">
-                            <motion.div
-                                variants={fadeInUp}
-                                custom={0.2}
-                                initial="hidden"
-                                animate={inView ? "visible" : "hidden"}
-                                className="flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/10 backdrop-blur-sm border border-purple-500/20"
-                            >
-                                <span className="text-sm text-purple-400">Welcome to my portfolio</span>
-                                <ArrowDown className="w-4 h-4 text-purple-400 animate-bounce" />
-                            </motion.div>
+                            <SectionHeader 
+                                title="Welcome to my portfolio" 
+                                icon={Sparkles}
+                                className="mb-4"
+                            />
 
                             <motion.h1 
                                 variants={fadeInUp}
@@ -135,131 +131,90 @@ function Hero() {
                             </motion.p>
                             
                             {/* Certificate Badges */}
+                            <div className="flex flex-col items-center gap-4">
+                                <motion.div
+                                    variants={fadeInUp}
+                                    custom={0.5}
+                                    initial="hidden"
+                                    animate={inView ? "visible" : "hidden"}
+                                    className="flex items-center gap-2 bg-white/5 backdrop-blur-sm px-4 py-2 rounded-full border border-purple-500/10"
+                                >
+                                    <div className="w-2 h-2 rounded-full bg-purple-500 animate-pulse" />
+                                    <span className="text-white/90 text-sm font-medium">Certified Professional</span>
+                                </motion.div>
+                                <motion.div
+                                    variants={fadeInUp}
+                                    custom={0.6}
+                                    initial="hidden"
+                                    animate={inView ? "visible" : "hidden"}
+                                    className="flex gap-6 mb-4"
+                                >
+                                    {[
+                                        { 
+                                            image: ibm, 
+                                            alt: "IBM Certificate", 
+                                            title: "IBM Data Analytics",
+                                            description: "Professional Certification"
+                                        },
+                                        { 
+                                            image: datacamp, 
+                                            alt: "DataCamp Certificate", 
+                                            title: "DataCamp Certification",
+                                            description: "Data Analysis Track"
+                                        },
+                                        { 
+                                            image: pl300, 
+                                            alt: "PL-300 Certificate", 
+                                            title: "Power BI Data Analyst",
+                                            description: "Microsoft Certified"
+                                        }
+                                    ].map((cert, index) => (
+                                        <motion.div
+                                            key={index}
+                                            whileHover={{ 
+                                                scale: 1.1,
+                                                y: -5,
+                                                transition: { 
+                                                    duration: 0.2,
+                                                    type: "spring",
+                                                    stiffness: 300
+                                                }
+                                            }}
+                                            className="group relative transition-all duration-300 hover:drop-shadow-lg hover:drop-shadow-purple-500/20"
+                                        >
+                                            <div className="relative">
+                                                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-transparent rounded-lg blur-sm group-hover:blur-md transition-all duration-300" />
+                                                <img 
+                                                    src={cert.image} 
+                                                    alt={cert.alt} 
+                                                    className="w-8 h-8 sm:w-10 sm:h-10 object-contain relative z-10" 
+                                                />
+                                            </div>
+                                            <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 px-3 py-2 bg-black/90 backdrop-blur-sm text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                                                <div className="font-medium">{cert.title}</div>
+                                                <div className="text-gray-400 text-[10px]">{cert.description}</div>
+                                            </div>
+                                        </motion.div>
+                                    ))}
+                                </motion.div>
+                            </div>
+                            {/* Buttons */}
                             <motion.div
                                 variants={fadeInUp}
-                                custom={0.6}
+                                custom={1}
                                 initial="hidden"
                                 animate={inView ? "visible" : "hidden"}
-                                className="flex gap-6 mb-4"
+                                className="flex flex-row gap-4 mt-2 order-2 md:order-3"
                             >
-                                {[
-                                    { image: ibm, alt: "IBM Certificate", title: "IBM Data Analytics" },
-                                    { image: datacamp, alt: "DataCamp Certificate", title: "DataCamp Certification" },
-                                    { image: pl300, alt: "PL-300 Certificate", title: "Power BI Data Analyst" }
-                                ].map((cert, index) => (
-                                    <motion.div
-                                        key={index}
-                                        whileHover={{ 
-                                            scale: 1.1,
-                                            transition: { duration: 0.2 }
-                                        }}
-                                        className="group relative transition-transform duration-300 hover:drop-shadow-lg hover:drop-shadow-purple-500/20"
-                                    >
-                                        <img 
-                                            src={cert.image} 
-                                            alt={cert.alt} 
-                                            className="w-8 h-8 sm:w-10 sm:h-10 object-contain" 
-                                        />
-                                        <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-black/80 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
-                                            {cert.title}
-                                        </span>
-                                    </motion.div>
-                                ))}
+                                <a href="#about">
+                                    <PrimaryButton>Learn More</PrimaryButton>
+                                </a>
+                                <SecondaryButton onClick={() => window.open(Resume, '_blank')}>View Resume</SecondaryButton>
                             </motion.div>
                         </div>
                     </motion.div>
                     
-                    {/* Stats Section */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ 
-                            opacity: inView ? 1 : 0, 
-                            y: inView ? 0 : 30,
-                            transition: {
-                                duration: 0.8,
-                                delay: 0.2,
-                                ease: "easeOut"
-                            }
-                        }}
-                        className="w-full max-w-3xl mx-auto order-4 md:order-2"
-                    >
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full">
-                            {[
-                                { value: 3, label: "Years Experience", delay: 0.4 },
-                                { value: 15, label: "Projects Completed", delay: 0.6 },
-                                { value: 3, label: "Certifications", delay: 0.8 }
-                            ].map((stat, index) => (
-                                <motion.div
-                                    key={index}
-                                    variants={fadeInUp}
-                                    custom={stat.delay}
-                                    initial="hidden"
-                                    animate={inView ? "visible" : "hidden"}
-                                    whileHover={{ 
-                                        scale: 1.03,
-                                        backgroundColor: "rgba(168, 85, 247, 0.1)",
-                                        transition: { duration: 0.3 }
-                                    }}
-                                    className="bg-white/5 backdrop-blur-sm rounded-xl p-4 md:p-6 border border-purple-500/10 text-center cursor-default transition-all duration-300"
-                                >
-                                    <div className="text-3xl md:text-4xl font-bold mb-2 text-white">
-                                        {inView && <CountUp end={stat.value} duration={1.5} delay={0.8} />}
-                                        {index !== 2 && "+"}
-                                    </div>
-                                    <div className="text-gray-400/80 text-sm tracking-wide">{stat.label}</div>
-                                </motion.div>
-                            ))}
-                        </div>
-                    </motion.div>
-                    
-                    {/* Buttons */}
-                    <motion.div
-                        variants={fadeInUp}
-                        custom={1}
-                        initial="hidden"
-                        animate={inView ? "visible" : "hidden"}
-                        className="flex flex-col sm:flex-row gap-4 mt-2 order-2 md:order-3"
-                    >
-                        <a href="#projects">
-                            <PrimaryButton>View Projects</PrimaryButton>
-                        </a>
-                        <SecondaryButton onClick={() => window.open(Resume, '_blank')}>View Resume</SecondaryButton>
-                    </motion.div>
-                    
-                    {/* Social Media Icons */}
-                    <motion.div
-                        variants={fadeInUp}
-                        custom={1.2}
-                        initial="hidden"
-                        animate={inView ? "visible" : "hidden"}
-                        className="flex justify-center gap-6 mt-2 order-3 md:order-4" 
-                    >
-                        {[
-                            { icon: <FaGithub size={24} />, href: "https://github.com/shareef99997", label: "GitHub" },
-                            { icon: <FaLinkedin size={24} />, href: "https://linkedin.com/in/shareef-ali", label: "LinkedIn" },
-                            { icon: <FaTwitter size={24} />, href: "https://x.com/SHIFO_99997", label: "Twitter" },
-                            { icon: <FaInstagram size={24} />, href: "https://www.instagram.com/shareef_zz/", label: "Instagram" },
-                            { icon: <FaEnvelope size={24} />, href: "mailto:Shareef.99997@gmail.com", label: "Email" }
-                        ].map((social, index) => (
-                            <motion.a
-                                key={index}
-                                whileHover={{ 
-                                    scale: 1.15,
-                                    color: "#a855f7",
-                                    transition: { duration: 0.2 }
-                                }}
-                                href={social.href}
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className="group relative text-white/60 transition-colors duration-300 hover:drop-shadow-lg hover:drop-shadow-purple-500/20"
-                            >
-                                {social.icon}
-                                <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-black/80 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
-                                    {social.label}
-                                </span>
-                            </motion.a>
-                        ))}
-                    </motion.div>
+                   
                 </div>
             </div>
         </section>

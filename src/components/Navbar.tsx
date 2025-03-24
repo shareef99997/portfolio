@@ -65,10 +65,10 @@ function NavBar() {
                         animate={{ y: 0, opacity: 1 }}
                         exit={{ y: -100, opacity: 0 }}
                         transition={{ duration: 0.3, ease: 'easeOut' }}
-                        className="fixed top-4 left-0 right-0 mx-auto w-fit z-50 bg-black/20 backdrop-blur-lg rounded-full border border-purple-500/10 shadow-lg shadow-purple-500/5"
+                        className="fixed top-4 md:left-0 right-0 md:mx-auto me-6 w-fit z-50 bg-black/20 backdrop-blur-lg rounded-full border border-purple-500/10 shadow-lg shadow-purple-500/5"
                     >
                         {/* Desktop Navigation */}
-                        <div className="hidden md:flex items-center justify-center px-6 py-3">
+                        <div className="hidden md:flex items-center justify-center px-4 py-2">
                             <ul className="flex items-center gap-4">
                                 {navItems.map(({ id, Icon, label }) => (
                                     <motion.li
@@ -113,7 +113,7 @@ function NavBar() {
                         </div>
 
                         {/* Mobile Menu Button */}
-                        <div className="md:hidden flex items-center justify-end px-4 py-2">
+                        <div className="md:hidden flex items-center justify-end px-2 py-2">
                             <button
                                 onClick={() => setIsMobileMenuOpen(true)}
                                 className="p-2 rounded-full text-white/60 hover:text-white hover:bg-purple-500/10 transition-all duration-300"

@@ -12,7 +12,7 @@ function Sections() {
         <div className="px-4 md:px-8 lg:px-16">
             <Background />
             <NavBar/>
-            <div className="overflow-hidden">
+            <div className="overflow-hidden space-y-20">
                 <Hero/>
                 <About/>
                 <Resume/>
