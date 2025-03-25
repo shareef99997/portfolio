@@ -19,8 +19,8 @@ function Hero() {
     });
     const roles = [
         { title: "Data Analyst", icon: <LineChart className="w-5 h-5" /> },
+        { title: "Business Intelligence Analyst", icon: <BarChart className="w-5 h-5" /> },
         { title: "Frontend Developer", icon: <Code2 className="w-5 h-5" /> },
-        { title: "Business Intelligence Analyst", icon: <BarChart className="w-5 h-5" /> }
     ];
 
     useEffect(() => {
@@ -124,10 +124,9 @@ function Hero() {
                                 custom={0.8}
                                 initial="hidden"
                                 animate={inView ? "visible" : "hidden"}
-                                className="text-sm sm:text-md md:text-lg text-gray-300/90 mb-4 max-w-2xl mx-auto leading-relaxed"
+                                className="text-sm sm:text-md md:text-lg italic text-gray-300/80 mb-4 max-w-2xl mx-auto leading-relaxed"
                             >
-                                Transforming complex data into actionable insights through analytical expertise and innovative solutions. 
-                                Crafting beautiful, responsive web experiences with modern technologies.
+                                From data to decisions, patterns to purpose—illuminating insights, automating flows, and shaping a smarter world.
                             </motion.p>
                             
                             {/* Certificate Badges */}
