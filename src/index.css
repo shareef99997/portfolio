@@ -7,7 +7,6 @@
 :root {
   font-family: "Syne", system-ui, Avenir, Helvetica, Arial, sans-serif, verdana, arial, helvetica,;
   scroll-behavior: smooth;
-  transition: 0.3s ease;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

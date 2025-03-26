@@ -179,7 +179,7 @@ function Hero() {
                                                     stiffness: 300
                                                 }
                                             }}
-                                            className="group relative transition-all duration-300 hover:drop-shadow-lg hover:drop-shadow-purple-500/20"
+                                            className="group relative  hover:drop-shadow-lg hover:drop-shadow-purple-500/20"
                                         >
                                             <div className="relative">
                                                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-transparent rounded-lg blur-sm group-hover:blur-md transition-all duration-300" />
@@ -189,7 +189,7 @@ function Hero() {
                                                     className="w-8 h-8 sm:w-10 sm:h-10 object-contain relative z-10" 
                                                 />
                                             </div>
-                                            <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 px-3 py-2 bg-black/90 backdrop-blur-sm text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                                            <div className="absolute w-[200px] z-10 -bottom-12 left-1/2 -translate-x-1/2 px-3 py-2 bg-black/90 backdrop-blur-sm text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                                                 <div className="font-medium">{cert.title}</div>
                                                 <div className="text-gray-400 text-[10px]">{cert.description}</div>
                                             </div>
