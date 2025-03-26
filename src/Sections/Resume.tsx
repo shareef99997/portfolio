@@ -248,7 +248,7 @@ function Resume() {
                     >
                         {/* Education Section */}
                         <div className="space-y-6">
-                            <div className="flex items-center gap-3 mb-8">
+                            <div className="flex items-center gap-3 mb-6">
                                 <GraduationCap className="w-6 h-6 text-purple-400" />
                                 <h3 className="text-2xl font-bold text-white">Education</h3>
                             </div>
@@ -312,7 +312,7 @@ function Resume() {
 
                         {/* Courses Section */}
                         <div className="space-y-6">
-                            <div className="flex items-center gap-3 mb-8">
+                            <div className="flex items-center gap-3 mb-6">
                                 <GraduationCap className="w-6 h-6 text-purple-400" />
                                 <h3 className="text-2xl font-bold text-white">Courses</h3>
                             </div>
