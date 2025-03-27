@@ -1,11 +1,11 @@
-import NavBar from "./components/Navbar"
+import NavBar from "./Components/Navbar"
 import Hero from "./Sections/Hero"
 import About from "./Sections/About"
 import Resume from "./Sections/Resume"
 import Skills from "./Sections/Skills"
 import Projects from "./Sections/Projects"
 import Contact from "./Sections/Contact"
-import Background from "./components/Background"
+import Background from "./Components/Background"
 
 function Sections() {
     return(

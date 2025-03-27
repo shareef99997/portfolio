@@ -7,9 +7,9 @@ import Resume from "../assets/resume.pdf";
 import datacamp from "../assets/datacamp.jpeg";
 import ibm from "../assets/ibm.png";
 import pl300 from "../assets/pl300.webp";
-import { PrimaryButton, SecondaryButton } from "../components/buttons";
+import { PrimaryButton, SecondaryButton } from "../Components/buttons";
 import { ArrowDown, Code2, BarChart, LineChart, Sparkles } from "lucide-react";
-import SectionHeader from "../components/SectionHeader";
+import SectionHeader from "../Components/SectionHeader";
 
 function Hero() {
     const [currentRole, setCurrentRole] = useState(0);

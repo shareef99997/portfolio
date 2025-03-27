@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FileText, Briefcase, GraduationCap, Trophy, Calendar, Building, ArrowUpRight, Clock } from "lucide-react";
-import SectionHeader from "../components/SectionHeader";
+import SectionHeader from "../Components/SectionHeader";
 import datacamp from "../assets/datacamp.jpeg";
 import ibm from "../assets/ibm.png";
 import pl300 from "../assets/pl300.webp";

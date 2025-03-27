@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { ArrowRight, User, Database, BarChart as ChartBar, Target, Rocket, MapPin, Calendar, Code } from "lucide-react";
-import { PrimaryButton } from "../components/buttons";
+import { PrimaryButton } from "../Components/buttons";
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaEnvelope } from "react-icons/fa";
-import SectionHeader from "../components/SectionHeader";
+import SectionHeader from "../Components/SectionHeader";
 import personal_image from "../assets/personal image.jpeg";
 
 function About() {

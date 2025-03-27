@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Home, User, FileText, Code2, FolderGit2, Mail, Globe, Menu, X } from 'lucide-react';
+import { Home, User, FileText, FolderGit2, Mail, Globe, Menu, X, Brain } from 'lucide-react';
 
 function NavBar() {
     const [isVisible, setIsVisible] = useState(false);
@@ -32,7 +32,7 @@ function NavBar() {
         { id: 'hero', Icon: Home, label: 'Home' },
         { id: 'about', Icon: User, label: 'About' },
         { id: 'resume', Icon: FileText, label: 'Resume' },
-        { id: 'skills', Icon: Code2, label: 'Skills' },
+        { id: 'skills', Icon: Brain, label: 'Skills' },
         { id: 'projects', Icon: FolderGit2, label: 'Projects' },
         { id: 'contact', Icon: Mail, label: 'Contact' }
     ];
