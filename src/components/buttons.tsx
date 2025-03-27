@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 
-export const PrimaryButton = ({ children, onClick, className }: { children: React.ReactNode; onClick?: () => void; className?: string }) => {
+export const PrimaryButton = ({ children, onClick, className, type }: { children: React.ReactNode; onClick?: () => void; className?: string; type?: "button" | "submit" | "reset" }) => {
     return (
         <motion.button
             onClick={onClick}
+            type={type}
             whileHover={{ 
                 scale: 1.05,
                 boxShadow: "0 0 20px rgba(168, 85, 247, 0.3)",
@@ -21,7 +22,7 @@ export const PrimaryButton = ({ children, onClick, className }: { children: Reac
             <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
             
             {/* Content */}
-            <span className="relative z-10">{children}</span>
+            <div className="relative z-10 flex items-center gap-2">{children}</div>
         </motion.button>
     );
 };
@@ -47,7 +48,7 @@ export const SecondaryButton = ({ children, onClick, className }: { children: Re
             <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
             
             {/* Content */}
-            <span className="relative z-10">{children}</span>
+            <div className="relative z-10 flex items-center gap-2">{children}</div>
         </motion.button>
     );
 };

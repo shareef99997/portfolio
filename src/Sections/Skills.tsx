@@ -255,7 +255,7 @@ function Skills() {
                         ))}
                     </div>
                 </motion.div>
-            </div>
+        </div>
         </section>
     );
 }
