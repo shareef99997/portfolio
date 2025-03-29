@@ -5,6 +5,7 @@ import { PrimaryButton } from "../Components/buttons";
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaEnvelope } from "react-icons/fa";
 import SectionHeader from "../Components/SectionHeader";
 import personal_image from "../assets/personal image.jpeg";
+import { projects } from "../data/projects";
 
 function About() {
     const [ref, inView] = useInView({
@@ -144,7 +145,7 @@ function About() {
                             <div className="grid grid-cols-3 gap-1 sm:gap-4">
                                 {[
                                     { label: "Experience", value: "2+ Years" },
-                                    { label: "Projects", value: "10+" },
+                                    { label: "Projects", value: `${projects.length}+` },
                                     { label: "Certifications", value: "3+" }
                                 ].map((stat, index) => (
                                     <motion.div

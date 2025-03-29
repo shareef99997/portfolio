@@ -9,7 +9,7 @@ import Background from "./Components/Background"
 
 function Sections() {
     return(
-        <div className="px-4 md:px-8 lg:px-16">
+        <div id="sections" className="px-4 md:px-8 lg:px-16">
             <Background />
             <NavBar/>
             <div className="overflow-hidden space-y-20">
