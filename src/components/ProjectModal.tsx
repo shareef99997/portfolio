@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { X, ChevronLeft, ChevronRight, Calendar, ExternalLink, Star } from "lucide-react";
 import { Project } from "../Types/Types";
 import { PrimaryButton } from "./Buttons";
-
+import { useLanguage } from "../Context/LanguageContext";
 interface ProjectModalProps {
     project: Project;
     onClose: () => void;
@@ -39,6 +39,8 @@ function ProjectModal({ project, onClose }: ProjectModalProps) {
     const previousImage = () => {
         setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
     };
+
+    const { t, language } = useLanguage();
 
     return (
         <motion.div
@@ -104,7 +106,7 @@ function ProjectModal({ project, onClose }: ProjectModalProps) {
                                             flex items-center gap-2 transform translate-y-2 group-hover:translate-y-0
                                             transition-transform duration-300">
                                     <ExternalLink className="w-4 h-4" />
-                                    <span>Click to view full size</span>
+                                    <span>{t('projectModal.clickToViewFullSize')}</span>
                                 </div>
                             </div>
 
@@ -183,7 +185,7 @@ function ProjectModal({ project, onClose }: ProjectModalProps) {
 
                         {/* Technologies */}
                         <div className="mb-6">
-                            <h3 className="text-lg font-semibold text-white mb-3">Technologies Used</h3>
+                            <h3 className="text-lg font-semibold text-white mb-3">{t('projectModal.technologiesUsed')}</h3>
                             <div className="flex flex-wrap gap-2">
                                 {project.technologies.map((tech, index) => (
                                     <span
@@ -200,7 +202,7 @@ function ProjectModal({ project, onClose }: ProjectModalProps) {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                             {/* Key Features */}
                             <div>
-                                <h3 className="text-lg font-semibold text-white mb-3">Key Features</h3>
+                                <h3 className="text-lg font-semibold text-white mb-3">{t('projectModal.keyFeatures')}</h3>
                                 <ul className="space-y-2">
                                     {project.features.map((feature, index) => (
                                         <li key={index} className="flex items-start gap-2 text-gray-300">
@@ -213,7 +215,7 @@ function ProjectModal({ project, onClose }: ProjectModalProps) {
 
                             {/* Key Insights */}
                             <div>
-                                <h3 className="text-lg font-semibold text-white mb-3">Key Insights</h3>
+                                <h3 className="text-lg font-semibold text-white mb-3">{t('projectModal.keyInsights')}</h3>
                                 <ul className="space-y-2">
                                     {project.impact.map((insight, index) => (
                                         <li key={index} className="flex items-start gap-2 text-gray-300">
@@ -233,7 +235,7 @@ function ProjectModal({ project, onClose }: ProjectModalProps) {
                                     className="!px-4 !py-2 w-full flex items-center justify-center gap-2"
                                 >
                                     <ExternalLink className="w-4 h-4" />
-                                    <span>View on GitHub</span>
+                                    <span>{t('projectModal.viewOnGitHub')}</span>
                                 </PrimaryButton>
                             )}
                         </div>

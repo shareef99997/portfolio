@@ -1,16 +1,20 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Home, User, FileText, FolderGit2, Mail, Globe, Menu, X, Brain } from 'lucide-react';
+import { useLanguage } from '../Context/LanguageContext';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 function NavBar() {
     const [isVisible, setIsVisible] = useState(false);
     const [activeSection, setActiveSection] = useState('hero');
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [currentLanguage, setCurrentLanguage] = useState('EN');
+    const { language, setLanguage, t } = useLanguage();
+    const navigate = useNavigate();
+    const location = useLocation();
 
     useEffect(() => {
         const handleScroll = () => {
-            setIsVisible(window.scrollY > 50);
+            setIsVisible(window.scrollY > 0);
 
             const sections = ['hero', 'about', 'resume', 'skills', 'projects', 'contact'];
             const current = sections.find(section => {
@@ -29,17 +33,17 @@ function NavBar() {
     }, []);
 
     const navItems = [
-        { id: 'hero', Icon: Home, label: 'Home' },
-        { id: 'about', Icon: User, label: 'About' },
-        { id: 'resume', Icon: FileText, label: 'Resume' },
-        { id: 'skills', Icon: Brain, label: 'Skills' },
-        { id: 'projects', Icon: FolderGit2, label: 'Projects' },
-        { id: 'contact', Icon: Mail, label: 'Contact' }
+        { id: 'hero', Icon: Home, label: t('nav.home') },
+        { id: 'about', Icon: User, label: t('nav.about') },
+        { id: 'resume', Icon: FileText, label: t('nav.resume') },
+        { id: 'skills', Icon: Brain, label: t('nav.skills') },
+        { id: 'projects', Icon: FolderGit2, label: t('nav.projects') },
+        { id: 'contact', Icon: Mail, label: t('nav.contact') }
     ];
 
     const languages = [
-        { code: 'EN', label: 'English' },
-        { code: 'ع', label: 'العربية' }
+        { code: 'en', label: 'English' },
+        { code: 'ar', label: 'العربية' }
     ];
 
     const scrollToSection = (id: string) => {
@@ -51,9 +55,11 @@ function NavBar() {
     };
 
     const toggleLanguage = () => {
-        const currentIndex = languages.findIndex(lang => lang.code === currentLanguage);
+        const currentIndex = languages.findIndex(lang => lang.code === language);
         const nextIndex = (currentIndex + 1) % languages.length;
-        setCurrentLanguage(languages[nextIndex].code);
+        const newLang = languages[nextIndex].code;
+        setLanguage(newLang as 'en' | 'ar');
+        navigate(`/${newLang}`);
     };
 
     return (
@@ -105,7 +111,7 @@ function NavBar() {
                                     >
                                         <Globe size={20} strokeWidth={2} />
                                         <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-black/80 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
-                                            {languages.find(lang => lang.code === currentLanguage)?.label}
+                                            {languages.find(lang => lang.code === language)?.label}
                                         </span>
                                     </button>
                                 </motion.li>
@@ -182,7 +188,7 @@ function NavBar() {
                                         className="w-full flex items-center gap-3 p-3 rounded-lg text-white/60 hover:text-white hover:bg-purple-500/10 transition-all duration-300"
                                     >
                                         <Globe size={20} strokeWidth={2} />
-                                        <span>{languages.find(lang => lang.code === currentLanguage)?.label}</span>
+                                        <span>{languages.find(lang => lang.code === language)?.label}</span>
                                     </button>
                                 </motion.li>
                             </ul>

@@ -2,8 +2,10 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FileText, Briefcase, GraduationCap, Trophy, Calendar, Building, ArrowUpRight, Clock } from "lucide-react";
 import SectionHeader from "../Components/SectionHeader";
-import { workExperience, education, courses } from "../Data/ResumeData";
-import { certifications } from "../Data/CertificationsData";
+import { useResumeData } from "../Data/ResumeData";
+import { useCertificationsData } from "../Data/CertificationsData";
+import { useLanguage } from "../Context/LanguageContext";
+
 function Resume() {
     const [ref, inView] = useInView({
         threshold: 0.1,
@@ -23,7 +25,9 @@ function Resume() {
         })
     };
     
-    
+    const { t, language } = useLanguage();
+    const { workExperience, education, courses } = useResumeData();
+    const certifications = useCertificationsData();
     return (
         <section id="resume" className="relative py-20 overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 to-transparent" />
@@ -38,12 +42,12 @@ function Resume() {
                     className="text-center mb-16"
                 >
                     <SectionHeader 
-                        title="My Resume" 
+                        title={t('resume.title')} 
                         icon={FileText}
                         className="mx-auto mb-4"
                     />
                     <h2 className="text-3xl sm:text-4xl font-bold text-white">
-                        Professional Journey
+                        {t('resume.title')}
                     </h2>
                 </motion.div>
 
@@ -61,7 +65,7 @@ function Resume() {
                         <div className="space-y-6">
                             <div className="flex items-center gap-3 mb-6">
                                 <Briefcase className="w-6 h-6 text-purple-400" />
-                                <h3 className="text-2xl font-bold text-white">Work Experience</h3>
+                                <h3 className="text-2xl font-bold text-white">{t('resume.workExperience')}</h3>
                             </div>
                             <div className="space-y-8">
                                 {workExperience.map((job, index) => (
@@ -141,7 +145,7 @@ function Resume() {
                         <div className="space-y-6">
                             <div className="flex items-center gap-3 mb-6">
                                 <GraduationCap className="w-6 h-6 text-purple-400" />
-                                <h3 className="text-2xl font-bold text-white">Education</h3>
+                                <h3 className="text-2xl font-bold text-white">{t('resume.education')}</h3>
                             </div>
                             <div className="space-y-8">
                                 {education.map((edu, index) => (
@@ -189,7 +193,7 @@ function Resume() {
                                                             whileHover={{ scale: 1.05 }}
                                                         >
                                                             <Trophy className="w-4 h-4" />
-                                                            View Credential
+                                                            {t('resume.viewCredential')}
                                                             <ArrowUpRight className="w-4 h-4" />
                                                         </motion.a>
                                                     </div>
@@ -205,7 +209,7 @@ function Resume() {
                         <div className="space-y-6">
                             <div className="flex items-center gap-3 mb-6">
                                 <GraduationCap className="w-6 h-6 text-purple-400" />
-                                <h3 className="text-2xl font-bold text-white">Courses</h3>
+                                <h3 className="text-2xl font-bold text-white">{t('resume.courses')}</h3>
                             </div>
                             <div className="grid gap-6">
                                 {courses.map((course, index) => (
@@ -242,7 +246,7 @@ function Resume() {
                                                                     text-purple-400 text-sm group-hover:bg-purple-500/20 
                                                                     transition-all duration-300">
                                                             <Clock className="w-3 h-3" />
-                                                            <span>{course.hours}h</span>
+                                                            <span>{course.hours} {t('resume.hours')}</span>
                                                         </div>
                                                         <div className="px-3 py-1 bg-purple-500/10 rounded-full text-purple-400 text-sm
                                                                     group-hover:bg-purple-500/20 transition-all duration-300">
@@ -268,7 +272,7 @@ function Resume() {
                                                             whileHover={{ scale: 1.05 }}
                                                         >
                                                             <Trophy className="w-4 h-4" />
-                                                            View Credential
+                                                            {t('resume.viewCredential')}
                                                             <ArrowUpRight className="w-4 h-4 transition-transform duration-300 
                                                                                 group-hover:translate-x-1" />
                                                         </motion.a>
@@ -293,7 +297,7 @@ function Resume() {
                 >
                     <div className="flex items-center gap-3 mb-8">
                         <Trophy className="w-6 h-6 text-purple-400" />
-                        <h3 className="text-2xl font-bold text-white">Certifications</h3>
+                        <h3 className="text-2xl font-bold text-white">{t('resume.certifications')}</h3>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -396,7 +400,7 @@ function Resume() {
                                                     whileHover={{ scale: 1.05 }}
                                                 >
                                                     <Trophy className="w-4 h-4" />
-                                                    View Credential
+                                                    {t('resume.viewCredential')}
                                                     <ArrowUpRight className="w-4 h-4 transition-transform duration-300 
                                                                         group-hover:translate-x-1" />
                                                 </motion.a>

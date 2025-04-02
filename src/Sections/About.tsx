@@ -5,10 +5,10 @@ import { PrimaryButton } from "../Components/Buttons";
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaEnvelope } from "react-icons/fa";
 import SectionHeader from "../Components/SectionHeader";
 import personal_image from "../assets/personal image.jpeg";
-import { projects } from "../Data/ProjectsData";
+import { useProjectsData } from "../Data/ProjectsData";
 import { socialLinks } from "../Data/SocialLinksData";
-import { certifications } from "../Data/CertificationsData";
-
+import { useCertificationsData } from "../Data/CertificationsData";
+import { useLanguage } from "../Context/LanguageContext";
 function About() {
     const [ref, inView] = useInView({
         threshold: 0.1,
@@ -41,6 +41,10 @@ function About() {
         })
     };
 
+    const { t, language } = useLanguage();
+    const projectsData = useProjectsData();
+    const certificationsData = useCertificationsData();
+
     return (
         <section id="about" className="relative py-20 overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 to-transparent" />
@@ -55,12 +59,12 @@ function About() {
                     className="text-center mb-16"
                 >
                     <SectionHeader 
-                        title="About Me" 
+                        title={t('about.title')} 
                         icon={User}
                         className="mx-auto mb-4"
                     />
                     <h2 className="text-3xl sm:text-4xl font-bold text-white">
-                        Get to Know Me
+                        {t('about.subtitle')}
                     </h2>
                 </motion.div>
 
@@ -96,16 +100,7 @@ function About() {
                             className="flex flex-col justify-center"
                         >
                             <p className="text-gray-300 leading-relaxed sm:text-lg text-md">
-                            I'm Shareef Ali, a Data Analyst and Business Intelligence
-                            Professional with a strong foundation in software development.
-                            Based in Riyadh, I specialize in Power BI, SQL, and Python,
-                            leveraging ETL processes, data modeling, and automation to
-                            transform raw data into actionable business insights.
-                            With experience in React.js and JavaScript, I bring
-                            problem-solving and technical expertise to data-driven
-                            solutions. My focus is on data visualization, reporting, and
-                            analytics, helping businesses optimize operations, identify
-                            trends, and drive strategic decisions.
+                                {t('about.intro')}
                             </p>
                         </motion.div>
                     </div>
@@ -125,16 +120,16 @@ function About() {
                                 {[
                                     { 
                                         icon: <MapPin className="w-5 h-5 text-purple-400" />,
-                                        title: "Location",
-                                        value: "Riyadh, Saudi Arabia",
-                                        subValue: "From Sudan",
+                                        title: t('about.location'),
+                                        value: t('about.locationValue'),
+                                        subValue: t('about.locationSub'),
                                         emoji: "🇸🇩"
                                     },
                                     { 
                                         icon: <Calendar className="w-5 h-5 text-purple-400" />,
-                                        title: "Age",
-                                        value: `${calculateAge()} Years`,
-                                        subValue: "with great ambition",
+                                        title: t('about.age'),
+                                        value: `${calculateAge()} ${language === 'ar' ? 'سنة' : 'years'}`,
+                                        subValue: t('about.ageSub'),
                                         emoji: "🚀"
                                     }
                                 ].map((info, index) => (
@@ -159,9 +154,9 @@ function About() {
                             {/* Quick Stats */}
                             <div className="grid grid-cols-3 gap-1 sm:gap-4">
                                 {[
-                                    { label: "Experience", value: `${new Date().getFullYear() - 2023}+ Years` },
-                                    { label: "Projects", value: `${projects.length}+` },
-                                    { label: "Certifications", value: `${certifications.length}+` }
+                                    { label: t('about.experience'), value: `${new Date().getFullYear() - 2023}+ ${language === 'ar' ? 'سنة' : 'years'}` },
+                                    { label: t('about.projects'), value: `${projectsData.projects.length}+` },
+                                    { label: t('about.certifications'), value: `${certificationsData.length}+` }
                                 ].map((stat, index) => (
                                     <motion.div
                                         key={index}
@@ -213,9 +208,9 @@ function About() {
                                 <div>
                                     <a href="#contact">
                                         <PrimaryButton>
-                                            <div className="flex items-center gap-2">
-                                                Get In Touch
-                                                <ArrowRight className="w-5 h-5" />
+                                            <div className="flex  items-center gap-2">
+                                                {t('about.getInTouch')}
+                                                <ArrowRight className={`${language === 'ar' ? 'rotate-180' : ''} w-5 h-5`} />
                                             </div>
                                         </PrimaryButton>
                                     </a>
@@ -234,23 +229,23 @@ function About() {
                                 {[
                                     { 
                                         icon: <Database className="w-5 h-5 text-purple-400" />,
-                                        title: "Data Analysis",
-                                        description: "Skilled in Power BI, SQL, and Python for data transformation, trend analysis, and decision-making support."
+                                        title: t('about.expertise.dataAnalysis'),
+                                        description: t('about.expertise.dataAnalysisDesc')
                                     },
                                     { 
                                         icon: <ChartBar className="w-5 h-5 text-purple-400" />,
-                                        title: "Business Intelligence",
-                                        description: "Designing interactive dashboards and real-time reporting systems to help businesses uncover insights."
+                                        title: t('about.expertise.businessIntelligence'),
+                                        description: t('about.expertise.businessIntelligenceDesc')
                                     },
                                     { 
                                         icon: <Code className="w-5 h-5 text-purple-400" />,
-                                        title: "Software Development",
-                                        description: "Developing web applications and automating business processes using Python and JavaScript."
+                                        title: t('about.expertise.softwareDevelopment'),
+                                        description: t('about.expertise.softwareDevelopmentDesc')
                                     },
                                     { 
                                         icon: <Rocket className="w-5 h-5 text-purple-400" />,
-                                        title: "Career Goals",
-                                        description: "Aspiring to become a Business Intelligence Analyst and help organizations make data-driven decisions."
+                                        title: t('about.expertise.careerGoals'),
+                                        description: t('about.expertise.careerGoalsDesc')
                                     }
                                 ].map((area, index) => (
                                     <motion.div
@@ -304,8 +299,8 @@ function About() {
                             <a href="#contact">
                                 <PrimaryButton>
                                     <div className="flex items-center gap-2">
-                                        Get In Touch
-                                        <ArrowRight className="w-5 h-5" />
+                                        {t('about.getInTouch')}
+                                        <ArrowRight className={`${language === 'ar' ? 'rotate-180' : ''} w-5 h-5`} />
                                     </div>
                                 </PrimaryButton>
                             </a>

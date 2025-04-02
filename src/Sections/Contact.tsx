@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Instagram } from "lucide-react";
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
 import SectionHeader from "../Components/SectionHeader";
 import { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 import toast, { Toaster } from 'react-hot-toast';
 import { PrimaryButton } from "../Components/Buttons";
 import { socialLinks } from "../Data/SocialLinksData";
+import { useContactData } from "../Data/ContactData";
 
 function Contact() {
     const [ref, inView] = useInView({
@@ -16,7 +16,7 @@ function Contact() {
     });
     const form = useRef<HTMLFormElement>(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
-
+    const contactData = useContactData();
     const fadeInUp = {
         hidden: { opacity: 0, y: 20 },
         visible: (delay: number) => ({
@@ -57,24 +57,17 @@ function Contact() {
     const contactInfo = [
         {
             icon: <Mail className="w-5 h-5 text-purple-400" />,
-            title: "Email",
-            value: "Shareef.99997@gmail.com",
-            link: "mailto:Shareef.99997@gmail.com"
+            ...contactData.contactInfo[0]
         },
         {
             icon: <Phone className="w-5 h-5 text-purple-400" />,
-            title: "Phone",
-            value: "+966 582635947",
-            link: "tel:+966582635947"
+            ...contactData.contactInfo[1]
         },
         {
             icon: <MapPin className="w-5 h-5 text-purple-400" />,
-            title: "Location",
-            value: "Riyadh, Saudi Arabia",
-            link: "https://maps.google.com"
+            ...contactData.contactInfo[2]
         }
     ];
-
 
     return (
         <section id="contact" className="relative py-20 overflow-hidden">
@@ -123,12 +116,12 @@ function Contact() {
                     className="text-center mb-16"
                 >
                     <SectionHeader 
-                        title="Get In Touch" 
+                        title={contactData.title} 
                         icon={Mail}
                         className="mx-auto mb-4"
                     />
                     <h2 className="text-3xl sm:text-4xl font-bold text-white">
-                        Let's Connect
+                        {contactData.subtitle}
                     </h2>
                 </motion.div>
 
@@ -147,7 +140,7 @@ function Contact() {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                                        Name
+                                        {contactData.name}
                                     </label>
                                     <input
                                         type="text"
@@ -157,12 +150,12 @@ function Contact() {
                                         className="w-full px-4 py-3 bg-white/5 border border-purple-500/10 rounded-lg
                                                 text-white placeholder-gray-400 focus:outline-none focus:border-purple-500/30
                                                 transition-colors duration-300"
-                                        placeholder="Your name"
+                                        placeholder={contactData.name}
                                     />
                                 </div>
                                 <div>
                                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                                        Email
+                                        {contactData.email}
                                     </label>
                                     <input
                                         type="email"
@@ -172,13 +165,13 @@ function Contact() {
                                         className="w-full px-4 py-3 bg-white/5 border border-purple-500/10 rounded-lg
                                                 text-white placeholder-gray-400 focus:outline-none focus:border-purple-500/30
                                                 transition-colors duration-300"
-                                        placeholder="your@email.com"
+                                        placeholder={contactData.email}
                                     />
                                 </div>
                             </div>
                             <div>
                                 <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
-                                    Subject
+                                    {contactData.subject}
                                 </label>
                                 <input
                                     type="text"
@@ -188,12 +181,12 @@ function Contact() {
                                     className="w-full px-4 py-3 bg-white/5 border border-purple-500/10 rounded-lg
                                             text-white placeholder-gray-400 focus:outline-none focus:border-purple-500/30
                                             transition-colors duration-300"
-                                    placeholder="Message subject"
+                                    placeholder={contactData.subject}
                                 />
                             </div>
                             <div>
                                 <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                                    Message
+                                    {contactData.message}
                                 </label>
                                 <textarea
                                     id="message"
@@ -203,16 +196,16 @@ function Contact() {
                                     className="w-full px-4 py-3 bg-white/5 border border-purple-500/10 rounded-lg
                                             text-white placeholder-gray-400 focus:outline-none focus:border-purple-500/30
                                             transition-colors duration-300 resize-none"
-                                    placeholder="Your message"
+                                    placeholder={contactData.message}
                                 />
                             </div>
-                                <PrimaryButton
-                                    type="submit"
-                                    className="w-full flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
-                                >
-                                    <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                                    {isSubmitting ? 'Sending...' : 'Send Message'}
-                                </PrimaryButton>
+                            <PrimaryButton
+                                type="submit"
+                                className="w-full flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                            >
+                                <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                                {isSubmitting ? contactData.sending : contactData.sendMessage}
+                            </PrimaryButton>
                         </form>
                     </motion.div>
 
@@ -256,7 +249,7 @@ function Contact() {
 
                         {/* Social Links */}
                         <div className="pt-8">
-                            <h3 className="text-xl font-bold text-white mb-6">Connect With Me</h3>
+                            <h3 className="text-xl font-bold text-white mb-6">{contactData.connectWithMe}</h3>
                             <div className="flex flex-wrap gap-4">
                                 {socialLinks.map((social, index) => (
                                     <motion.a

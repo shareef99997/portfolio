@@ -66,3 +66,48 @@ a {
     font-size: 80%;
   }
 }
+
+/* RTL Support */
+.rtl {
+  direction: rtl;
+}
+
+.rtl .navbar {
+  flex-direction: row-reverse;
+}
+
+.rtl .navbar .nav-items {
+  flex-direction: row-reverse;
+}
+
+.rtl .hero-content {
+  text-align: right;
+}
+
+.rtl .hero-content .roles {
+  flex-direction: row-reverse;
+}
+
+.rtl .hero-content .roles .role {
+  margin-right: 0;
+  margin-left: 1rem;
+}
+
+.rtl .hero-content .buttons {
+  flex-direction: row-reverse;
+}
+
+.rtl .hero-content .buttons button {
+  margin-right: 0;
+  margin-left: 1rem;
+}
+
+.rtl .hero-content .certification-badge {
+  margin-right: 0;
+  margin-left: 1rem;
+}
+
+.rtl .hero-content .certification-badge i {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}

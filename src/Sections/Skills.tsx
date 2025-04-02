@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Brain } from "lucide-react";
 import SectionHeader from "../Components/SectionHeader";
-import { technicalSkills, professionalSkills } from "../Data/SkillsData";
+import { useSkillsData } from "../Data/SkillsData";
+import { useLanguage } from "../Context/LanguageContext";
 import { Technology, ImageTechnology, IconTechnology } from "../Types/Types";
 
 function isImageTechnology(tech: Technology): tech is ImageTechnology {
@@ -14,6 +15,8 @@ function isIconTechnology(tech: Technology): tech is IconTechnology {
 }
 
 function Skills() {
+    const { t, language } = useLanguage();
+    const { technicalSkills, softSkills } = useSkillsData();
     const [ref, inView] = useInView({
         threshold: 0.1,
         triggerOnce: true,
@@ -46,12 +49,12 @@ function Skills() {
                     className="text-center mb-16"
                 >
                     <SectionHeader 
-                        title="Skills & Expertise" 
+                        title={t('skills.title')} 
                         icon={Brain}
                         className="mx-auto mb-4"
                     />
                     <h2 className="text-3xl sm:text-4xl font-bold text-white">
-                        Professional Competencies
+                        {t('skills.subtitle')}
                     </h2>
                 </motion.div>
 
@@ -124,12 +127,12 @@ function Skills() {
                             hover:border-purple-500/20 transition-all duration-300"
                 >
                     <div className="flex items-center gap-3 mb-4">
-                        {professionalSkills.icon}
-                        <h3 className="text-xl font-bold text-white">{professionalSkills.title}</h3>
+                        {softSkills.icon}
+                        <h3 className="text-xl font-bold text-white">{softSkills.title}</h3>
                     </div>
-                    <p className="text-gray-300 mb-6">{professionalSkills.description}</p>
+                    <p className="text-gray-300 mb-6">{softSkills.description}</p>
                     <div className="flex flex-wrap gap-3">
-                        {professionalSkills.technologies.map((tech, techIndex) => (
+                        {softSkills.technologies.map((tech, techIndex) => (
                             <motion.div
                                 key={techIndex}
                                 variants={fadeInUp}
@@ -149,7 +152,7 @@ function Skills() {
                         ))}
                     </div>
                 </motion.div>
-        </div>
+            </div>
         </section>
     );
 }

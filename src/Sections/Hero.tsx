@@ -1,31 +1,28 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaEnvelope } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
-import CountUp from "react-countup";
 import Resume from "../assets/resume.pdf";
-import datacamp from "../assets/datacamp.jpeg";
-import ibm from "../assets/ibm.png";
-import pl300 from "../assets/pl300.webp";
 import { PrimaryButton, SecondaryButton } from "../Components/Buttons";
-import { ArrowDown, Code2, BarChart, LineChart, Sparkles } from "lucide-react";
+import { BarChart, Code2, LineChart, Sparkles } from "lucide-react";
 import SectionHeader from "../Components/SectionHeader";
-import { certifications } from "../Data/CertificationsData";
+import { useCertificationsData } from "../Data/CertificationsData";
+import { useLanguage } from "../Context/LanguageContext";
 
 function Hero() {
-    // Roles
-    const roles = [
-        { title: "Data Analyst", icon: <LineChart className="w-5 h-5" /> },
-        { title: "Business Intelligence Analyst", icon: <BarChart className="w-5 h-5" /> },
-        { title: "Frontend Developer", icon: <Code2 className="w-5 h-5" /> },
-    ];
-
+    const { t, language } = useLanguage();
+    const certifications = useCertificationsData();
     const [currentRole, setCurrentRole] = useState(0);
     const [ref, inView] = useInView({
         threshold: 0.1,
         triggerOnce: true,
     });
-    
+
+    // Roles with translations
+    const roles = [
+        { title: t('hero.roles.dataAnalyst'), icon: <LineChart className="w-5 h-5" /> },
+        { title: t('hero.roles.biAnalyst'), icon: <BarChart className="w-5 h-5" /> },
+        { title: t('hero.roles.developer'), icon: <Code2 className="w-5 h-5" /> },
+    ];
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -69,7 +66,7 @@ function Hero() {
                     >
                         <div className="flex flex-col items-center gap-6">
                             <SectionHeader 
-                                title="Welcome to my portfolio" 
+                                title={t('hero.welcome')}
                                 icon={Sparkles}
                                 className="mb-4"
                             />
@@ -81,7 +78,7 @@ function Hero() {
                                 animate={inView ? "visible" : "hidden"}
                                 className="text-4xl sm:text-6xl md:text-7xl font-bold text-white"
                             >
-                                Shareef Huzaifa
+                                {t('hero.name')}
                             </motion.h1>
 
                             <div className="overflow-hidden h-12 md:h-14">
@@ -130,7 +127,7 @@ function Hero() {
                                 animate={inView ? "visible" : "hidden"}
                                 className="text-sm sm:text-md md:text-lg italic text-gray-300/80 mb-4 max-w-2xl mx-auto leading-relaxed"
                             >
-                                From data to decisions, patterns to purpose—illuminating insights, automating flows, and shaping a smarter world.
+                                “{t('hero.tagline')}”
                             </motion.p>
                             
                             {/* Certificate Badges */}
@@ -143,7 +140,7 @@ function Hero() {
                                     className="flex items-center gap-2 bg-white/5 backdrop-blur-sm px-4 py-2 rounded-full border border-purple-500/10"
                                 >
                                     <div className="w-2 h-2 rounded-full bg-purple-500 animate-pulse" />
-                                    <span className="text-white/90 text-sm font-medium">Certified Professional</span>
+                                    <span className="text-white/90 text-sm font-medium">{t('hero.certified')}</span>
                                 </motion.div>
                                 <motion.div
                                     variants={fadeInUp}
@@ -164,7 +161,7 @@ function Hero() {
                                                     stiffness: 300
                                                 }
                                             }}
-                                            className="group relative  hover:drop-shadow-lg hover:drop-shadow-purple-500/20"
+                                            className="group relative hover:drop-shadow-lg hover:drop-shadow-purple-500/20"
                                         >
                                             <div className="relative">
                                                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-transparent rounded-lg blur-sm group-hover:blur-md transition-all duration-300" />
@@ -191,14 +188,14 @@ function Hero() {
                                 className="flex flex-row gap-4 mt-2 order-2 md:order-3"
                             >
                                 <a href="#about">
-                                    <PrimaryButton>Learn More</PrimaryButton>
+                                    <PrimaryButton>{t('hero.learnMore')}</PrimaryButton>
                                 </a>
-                                <SecondaryButton onClick={() => window.open(Resume, '_blank')}>View Resume</SecondaryButton>
+                                <SecondaryButton onClick={() => window.open(Resume, '_blank')}>
+                                    {t('hero.viewResume')}
+                                </SecondaryButton>
                             </motion.div>
                         </div>
                     </motion.div>
-                    
-                   
                 </div>
             </div>
         </section>

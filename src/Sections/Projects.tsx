@@ -11,10 +11,13 @@ import {
 } from "lucide-react";
 import SectionHeader from "../Components/SectionHeader";
 import ProjectModal from "../Components/ProjectModal";
+import { useProjectsData } from "../Data/ProjectsData";
+import { useLanguage } from "../Context/LanguageContext";
 import { Project } from "../Types/Types";
-import { projects, categories } from "../Data/ProjectsData";
 
 function Projects() {
+    const { t, language } = useLanguage();
+    const { categories, projects } = useProjectsData();
     const [selectedCategory, setSelectedCategory] = useState("All");
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
     const [ref, inView] = useInView({
@@ -60,12 +63,12 @@ function Projects() {
                     className="text-center mb-16"
                 >
                     <SectionHeader 
-                        title="My Projects" 
+                        title={t('projects.title')} 
                         icon={Code2}
                         className="mx-auto mb-4"
                     />
                     <h2 className="text-3xl sm:text-4xl font-bold text-white">
-                        Featured Work
+                        {t('projects.subtitle')}
                     </h2>
                 </motion.div>
 
@@ -207,7 +210,7 @@ function Projects() {
                                 <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 
                                             transition-opacity duration-300 flex items-center justify-center">
                                     <span className="text-white font-medium flex items-center gap-2">
-                                        View Details
+                                        {t('projects.viewDetails')}
                                         <ArrowUpRight className="w-4 h-4" />
                                     </span>
                                 </div>
