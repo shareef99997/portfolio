@@ -6,7 +6,8 @@ import SectionHeader from "../Components/SectionHeader";
 import { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 import toast, { Toaster } from 'react-hot-toast';
-import { PrimaryButton } from "../Components/buttons";
+import { PrimaryButton } from "../Components/Buttons";
+import { socialLinks } from "../Data/SocialLinksData";
 
 function Contact() {
     const [ref, inView] = useInView({
@@ -74,33 +75,6 @@ function Contact() {
         }
     ];
 
-    const socialLinks = [
-        {
-            icon: <FaGithub size={24} />,
-            href: "https://github.com/shareef99997",
-            label: "GitHub"
-        },
-        {
-            icon: <FaLinkedin size={24} />,
-            href: "https://linkedin.com/in/shareef-ali",
-            label: "LinkedIn"
-        },
-        {
-            icon: <FaTwitter size={24} />,
-            href: "https://x.com/SHIFO_99997",
-            label: "Twitter"
-        },
-        {
-            icon: <FaInstagram size={24} />,
-            href: "https://www.instagram.com/shareef_zz/",
-            label: "Instagram"
-        },
-        {
-            icon: <FaWhatsapp size={24} />,
-            href: "https://wa.me/966582635947",
-            label: "WhatsApp"
-        }
-    ];
 
     return (
         <section id="contact" className="relative py-20 overflow-hidden">

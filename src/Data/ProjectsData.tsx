@@ -1,4 +1,4 @@
-import { Project } from '../types/Project';
+import { Project } from '../Types/Types';
 import powerbiIcon from '../Assets/power_bi_icon.svg';
 import sqlIcon from '../Assets/sql.svg';
 import pythonIcon from '../Assets/python.svg';
@@ -52,6 +52,7 @@ export const projects: Project[] = [
         completionDate: "March 2024",
         githubUrl: "https://github.com/yourusername/sales-analytics"
     },
+    
     {
         id: "2",
         title: "Customer Analytics Platform",
@@ -83,6 +84,7 @@ export const projects: Project[] = [
         ],
         completionDate: "February 2024"
     },
+
     {
         id: "3",
         title: "Financial Analysis Tool",
@@ -114,6 +116,7 @@ export const projects: Project[] = [
         ],
         completionDate: "January 2024"
     },
+
     {
         id: "4",
         title: "Data Analysis Automation",

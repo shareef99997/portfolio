@@ -1,17 +1,32 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { ArrowRight, User, Database, BarChart as ChartBar, Target, Rocket, MapPin, Calendar, Code } from "lucide-react";
-import { PrimaryButton } from "../Components/buttons";
+import { PrimaryButton } from "../Components/Buttons";
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaEnvelope } from "react-icons/fa";
 import SectionHeader from "../Components/SectionHeader";
 import personal_image from "../assets/personal image.jpeg";
-import { projects } from "../data/projects";
+import { projects } from "../Data/ProjectsData";
+import { socialLinks } from "../Data/SocialLinksData";
+import { certifications } from "../Data/CertificationsData";
 
 function About() {
     const [ref, inView] = useInView({
         threshold: 0.1,
         triggerOnce: true,
     });
+
+    const calculateAge = () => {
+        const birthDate = new Date(2000, 7, 21); // Month is 0-based, so 7 = August
+        const today = new Date();
+        let age = today.getFullYear() - birthDate.getFullYear();
+        const monthDiff = today.getMonth() - birthDate.getMonth();
+        
+        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+        
+        return age;
+    };
 
     const fadeInUp = {
         hidden: { opacity: 0, y: 20 },
@@ -118,7 +133,7 @@ function About() {
                                     { 
                                         icon: <Calendar className="w-5 h-5 text-purple-400" />,
                                         title: "Age",
-                                        value: "24 Years",
+                                        value: `${calculateAge()} Years`,
                                         subValue: "with great ambition",
                                         emoji: "🚀"
                                     }
@@ -144,9 +159,9 @@ function About() {
                             {/* Quick Stats */}
                             <div className="grid grid-cols-3 gap-1 sm:gap-4">
                                 {[
-                                    { label: "Experience", value: "2+ Years" },
+                                    { label: "Experience", value: `${new Date().getFullYear() - 2023}+ Years` },
                                     { label: "Projects", value: `${projects.length}+` },
-                                    { label: "Certifications", value: "3+" }
+                                    { label: "Certifications", value: `${certifications.length}+` }
                                 ].map((stat, index) => (
                                     <motion.div
                                         key={index}
@@ -262,13 +277,7 @@ function About() {
                         {/* Social Links */}
                         <div className="w-full">
                             <div className="flex flex-wrap gap-6 justify-center">
-                                {[
-                                    { icon: <FaGithub size={24} />, href: "https://github.com/shareef99997", label: "GitHub" },
-                                    { icon: <FaLinkedin size={24} />, href: "https://linkedin.com/in/shareef-ali", label: "LinkedIn" },
-                                    { icon: <FaTwitter size={24} />, href: "https://x.com/SHIFO_99997", label: "Twitter" },
-                                    { icon: <FaInstagram size={24} />, href: "https://www.instagram.com/shareef_zz/", label: "Instagram" },
-                                    { icon: <FaEnvelope size={24} />, href: "mailto:Shareef.99997@gmail.com", label: "Email" }
-                                ].map((social, index) => (
+                                {socialLinks.map((social, index) => (
                                     <motion.a
                                         key={index}
                                         whileHover={{ 

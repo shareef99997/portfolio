@@ -2,10 +2,8 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FileText, Briefcase, GraduationCap, Trophy, Calendar, Building, ArrowUpRight, Clock } from "lucide-react";
 import SectionHeader from "../Components/SectionHeader";
-import datacamp from "../assets/datacamp.jpeg";
-import ibm from "../assets/ibm.png";
-import pl300 from "../assets/pl300.webp";
-
+import { workExperience, education, courses } from "../Data/ResumeData";
+import { certifications } from "../Data/CertificationsData";
 function Resume() {
     const [ref, inView] = useInView({
         threshold: 0.1,
@@ -24,115 +22,8 @@ function Resume() {
             }
         })
     };
-
-    const workExperience = [
-        {
-            title: "Business Intelligence Analyst",
-            company: "Orpheous",
-            period: "2024/09 - Present",
-            companyLogo: datacamp,
-            description: "Led data analysis initiatives and created interactive Power BI dashboards for business insights.",
-            highlights: [
-                "Developed and maintained Power BI reports and dashboards",
-                "Performed ETL processes using Python and SQL",
-                "Automated reporting processes saving 10+ hours weekly"
-            ]
-        },
-        {
-            title: "Software Developer",
-            company: "Freelance",
-            period: "2022/12 - 2024/09",
-            companyLogo: datacamp,
-            description: "Developed web applications and automated solutions for clients.",
-            highlights: [
-                "Built responsive web applications using React",
-                "Created automation scripts using Python",
-                "Implemented data visualization solutions"
-            ]
-        },
-        {
-            title: "Software Developer",
-            company: "Freelance",
-            period: "2023/01 - 2023/06",
-            companyLogo: datacamp,
-            description: "Developed web applications and automated solutions for clients.",
-            highlights: [
-                "Built responsive web applications using React",
-                "Created automation scripts using Python",
-                "Implemented data visualization solutions"
-            ]
-        }
-    ];
-
-    const education = [
-        {
-            degree: "Bachelor of Science in Information Technology",
-            institution: "Sudan University of Science and Technology",
-            period: "2019 - 2023",
-            institutionLogo: datacamp, 
-            credentialUrl: "#",
-            description: "Focused on software development, database management, and data analysis."
-        }
-    ];
-
-    const certifications = [
-        {
-            title: "Power BI Data Analyst Associate",
-            issuer: "Microsoft",
-            date: "2025",
-            badgeImage: pl300,
-            credentialUrl: "#",
-            code:"#564,658"
-        },
-        {
-            title: "Data Analytics Professional",
-            issuer: "IBM",
-            date: "2025",
-            badgeImage: ibm,
-            credentialUrl: "#",
-            code:"#564,658"
-        },
-        {
-            title: "Associate Data Analyst in Python",
-            issuer: "DataCamp",
-            date: "2025",
-            badgeImage: datacamp,
-            credentialUrl: "#",
-            code:"#564,658"
-        },
-    ];
-
-    const courses = [
-        {
-            title: "Advanced SQL",
-            platform: "DataCamp",
-            date: "2024",
-            hours: 36,
-            platformLogo: datacamp,
-            credentialUrl: "#",
-            description: "Mastered complex SQL queries, window functions, and database optimization techniques"
-        },
-        {
-            title: "Power BI for Business Intelligence",
-            platform: "Udemy",
-            date: "2025",
-            hours: 50,
-            platformLogo: datacamp,
-            credentialUrl: "#",
-            description: "Comprehensive course on Power BI development, DAX, and data modeling"
-        },
-        {
-            title: "Python for Data Science",
-            platform: "Coursera",
-            date: "2025",
-            hours: 40,
-            platformLogo: datacamp,
-            credentialUrl: "#",
-            description: "Data manipulation, analysis, and visualization using Python libraries"
-        }
-    ];
     
-
+    
     return (
         <section id="resume" className="relative py-20 overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 to-transparent" />
@@ -393,130 +284,130 @@ function Resume() {
                 </div>
 
                 {/* Certifications Section */}
-            <motion.div
-                variants={fadeInUp}
-                custom={0.6}
-                initial="hidden"
-                animate={inView ? "visible" : "hidden"}
-                className="mt-16"
-            >
-                <div className="flex items-center gap-3 mb-8">
-                    <Trophy className="w-6 h-6 text-purple-400" />
-                    <h3 className="text-2xl font-bold text-white">Certifications</h3>
-                </div>
+                <motion.div
+                    variants={fadeInUp}
+                    custom={0.6}
+                    initial="hidden"
+                    animate={inView ? "visible" : "hidden"}
+                    className="mt-16"
+                >
+                    <div className="flex items-center gap-3 mb-8">
+                        <Trophy className="w-6 h-6 text-purple-400" />
+                        <h3 className="text-2xl font-bold text-white">Certifications</h3>
+                    </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {certifications.map((cert, index) => (
-                        <motion.div
-                            key={index}
-                            variants={fadeInUp}
-                            custom={0.7 + index * 0.1}
-                            whileHover={{ 
-                                scale: 1.02,
-                                transition: { duration: 0.2 }
-                            }}
-                            className="group relative bg-gradient-to-br from-purple-900/20 via-purple-800/10 to-purple-900/20 
-                                    backdrop-blur-sm rounded-xl overflow-hidden
-                                    border border-purple-500/10 hover:border-purple-500/30 
-                                    transition-all duration-500"
-                        >
-                            {/* Animated border effect */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {certifications.map((cert, index) => (
                             <motion.div
-                                className="absolute inset-0"
-                                initial={{ background: "linear-gradient(90deg, transparent 0%, transparent 100%)" }}
-                                animate={{
-                                    background: [
-                                        "linear-gradient(90deg, transparent 0%, transparent 100%)",
-                                        "linear-gradient(90deg, transparent 0%, rgba(168, 85, 247, 0.4) 50%, transparent 100%)",
-                                        "linear-gradient(90deg, transparent 0%, transparent 100%)",
-                                    ],
-                                    x: ["-100%", "100%", "100%"],
+                                key={index}
+                                variants={fadeInUp}
+                                custom={0.7 + index * 0.1}
+                                whileHover={{ 
+                                    scale: 1.02,
+                                    transition: { duration: 0.2 }
                                 }}
-                                transition={{
-                                    duration: 3,
-                                    repeat: Infinity,
-                                    repeatType: "loop",
-                                    ease: "linear",
-                                }}
-                            />
+                                className="group relative bg-gradient-to-br from-purple-900/20 via-purple-800/10 to-purple-900/20 
+                                        backdrop-blur-sm rounded-xl overflow-hidden
+                                        border border-purple-500/10 hover:border-purple-500/30 
+                                        transition-all duration-500"
+                            >
+                                {/* Animated border effect */}
+                                <motion.div
+                                    className="absolute inset-0"
+                                    initial={{ background: "linear-gradient(90deg, transparent 0%, transparent 100%)" }}
+                                    animate={{
+                                        background: [
+                                            "linear-gradient(90deg, transparent 0%, transparent 100%)",
+                                            "linear-gradient(90deg, transparent 0%, rgba(168, 85, 247, 0.4) 50%, transparent 100%)",
+                                            "linear-gradient(90deg, transparent 0%, transparent 100%)",
+                                        ],
+                                        x: ["-100%", "100%", "100%"],
+                                    }}
+                                    transition={{
+                                        duration: 3,
+                                        repeat: Infinity,
+                                        repeatType: "loop",
+                                        ease: "linear",
+                                    }}
+                                />
 
-                            {/* Content */}
-                            <div className="relative p-6">
-                                <div className="flex items-start gap-4">
-                                    <div className="flex-1">
-                                        <div className="flex justify-between items-start gap-4">
-                                            <motion.div
-                                                initial={{ scale: 0.8, opacity: 0 }}
-                                                animate={{ scale: 1, opacity: 1 }}
-                                                transition={{ duration: 0.3, delay: index * 0.1 }}
-                                                className="sm:w-20 sm:h-20 w-16 h-16 rounded-lg overflow-hidden flex-shrink-0
-                                                        bg-white/5 border border-purple-500/10 p-2
-                                                        group-hover:border-purple-500/30 transition-all duration-300"
+                                {/* Content */}
+                                <div className="relative p-6">
+                                    <div className="flex items-start gap-4">
+                                        <div className="flex-1">
+                                            <div className="flex justify-between items-start gap-4">
+                                                <motion.div
+                                                    initial={{ scale: 0.8, opacity: 0 }}
+                                                    animate={{ scale: 1, opacity: 1 }}
+                                                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                                                    className="sm:w-20 sm:h-20 w-16 h-16 rounded-lg overflow-hidden flex-shrink-0
+                                                            bg-white/5 border border-purple-500/10 p-2
+                                                            group-hover:border-purple-500/30 transition-all duration-300"
+                                                >
+                                                    <motion.img
+                                                        src={cert.badgeImage}
+                                                        alt={`${cert.title} Badge`}
+                                                        className="w-full h-full object-contain"
+                                                        whileHover={{ rotate: 25 }}
+                                                        transition={{ duration: 0.3 }}
+                                                    />
+                                                </motion.div>
+                                                <span className="px-3 py-1 bg-purple-500/10 rounded-full text-purple-400 text-sm
+                                                            group-hover:bg-purple-500/20 transition-all duration-300">
+                                                    {cert.date}
+                                                </span>
+                                            </div>
+                                            
+                                            <motion.h4 
+                                                className="text-xl font-bold text-white mt-4 group-hover:text-purple-400 
+                                                        transition-colors duration-300"
+                                                initial={{ y: 20, opacity: 0 }}
+                                                animate={{ y: 0, opacity: 1 }}
+                                                transition={{ duration: 0.4, delay: index * 0.1 + 0.2 }}
                                             >
-                                                <motion.img
-                                                    src={cert.badgeImage}
-                                                    alt={`${cert.title} Badge`}
-                                                    className="w-full h-full object-contain"
-                                                    whileHover={{ rotate: 25 }}
-                                                    transition={{ duration: 0.3 }}
-                                                />
+                                                {cert.title}
+                                            </motion.h4>
+                                            
+                                            <motion.div 
+                                                className="flex items-center gap-2 text-gray-400 mt-2"
+                                                initial={{ y: 20, opacity: 0 }}
+                                                animate={{ y: 0, opacity: 1 }}
+                                                transition={{ duration: 0.4, delay: index * 0.1 + 0.3 }}
+                                            >
+                                                <Building className="w-4 h-4" />
+                                                <span>{cert.issuer}</span>
                                             </motion.div>
-                                            <span className="px-3 py-1 bg-purple-500/10 rounded-full text-purple-400 text-sm
-                                                         group-hover:bg-purple-500/20 transition-all duration-300">
-                                                {cert.date}
-                                            </span>
-                                        </div>
-                                        
-                                        <motion.h4 
-                                            className="text-xl font-bold text-white mt-4 group-hover:text-purple-400 
-                                                     transition-colors duration-300"
-                                            initial={{ y: 20, opacity: 0 }}
-                                            animate={{ y: 0, opacity: 1 }}
-                                            transition={{ duration: 0.4, delay: index * 0.1 + 0.2 }}
-                                        >
-                                            {cert.title}
-                                        </motion.h4>
-                                        
-                                        <motion.div 
-                                            className="flex items-center gap-2 text-gray-400 mt-2"
-                                            initial={{ y: 20, opacity: 0 }}
-                                            animate={{ y: 0, opacity: 1 }}
-                                            transition={{ duration: 0.4, delay: index * 0.1 + 0.3 }}
-                                        >
-                                            <Building className="w-4 h-4" />
-                                            <span>{cert.issuer}</span>
-                                        </motion.div>
-                                        
-                                        <motion.div 
-                                            className="flex items-center justify-between mt-4"
-                                            initial={{ y: 20, opacity: 0 }}
-                                            animate={{ y: 0, opacity: 1 }}
-                                            transition={{ duration: 0.4, delay: index * 0.1 + 0.4 }}
-                                        >
-                                            <span className="text-gray-300 text-sm">{cert.code}</span>
-                                            <motion.a
-                                                href={cert.credentialUrl}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="inline-flex items-center gap-2 px-4 py-2 
-                                                        bg-purple-500/10 rounded-full text-purple-400 text-sm
-                                                        hover:bg-purple-500/20 transition-all duration-300
-                                                        group-hover:translate-x-1"
-                                                whileHover={{ scale: 1.05 }}
+                                            
+                                            <motion.div 
+                                                className="flex items-center justify-between mt-4"
+                                                initial={{ y: 20, opacity: 0 }}
+                                                animate={{ y: 0, opacity: 1 }}
+                                                transition={{ duration: 0.4, delay: index * 0.1 + 0.4 }}
                                             >
-                                                <Trophy className="w-4 h-4" />
-                                                View Credential
-                                                <ArrowUpRight className="w-4 h-4 transition-transform duration-300 
-                                                                      group-hover:translate-x-1" />
-                                            </motion.a>
-                                        </motion.div>
+                                                <span className="text-gray-300 text-sm">{cert.code}</span>
+                                                <motion.a
+                                                    href={cert.credentialUrl}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="inline-flex items-center gap-2 px-4 py-2 
+                                                            bg-purple-500/10 rounded-full text-purple-400 text-sm
+                                                            hover:bg-purple-500/20 transition-all duration-300
+                                                            group-hover:translate-x-1"
+                                                    whileHover={{ scale: 1.05 }}
+                                                >
+                                                    <Trophy className="w-4 h-4" />
+                                                    View Credential
+                                                    <ArrowUpRight className="w-4 h-4 transition-transform duration-300 
+                                                                        group-hover:translate-x-1" />
+                                                </motion.a>
+                                            </motion.div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </motion.div>
-                    ))}
-                </div>
-            </motion.div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </motion.div>
             </div>
         </section>
     );

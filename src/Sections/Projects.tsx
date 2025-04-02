@@ -11,8 +11,8 @@ import {
 } from "lucide-react";
 import SectionHeader from "../Components/SectionHeader";
 import ProjectModal from "../Components/ProjectModal";
-import { Project } from "../types/Project";
-import { projects, categories } from "../data/projects";
+import { Project } from "../Types/Types";
+import { projects, categories } from "../Data/ProjectsData";
 
 function Projects() {
     const [selectedCategory, setSelectedCategory] = useState("All");
@@ -44,20 +44,6 @@ function Projects() {
                 delay: delay || 0
             }
         })
-    };
-
-    const getCategoryIcon = (category: string) => {
-        const categoryData = categories.find(cat => cat.name === category);
-        if (categoryData) {
-            return (
-                <img 
-                    src={categoryData.icon} 
-                    alt={category} 
-                    className="w-5 h-5 object-contain"
-                />
-            );
-        }
-        return <Filter className="w-5 h-5" />;
     };
 
     return (
