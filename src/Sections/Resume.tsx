@@ -139,7 +139,7 @@ function Resume() {
                         custom={0.4}
                         initial="hidden"
                         animate={inView ? "visible" : "hidden"}
-                        className="space-y-6"
+                        className="space-y-6 h-full"
                     >
                         {/* Education Section */}
                         <div className="space-y-6">
@@ -211,7 +211,7 @@ function Resume() {
                                 <GraduationCap className="w-6 h-6 text-purple-400" />
                                 <h3 className="text-2xl font-bold text-white">{t('resume.courses')}</h3>
                             </div>
-                            <div className="grid gap-6">
+                            <div className="grid gap-6 max-h-[670px] overflow-y-auto pr-4 custom-scrollbar">
                                 {courses.map((course, index) => (
                                     <motion.div
                                         key={index}
