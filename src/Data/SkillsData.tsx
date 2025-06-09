@@ -5,7 +5,10 @@ import sqlIcon from "../Assets/Logos/sql.svg";
 import pythonIcon from "../Assets/Logos/python.svg";
 import pandasIcon from "../Assets/Logos/pandas.svg";
 import numpyIcon from "../Assets/Logos/numpy.svg";
-import matplotlibIcon from "../Assets/Logos/seaborn.svg";
+import dax from "../Assets/Logos/dax.svg";
+import powerquery from "../Assets/Logos/powerquery.svg";
+import seabornIcon from "../Assets/Logos/seaborn.svg";
+import matplotlibIcon from "../Assets/Logos/Matplotlib.svg";
 import htmlIcon from "../Assets/Logos/html.svg";
 import cssIcon from "../Assets/Logos/css.svg";
 import javascriptIcon from "../Assets/Logos/javascript.svg";
@@ -26,15 +29,18 @@ const skillsData = {
             {
                 title: "Data Analysis & Business Intelligence",
                 icon: <BarChart className="w-6 h-6 text-purple-400" />,
-                description: "Transforming complex data into actionable insights through advanced analytics and visualization. Building scalable systems for data-driven decision making.",
+                description: "Transforming large datasets into strategic insights using advanced analytics, automation, and visual storytelling ",
                 technologies: [
                     { name: "Power BI", image: powerbiIcon },
                     { name: "Excel", image: excelIcon },
                     { name: "SQL", image: sqlIcon },
                     { name: "Python", image: pythonIcon },
                     { name: "Pandas", image: pandasIcon },
-                    { name: "NumPy", image: numpyIcon },
                     { name: "Matplotlib", image: matplotlibIcon },
+                    { name: "Seaborn", image: seabornIcon },
+                    { name: "NumPy", image: numpyIcon },
+                    { name: "DAX", image: dax }, 
+                    { name: "Power Query", image: powerquery },
                     { name: "PostgreSQL", image: postgresqlIcon },
                     { name: "MySQL", image: mysqlIcon },
                     { name: "ETL", image: etlIcon },
@@ -44,7 +50,7 @@ const skillsData = {
             {
                 title: "Programming & Development",
                 icon: <Code2 className="w-6 h-6 text-purple-400" />,
-                description: "Creating elegant solutions through modern development practices. Building responsive applications with clean, maintainable code.",
+                description: "Building responsive, scalable web and mobile apps using React.js, Flutter, and modern front-end architectures.",
                 technologies: [
                     { name: "HTML", image: htmlIcon },
                     { name: "CSS", image: cssIcon },
@@ -73,54 +79,61 @@ const skillsData = {
     },
     ar: {
         technicalSkills: [
-            {
-                title: "تحليل البيانات وذكاء الأعمال",
-                icon: <BarChart className="w-6 h-6 text-purple-400" />,
-                description: "تحويل البيانات المعقدة إلى رؤى قابلة للتنفيذ من خلال التحليلات المتقدمة والتصور. بناء أنظمة قابلة للتطوير لاتخاذ القرارات القائمة على البيانات.",
-                technologies: [
-                    { name: "Power BI", image: powerbiIcon },
-                    { name: "Excel", image: excelIcon },
-                    { name: "SQL", image: sqlIcon },
-                    { name: "Python", image: pythonIcon },
-                    { name: "Pandas", image: pandasIcon },
-                    { name: "NumPy", image: numpyIcon },
-                    { name: "Matplotlib", image: matplotlibIcon },
-                    { name: "PostgreSQL", image: postgresqlIcon },
-                    { name: "MySQL", image: mysqlIcon },
-                    { name: "ETL", image: etlIcon },
-                    { name: "نمذجة البيانات", image: dataModelingIcon }
-                ]
-            },
-            {
-                title: "البرمجة والتطوير",
-                icon: <Code2 className="w-6 h-6 text-purple-400" />,
-                description: "إنشاء حلول أنيقة من خلال ممارسات التطوير الحديثة. بناء تطبيقات متجاوبة مع كود نظيف وقابل للصيانة.",
-                technologies: [
-                    { name: "HTML", image: htmlIcon },
-                    { name: "CSS", image: cssIcon },
-                    { name: "JavaScript", image: javascriptIcon },
-                    { name: "Flutter", image: flutterIcon },
-                    { name: "React", image: reactIcon },
-                    { name: "Tailwind CSS", image: tailwindIcon },
-                    { name: "Git", image: gitIcon },
-                    { name: "ChatGPT", image: chatgptIcon }
-                ]
-            }
+          {
+            title: "تحليل البيانات وذكاء الأعمال",
+            icon: <BarChart className="w-6 h-6 text-purple-400" />,
+            description:
+              "تحويل البيانات إلى رؤى استراتيجية مع التحليل المتقدم، والأتمتة، وسرد البيانات بصريًا.",
+            technologies: [
+              { name: "Power BI", image: powerbiIcon },
+              { name: "Excel", image: excelIcon },
+              { name: "SQL", image: sqlIcon },
+              { name: "Python", image: pythonIcon },
+              { name: "Pandas", image: pandasIcon },
+              { name: "NumPy", image: numpyIcon },
+              { name: "Matplotlib", image: matplotlibIcon },
+              { name: "Seaborn", image: seabornIcon },
+              { name: "DAX", image: dax },
+              { name: "Power Query", image: powerquery },
+              { name: "PostgreSQL", image: postgresqlIcon },
+              { name: "MySQL", image: mysqlIcon },
+              { name: "ETL", image: etlIcon },
+              { name: "نمذجة البيانات", image: dataModelingIcon }
+            ]
+          },
+          {
+            title: "البرمجة والتطوير",
+            icon: <Code2 className="w-6 h-6 text-purple-400" />,
+            description:
+              "بناء تطبيقات ويب وموبايل متجاوبة وقابلة للتوسّع باستخدام React.js وFlutter وهياكل حديثة للواجهة الأمامية.",
+            technologies: [
+              { name: "HTML", image: htmlIcon },
+              { name: "CSS", image: cssIcon },
+              { name: "JavaScript", image: javascriptIcon },
+              { name: "Flutter", image: flutterIcon },
+              { name: "React", image: reactIcon },
+              { name: "Tailwind CSS", image: tailwindIcon },
+              { name: "Git", image: gitIcon },
+              { name: "ChatGPT", image: chatgptIcon }
+            ]
+          }
         ],
         softSkills: {
-            title: "المهارات المهنية",
-            icon: <Users className="w-6 h-6 text-purple-400" />,
-            description: "عقلية تحليلية قوية مع خبرة في حل المشكلات واتخاذ القرارات القائمة على البيانات. مهارات تواصل وتعاون فعالة.",
-            technologies: [
-                { name: "التفكير التحليلي", icon: <LineChart className="w-5 h-5" /> },
-                { name: "حل المشكلات", icon: <Lightbulb className="w-5 h-5" /> },
-                { name: "تصور البيانات", icon: <BarChart className="w-5 h-5" /> },
-                { name: "التحليل النقدي", icon: <Target className="w-5 h-5" /> },
-                { name: "التواصل", icon: <MessageSquare className="w-5 h-5" /> },
-                { name: "التعاون الجماعي", icon: <Network className="w-5 h-5" /> }
-            ]
+          title: "المهارات المهنية",
+          icon: <Users className="w-6 h-6 text-purple-400" />,
+          description:
+            "ذهن تحليلي قوي وخبرة في حل المشكلات واتخاذ قرارات مدعومة بالبيانات. متمكن في التواصل والعمل الجماعي.",
+          technologies: [
+            { name: "التفكير التحليلي", icon: <LineChart className="w-5 h-5" /> },
+            { name: "حل المشكلات", icon: <Lightbulb className="w-5 h-5" /> },
+            { name: "تصور البيانات", icon: <BarChart className="w-5 h-5" /> },
+            { name: "التحليل النقدي", icon: <Target className="w-5 h-5" /> },
+            { name: "التواصل", icon: <MessageSquare className="w-5 h-5" /> },
+            { name: "التعاون الجماعي", icon: <Network className="w-5 h-5" /> }
+          ]
         }
-    }
+      }
+      
 };
 
 export const useSkillsData = () => {
