@@ -1,9 +1,9 @@
 import { Project } from '../Types/Types';
-import powerbiIcon from '../Assets/power_bi_icon.svg';
-import sqlIcon from '../Assets/sql.svg';
-import pythonIcon from '../Assets/python.svg';
-import excelIcon from '../Assets/excel.svg';
-import codeIcon from '../Assets/programming.svg';
+import powerbiIcon from '../Assets/Logos/power_bi_icon.svg';
+import sqlIcon from '../Assets/Logos/sql.svg';
+import pythonIcon from '../Assets/Logos/python.svg';
+import excelIcon from '../Assets/Logos/excel.svg';
+import codeIcon from '../Assets/Logos/programming.svg';
 import globalElectronicsSc1 from '../Assets/Projects/Global Electronics/Sales Performance.png';
 import globalElectronicsSc2 from '../Assets/Projects/Global Electronics/customer demograpghy.png';
 import globalElectronicsSc3 from '../Assets/Projects/Global Electronics/data model.png';

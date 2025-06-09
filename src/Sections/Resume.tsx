@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { FileText, Briefcase, GraduationCap, Trophy, Calendar, Building, ArrowUpRight, Clock } from "lucide-react";
+import { FileText, Briefcase, GraduationCap, Trophy, Calendar, Building, ArrowUpRight, Clock, Code } from "lucide-react";
 import SectionHeader from "../Components/SectionHeader";
 import { useResumeData } from "../Data/ResumeData";
 import { useCertificationsData } from "../Data/CertificationsData";
 import { useLanguage } from "../Context/LanguageContext";
+import { FaHashtag } from "react-icons/fa";
 
 function Resume() {
     const [ref, inView] = useInView({
@@ -181,10 +182,10 @@ function Resume() {
                                                     <span>{edu.institution}</span>
                                                 </div>
                                                 <p className="text-gray-300">{edu.description}</p>
-                                                {edu.credentialUrl && (
-                                                    <div className="flex items-center justify-end mt-4">
+                                                {(edu.credentialUrl || edu.credentialFile) && (
+                                                    <div className="flex items-center justify-end gap-3 mt-4">
                                                         <motion.a
-                                                            href={edu.credentialUrl}
+                                                            href={edu.credentialUrl || edu.credentialFile}
                                                             target="_blank"
                                                             rel="noopener noreferrer"
                                                             className="inline-flex items-center gap-2 px-4 py-2 
@@ -196,6 +197,19 @@ function Resume() {
                                                             {t('resume.viewCredential')}
                                                             <ArrowUpRight className="w-4 h-4" />
                                                         </motion.a>
+                                                        {edu.credentialFile && (
+                                                            <motion.a
+                                                                href={edu.credentialFile}
+                                                                download
+                                                                className="inline-flex items-center gap-2 px-4 py-2 
+                                                                        bg-purple-500/10 rounded-full text-purple-400 text-sm
+                                                                        hover:bg-purple-500/20 transition-all duration-300"
+                                                                whileHover={{ scale: 1.05 }}
+                                                            >
+                                                                <FileText className="w-4 h-4" />
+                                                                {t('resume.download')}
+                                                            </motion.a>
+                                                        )}
                                                     </div>
                                                 )}
                                             </div>
@@ -211,7 +225,7 @@ function Resume() {
                                 <GraduationCap className="w-6 h-6 text-purple-400" />
                                 <h3 className="text-2xl font-bold text-white">{t('resume.courses')}</h3>
                             </div>
-                            <div className="grid gap-6 max-h-[670px] overflow-y-auto pr-4 custom-scrollbar">
+                            <div className="grid gap-6">
                                 {courses.map((course, index) => (
                                     <motion.div
                                         key={index}
@@ -236,7 +250,7 @@ function Resume() {
                                                 </div>
                                             )}
                                             <div className="flex-1">
-                                                <div className="flex justify-between items-start  gap-2">
+                                                <div className="flex justify-between items-start gap-2">
                                                     <h4 className="text-lg font-semibold text-white max-w-[80%] group-hover:text-purple-400 
                                                             transition-colors duration-300">
                                                         {course.title}
@@ -259,10 +273,10 @@ function Resume() {
                                                     <span>{course.platform}</span>
                                                 </div>
                                                 <p className="text-gray-300 text-sm mt-2">{course.description}</p>
-                                                {course.credentialUrl && (
-                                                    <div className="flex items-center justify-end mt-4">
+                                                {(course.credentialUrl || course.credentialFile) && (
+                                                    <div className="flex items-center justify-end gap-3 mt-4">
                                                         <motion.a
-                                                            href={course.credentialUrl}
+                                                            href={course.credentialUrl || course.credentialFile}
                                                             target="_blank"
                                                             rel="noopener noreferrer"
                                                             className="inline-flex items-center gap-2 px-4 py-2 
@@ -276,6 +290,19 @@ function Resume() {
                                                             <ArrowUpRight className="w-4 h-4 transition-transform duration-300 
                                                                                 group-hover:translate-x-1" />
                                                         </motion.a>
+                                                        {course.credentialFile && (
+                                                            <motion.a
+                                                                href={course.credentialFile}
+                                                                download
+                                                                className="inline-flex items-center gap-2 px-4 py-2 
+                                                                        bg-purple-500/10 rounded-full text-purple-400 text-sm
+                                                                        hover:bg-purple-500/20 transition-all duration-300"
+                                                                whileHover={{ scale: 1.05 }}
+                                                            >
+                                                                <FileText className="w-4 h-4" />
+                                                                {t('resume.download')}
+                                                            </motion.a>
+                                                        )}
                                                     </div>
                                                 )}
                                             </div>
@@ -381,29 +408,62 @@ function Resume() {
                                                 <Building className="w-4 h-4" />
                                                 <span>{cert.issuer}</span>
                                             </motion.div>
-                                            
+                                            {!cert.code &&
+                                            <motion.div 
+                                                className="flex items-center gap-2 text-gray-400 mt-2"
+                                                initial={{ y: 20, opacity: 0 }}
+                                                animate={{ y: 0, opacity: 1 }}
+                                                transition={{ duration: 0.4, delay: index * 0.1 + 0.3 }}
+                                            >
+                                                <div className="w-4 h-6"></div>
+                                            </motion.div>}
+                                            {cert.code &&
+                                            <motion.div 
+                                                className="flex items-center gap-2 text-gray-400 mt-2"
+                                                initial={{ y: 20, opacity: 0 }}
+                                                animate={{ y: 0, opacity: 1 }}
+                                                transition={{ duration: 0.4, delay: index * 0.1 + 0.3 }}
+                                            >
+                                                <FaHashtag className="w-4 h-4" />
+                                                <span>{cert.code}</span>
+                                            </motion.div>}
                                             <motion.div 
                                                 className="flex items-center justify-between mt-4"
                                                 initial={{ y: 20, opacity: 0 }}
                                                 animate={{ y: 0, opacity: 1 }}
                                                 transition={{ duration: 0.4, delay: index * 0.1 + 0.4 }}
                                             >
-                                                <span className="text-gray-300 text-sm">{cert.code}</span>
-                                                <motion.a
-                                                    href={cert.credentialUrl}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="inline-flex items-center gap-2 px-4 py-2 
-                                                            bg-purple-500/10 rounded-full text-purple-400 text-sm
-                                                            hover:bg-purple-500/20 transition-all duration-300
-                                                            group-hover:translate-x-1"
-                                                    whileHover={{ scale: 1.05 }}
-                                                >
-                                                    <Trophy className="w-4 h-4" />
-                                                    {t('resume.viewCredential')}
-                                                    <ArrowUpRight className="w-4 h-4 transition-transform duration-300 
-                                                                        group-hover:translate-x-1" />
-                                                </motion.a>
+                                                
+                                                <div className="flex items-center gap-3">
+                                                    <motion.a
+                                                        href={cert.credentialUrl || cert.credentialFile}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="inline-flex items-center gap-2 px-4 py-2 
+                                                                bg-purple-500/10 rounded-full text-purple-400 text-sm
+                                                                hover:bg-purple-500/20 transition-all duration-300
+                                                                group-hover:translate-x-1"
+                                                        whileHover={{ scale: 1.05 }}
+                                                    >
+                                                        <Trophy className="w-4 h-4" />
+                                                        {t('resume.viewCredential')}
+                                                        <ArrowUpRight className="w-4 h-4 transition-transform duration-300 
+                                                                            group-hover:translate-x-1" />
+                                                    </motion.a>
+                                                    {cert.credentialFile && (
+                                                        <motion.a
+                                                            href={cert.credentialFile}
+                                                            download
+                                                            className="inline-flex items-center gap-2 px-4 py-2 
+                                                                    bg-purple-500/10 rounded-full text-purple-400 text-sm
+                                                                    hover:bg-purple-500/20 transition-all duration-300"
+                                                            whileHover={{ scale: 1.05 }}
+                                                        >
+                                                            <FileText className="w-4 h-4" />
+                                                            {t('resume.download')}
+                                                        </motion.a>
+                                                    )}
+                                                </div>
                                             </motion.div>
                                         </div>
                                     </div>

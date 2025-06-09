@@ -7,6 +7,7 @@ export const resumeTranslations = {
         'resume.courses': 'Courses',
         'resume.certifications': 'Certifications',
         'resume.viewCredential': 'View Credential',
+        'resume.download': 'Download',
         'resume.hours': 'h',
     },
     ar: {
@@ -17,6 +18,7 @@ export const resumeTranslations = {
         'resume.courses': 'الدورات',
         'resume.certifications': 'الشهادات',
         'resume.viewCredential': 'عرض الشهادة',
+        'resume.download': 'تحميل',
         'resume.hours': 'ساعة',
     }
 }; 

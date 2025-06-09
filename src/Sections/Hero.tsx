@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
-import Resume from "../assets/resume.pdf";
+import Resume from "../Assets/Credentials/Shareef Huzaifa Resume.pdf";
 import { PrimaryButton, SecondaryButton } from "../Components/Buttons";
 import { BarChart, Code2, LineChart, Sparkles } from "lucide-react";
 import SectionHeader from "../Components/SectionHeader";

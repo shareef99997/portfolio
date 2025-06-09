@@ -4,7 +4,9 @@ import { ArrowRight, User, Database, BarChart as ChartBar, Target, Rocket, MapPi
 import { PrimaryButton } from "../Components/Buttons";
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaEnvelope } from "react-icons/fa";
 import SectionHeader from "../Components/SectionHeader";
-import personal_image from "../assets/personal image.jpeg";
+import personal_image from "../Assets/Images/personal image2.jpg"
+import sudanFlag from "../Assets/Icons/sudan-flag-icon.svg"
+import saudiFlag from "../Assets/Icons/saudi-arabia-flag-icon.svg"
 import { useProjectsData } from "../Data/ProjectsData";
 import { socialLinks } from "../Data/SocialLinksData";
 import { useCertificationsData } from "../Data/CertificationsData";
@@ -101,6 +103,10 @@ function About() {
                         >
                             <p className="text-gray-300 leading-relaxed sm:text-lg text-md">
                                 {t('about.intro')}
+                                <span className="flex items-center gap-2 mt-2 text-purple-300">
+                                    <MapPin className="w-4 h-4" />
+                                    {t('about.locationValue')} <img src={saudiFlag} alt="Saudi Arabia Flag" className="w-4 h-4 inline-block" />
+                                </span>
                             </p>
                         </motion.div>
                     </div>
@@ -115,22 +121,20 @@ function About() {
                             animate={inView ? "visible" : "hidden"}
                             className="space-y-6"
                         >
-                            {/* Location and Age Cards */}
+                            {/* Age and Nationality Cards */}
                             <div className="grid grid-cols-2 gap-1 sm:gap-4">
                                 {[
-                                    { 
-                                        icon: <MapPin className="w-5 h-5 text-purple-400" />,
-                                        title: t('about.location'),
-                                        value: t('about.locationValue'),
-                                        subValue: t('about.locationSub'),
-                                        emoji: "🇸🇩"
-                                    },
                                     { 
                                         icon: <Calendar className="w-5 h-5 text-purple-400" />,
                                         title: t('about.age'),
                                         value: `${calculateAge()} ${language === 'ar' ? 'سنة' : 'years'}`,
-                                        subValue: t('about.ageSub'),
                                         emoji: "🚀"
+                                    },
+                                    { 
+                                        icon: <User className="w-5 h-5 text-purple-400" />,
+                                        title: t('about.nationality'),
+                                        value: t('about.nationalityValue'),
+                                        emoji: <img src={sudanFlag} alt="Sudan Flag" className="w-4 h-4 inline-block" />
                                     }
                                 ].map((info, index) => (
                                     <motion.div
@@ -145,8 +149,10 @@ function About() {
                                             {info.icon}
                                             <h3 className="text-white font-medium">{info.title}</h3>
                                         </div>
-                                        <div className="text-white font-medium">{info.value}</div>
-                                        <div className="text-gray-400 text-sm mt-1">{info.subValue} {info.emoji}</div>
+                                        <div className="text-white font-medium flex items-center gap-2">
+                                            {info.value}
+                                            {info.emoji}
+                                        </div>
                                     </motion.div>
                                 ))}
                             </div>
@@ -158,6 +164,7 @@ function About() {
                                     { label: t('about.projects'), value: `${projectsData.projects.length}+` },
                                     { label: t('about.certifications'), value: `${certificationsData.length}+` }
                                 ].map((stat, index) => (
+                                    // 
                                     <motion.div
                                         key={index}
                                         variants={fadeInUp}
@@ -171,6 +178,7 @@ function About() {
                                     </motion.div>
                                 ))}
                             </div>
+                            
                             {/*Desktop - Social Links and CTA */}
                             <div className="hidden lg:flex flex-col lg:flex-row items-center justify-between gap-8 ">
                                 {/* Social Links */}
@@ -309,6 +317,7 @@ function About() {
                     
                 </div>
             </div>
+            
         </section>
     );
 }
