@@ -13,8 +13,10 @@ export const projectsTranslations = {
         'projectModal.clickToViewFullSize': 'Click to view full size',
         'projectModal.technologiesUsed': 'Technologies Used',
         'projectModal.keyFeatures': 'Key Features',
-        'projectModal.keyInsights': 'Key Insights',
+        'projectModal.impact': 'Impact',
         'projectModal.viewOnGitHub': 'View on GitHub',
+        'projectModal.viewProject': 'View Project',
+        'projects.showMore': 'Show More',
     },
     ar: {
         'projects.title': 'مشاريعي',
@@ -30,7 +32,9 @@ export const projectsTranslations = {
         'projectModal.clickToViewFullSize': 'انقر لعرض الحجم الكامل',
         'projectModal.technologiesUsed': 'التقنيات المستخدمة',
         'projectModal.keyFeatures': 'الميزات الرئيسية',
-        'projectModal.keyInsights': 'المفاهيم الرئيسية',
+        'projectModal.impact': 'الأثر',
         'projectModal.viewOnGitHub': 'عرض على GitHub',
+        'projectModal.viewProject': 'عرض المشروع',
+        'projects.showMore': 'عرض المزيد',
     }
 }; 

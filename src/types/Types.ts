@@ -7,11 +7,13 @@ export interface Project {
     screenshots: string[];
     category: string;
     categoryIcon: string;
+    categoryLabel?: string;
     technologies: string[];
     features: string[];
     impact: string[];
     completionDate: string;
     githubUrl?: string;
+    projectUrl?: string;
 } 
 
 export type ImageTechnology = {

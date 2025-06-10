@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { 
     Code2, 
-    Filter,
+
     Calendar,
     Star,
     ExternalLink,
@@ -18,16 +18,20 @@ import { Project } from "../Types/Types";
 function Projects() {
     const { t, language } = useLanguage();
     const { categories, projects } = useProjectsData();
-    const [selectedCategory, setSelectedCategory] = useState("All");
+    const [selectedCategory, setSelectedCategory] = useState(language === "ar" ? "الكل" : "All");
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+    const [showAllProjects, setShowAllProjects] = useState(false);
     const [ref, inView] = useInView({
         threshold: 0.1,
         triggerOnce: true,
     });
 
-    const filteredProjects = selectedCategory === "All" 
+    const filteredProjects = selectedCategory === "All" || selectedCategory === "الكل"
         ? projects 
         : projects.filter(project => project.category === selectedCategory);
+
+    // Get visible projects based on showAllProjects state
+    const visibleProjects = showAllProjects ? filteredProjects : filteredProjects.slice(0, 6);
 
     // Get the most recent project
     const mostRecentProject = projects.reduce((latest, current) => {
@@ -109,10 +113,10 @@ function Projects() {
                     custom={0.3}
                     initial="hidden"
                     animate={inView ? "visible" : "hidden"}
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr"
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr "
                 >
                     <AnimatePresence mode="wait">
-                        {filteredProjects.map((project, index) => (
+                        {visibleProjects.map((project, index) => (
                             <motion.div
                                 key={project.id}
                                 variants={fadeInUp}
@@ -165,7 +169,7 @@ function Projects() {
                                                     alt={project.category} 
                                                     className="w-5 h-5 object-contain"
                                                 />
-                                                {project.category}
+                                                {project.categoryLabel ? project.categoryLabel : project.category}
                                             </div>
                                         </div>
                                         <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 
@@ -217,7 +221,30 @@ function Projects() {
                             </motion.div>
                         ))}
                     </AnimatePresence>
+                    
                 </motion.div>
+                    {/* Show More Button  make it in the center horizontally*/}
+                    {filteredProjects.length > 6 && !showAllProjects && (
+                        <motion.div
+                            variants={fadeInUp}
+                            custom={0.4}
+                            initial="hidden"
+                            animate={inView ? "visible" : "hidden"}
+                            className="text-center mt-8"
+                        >
+                            <motion.button
+                                variants={fadeInUp}
+                                custom={0.4}
+                                onClick={() => setShowAllProjects(true)}
+                                className="inline-flex items-center gap-2 px-6 py-2 rounded-full text-sm font-medium
+                                        transition-all duration-300 bg-purple-500/10 text-purple-400
+                                        hover:bg-purple-500/20 hover:text-purple-300"
+                            >
+                                {t('projects.showMore')}
+                                <ArrowUpRight className="w-4 h-4" />
+                            </motion.button>
+                        </motion.div>
+                    )}
             </div>
 
             {/* Project Modal */}

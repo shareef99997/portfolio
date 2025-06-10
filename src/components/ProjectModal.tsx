@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import { X, ChevronLeft, ChevronRight, Calendar, ExternalLink, Star } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, Calendar, ExternalLink, Star, Github } from "lucide-react";
 import { Project } from "../Types/Types";
 import { PrimaryButton } from "./Buttons";
 import { useLanguage } from "../Context/LanguageContext";
@@ -201,6 +201,7 @@ function ProjectModal({ project, onClose }: ProjectModalProps) {
                         {/* Features and Insights Grid */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                             {/* Key Features */}
+                            {project.features.length > 0 && (
                             <div>
                                 <h3 className="text-lg font-semibold text-white mb-3">{t('projectModal.keyFeatures')}</h3>
                                 <ul className="space-y-2">
@@ -212,10 +213,11 @@ function ProjectModal({ project, onClose }: ProjectModalProps) {
                                     ))}
                                 </ul>
                             </div>
-
-                            {/* Key Insights */}
+                            )}
+                            {/* Impact */}
+                            {project.impact.length > 0 && (
                             <div>
-                                <h3 className="text-lg font-semibold text-white mb-3">{t('projectModal.keyInsights')}</h3>
+                                <h3 className="text-lg font-semibold text-white mb-3">{t('projectModal.impact')}</h3>
                                 <ul className="space-y-2">
                                     {project.impact.map((insight, index) => (
                                         <li key={index} className="flex items-start gap-2 text-gray-300">
@@ -225,19 +227,31 @@ function ProjectModal({ project, onClose }: ProjectModalProps) {
                                     ))}
                                 </ul>
                             </div>
+                            )}
                         </div>
 
-                        {/* View on GitHub Button */}
-                        <div className="mt-auto pt-6 border-t border-white/10">
-                            {project.githubUrl && (
+                        {/* Action Buttons */}
+                        <div className="flex items-center w-full gap-4 mt-auto pt-6 border-t border-white/10">
+                            {/* View Project */}
+                            {project.projectUrl && (
                                 <PrimaryButton
-                                    onClick={() => window.open(project.githubUrl, '_blank')}
+                                    onClick={() => window.open(project.projectUrl, '_blank')}
                                     className="!px-4 !py-2 w-full flex items-center justify-center gap-2"
                                 >
                                     <ExternalLink className="w-4 h-4" />
-                                    <span>{t('projectModal.viewOnGitHub')}</span>
+                                    <span>{t('projectModal.viewProject')}</span>
                                 </PrimaryButton>
                             )}
+                            {/* View on GitHub Button */}
+                                {project.githubUrl && (
+                                    <PrimaryButton
+                                        onClick={() => window.open(project.githubUrl, '_blank')}
+                                        className="!px-4 !py-2 w-full flex items-center justify-center gap-2"
+                                    >
+                                        <Github className="w-4 h-4" />
+                                        <span>{t('projectModal.viewOnGitHub')}</span>
+                                    </PrimaryButton>
+                                )}
                         </div>
                     </div>
                 </div>
