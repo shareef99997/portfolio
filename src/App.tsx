@@ -1,7 +1,7 @@
 import Sections from './Sections';
-import { BrowserRouter as Router, Route, Routes, Navigate, useParams } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes, Navigate, useParams } from 'react-router-dom';
 import { LanguageProvider, useLanguage } from './Context/LanguageContext';
-import { RTLProvider } from './Components/RTLProvider';
+import { RTLProvider } from './components/RTLProvider';
 
 function LanguageRoute() {
     const { lang } = useParams();
