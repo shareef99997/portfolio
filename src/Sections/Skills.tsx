@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Brain } from "lucide-react";
-import SectionHeader from "../Components/SectionHeader";
+import SectionHeader from "../components/SectionHeader";
 import { useSkillsData } from "../Data/SkillsData";
 import { useLanguage } from "../Context/LanguageContext";
-import { Technology, ImageTechnology, IconTechnology } from "../Types/Types";
+import { Technology, ImageTechnology, IconTechnology } from "../types/Types";
 
 function isImageTechnology(tech: Technology): tech is ImageTechnology {
     return 'image' in tech;

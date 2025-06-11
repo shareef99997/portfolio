@@ -1,8 +1,8 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { X, ChevronLeft, ChevronRight, Calendar, ExternalLink, Star, Github } from "lucide-react";
-import { Project } from "../Types/Types";
-import { PrimaryButton } from "./Buttons";
+import { Project } from "../types/Types";
+import { PrimaryButton } from "./buttons";
 import { useLanguage } from "../Context/LanguageContext";
 interface ProjectModalProps {
     project: Project;

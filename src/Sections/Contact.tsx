@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
-import SectionHeader from "../Components/SectionHeader";
+import SectionHeader from "../components/SectionHeader";
 import { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 import toast, { Toaster } from 'react-hot-toast';
-import { PrimaryButton } from "../Components/Buttons";
+import { PrimaryButton } from "../components/buttons";
 import { socialLinks } from "../Data/SocialLinksData";
 import { useContactData } from "../Data/ContactData";
 

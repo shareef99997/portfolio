@@ -1,4 +1,4 @@
-import { Project } from '../Types/Types';
+import { Project } from '../types/Types';
 import powerbiIcon from '../Assets/Logos/power_bi_icon.svg';
 import sqlIcon from '../Assets/Logos/sql.svg';
 import pythonIcon from '../Assets/Logos/python.svg';
@@ -272,6 +272,8 @@ const projectsData = {
                 completionDate: "May 2025",
                 githubUrl: "https://github.com/shareef99997/USA-Real-Estate-Python-Project",
             },
+
+
             {
                 id: "5",
                 title: "Nobel Prize Analysis",
@@ -403,6 +405,8 @@ const projectsData = {
                 completionDate: "May 2025",
                 githubUrl: "https://github.com/shareef99997/Netflix-SQL-Project",
             },
+
+
             {
                 id: "9",
                 title: "Customer Churn Analysis",
@@ -543,6 +547,7 @@ const projectsData = {
                 completionDate: "January 2024",
                 githubUrl: "https://github.com/shareef99997/drip",
             },
+            
             {
                 id: "13",
                 title: "26 Ideas - Digital Marketing Agency",

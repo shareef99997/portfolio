@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FileText, Briefcase, GraduationCap, Trophy, Calendar, Building, ArrowUpRight, Clock, Code } from "lucide-react";
-import SectionHeader from "../Components/SectionHeader";
+import SectionHeader from "../components/SectionHeader";
 import { useResumeData } from "../Data/ResumeData";
 import { useCertificationsData } from "../Data/CertificationsData";
 import { useLanguage } from "../Context/LanguageContext";

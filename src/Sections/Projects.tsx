@@ -9,11 +9,11 @@ import {
     ExternalLink,
     ArrowUpRight
 } from "lucide-react";
-import SectionHeader from "../Components/SectionHeader";
-import ProjectModal from "../Components/ProjectModal";
+import SectionHeader from "../components/SectionHeader";
+import ProjectModal from "../components/ProjectModal";
 import { useProjectsData } from "../Data/ProjectsData";
 import { useLanguage } from "../Context/LanguageContext";
-import { Project } from "../Types/Types";
+import { Project } from "../types/Types";
 
 function Projects() {
     const { t, language } = useLanguage();
