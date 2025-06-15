@@ -1,6 +1,0 @@
-SELECT TOP (100000) [continent]
-      ,[location]
-      ,[date]
-      ,[population]
-      ,[RollingPeopleDied]
-  FROM [Portfolio_Project].[dbo].[PercentPopulationDeath]
