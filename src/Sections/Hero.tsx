@@ -23,6 +23,7 @@ function Hero() {
         { title: t('hero.roles.biAnalyst'), icon: <BarChart className="w-5 h-5" /> },
         { title: t('hero.roles.developer'), icon: <Code2 className="w-5 h-5" /> },
     ];
+    
 
     useEffect(() => {
         const interval = setInterval(() => {
