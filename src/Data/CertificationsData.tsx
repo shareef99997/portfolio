@@ -4,9 +4,9 @@ import pl300 from '../Assets/Logos/pl300.webp';
 import { useLanguage } from "../Context/LanguageContext";
 
 // Credentials Files
-import pl300file from "../Assets/Info/Certificates/Power BI Data Analyst Associate/Certificate.pdf"
-import ibmfile from "../Assets/Info/Certificates/IBM Data Analyst/Certificate.pdf"
-import datacampfile from "../Assets/Info/Certificates/Data Analyst Associate certificate/Data Analyst Associate certificate.pdf"
+import pl300file from "../Assets/Credentials/Certificates/Power BI Data Analyst Associate/Certificate.pdf"
+import ibmfile from "../Assets/Credentials/Certificates/IBM Data Analyst/Certificate.pdf"
+import datacampfile from "../Assets/Credentials/Certificates/Data Analyst Associate certificate/Data Analyst Associate certificate.pdf"
 
 const certificationsData = {
     en: [

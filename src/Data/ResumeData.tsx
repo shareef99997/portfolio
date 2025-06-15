@@ -7,14 +7,14 @@ import misk from "../Assets/Logos/misk.jpeg"
 import { useLanguage } from "../Context/LanguageContext";
 
 // Import courses PDFs
-import advancedSQL from "../Assets/Info/Courses/Associate Data Analyst in SQL/Statement of Accomplishment.pdf";
-import powerbicoursera from "../Assets/Info/Courses/Microsoft Power BI Data Analyst/Certificate.pdf";
-import miskvirtual from "../Assets/Info/Courses/Misk Data Analysis Cource/certificate.pdf";
-import dataCampPython from "../Assets/Info/Courses/Data Analyst in Python/certificate.pdf";
-import dataCampPowerBi from "../Assets/Info/Courses/Data Analyst in Power BI/Statement of Accomplishment.pdf";
+import advancedSQL from "../Assets/Credentials/Courses/Associate Data Analyst in SQL/Statement of Accomplishment.pdf";
+import powerbicoursera from "../Assets/Credentials/Courses/Microsoft Power BI Data Analyst/Certificate.pdf";
+import miskvirtual from "../Assets/Credentials/Courses/Misk Data Analysis Cource/certificate.pdf";
+import dataCampPython from "../Assets/Credentials/Courses/Data Analyst in Python/certificate.pdf";
+import dataCampPowerBi from "../Assets/Credentials/Courses/Data Analyst in Power BI/Statement of Accomplishment.pdf";
 import aouLogo from "../Assets/Logos/aou.jpeg"
 // Import College Degree
-import AOUCert from "../Assets/Info/Bachelor Degree/Certificate.pdf"
+import AOUCert from "../Assets/Credentials/Bachelor Degree/Certificate.pdf"
 const resumeData = {
     en: {
         workExperience: [
