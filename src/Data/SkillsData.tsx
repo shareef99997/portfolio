@@ -68,12 +68,12 @@ const skillsData = {
             icon: <Users className="w-6 h-6 text-purple-400" />,
             description: "Strong analytical mindset with expertise in problem-solving and data-driven decision making. Effective communication and collaboration skills.",
             technologies: [
-                { name: "Analytical Thinking", icon: <LineChart className="w-5 h-5" /> },
-                { name: "Problem Solving", icon: <Lightbulb className="w-5 h-5" /> },
-                { name: "Data Visualization", icon: <BarChart className="w-5 h-5" /> },
-                { name: "Critical Analysis", icon: <Target className="w-5 h-5" /> },
-                { name: "Communication", icon: <MessageSquare className="w-5 h-5" /> },
-                { name: "Team Collaboration", icon: <Network className="w-5 h-5" /> }
+                { name: "Analytical Thinking", icon: <LineChart className="sm:w-5 sm:h-5 w-4 h-4" /> },
+                { name: "Problem Solving", icon: <Lightbulb className="sm:w-5 sm:h-5 w-4 h-4" /> },
+                { name: "Data Visualization", icon: <BarChart className="sm:w-5 sm:h-5 w-4 h-4" /> },
+                { name: "Critical Analysis", icon: <Target className="sm:w-5 sm:h-5 w-4 h-4" /> },
+                { name: "Communication", icon: <MessageSquare className="sm:w-5 sm:h-5 w-4 h-4" /> },
+                { name: "Team Collaboration", icon: <Network className="sm:w-5 sm:h-5 w-4 h-4" /> }
             ]
         }
     },

@@ -154,7 +154,7 @@ function Resume() {
                                         key={index}
                                         variants={fadeInUp}
                                         custom={0.6 + index * 0.1}
-                                        className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-500/10 
+                                        className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-500/10 white-space-nowrap
                                                 hover:border-purple-500/20 transition-all duration-300"
                                     >
                                         <div className="flex items-start gap-4">
@@ -189,11 +189,11 @@ function Resume() {
                                                             target="_blank"
                                                             rel="noopener noreferrer"
                                                             className="inline-flex items-center gap-2 px-4 py-2 
-                                                                    bg-purple-500/10 rounded-full text-purple-400 text-sm
+                                                                    bg-purple-500/10 rounded-full text-purple-400 sm:text-sm text-[8px] white-space-nowrap
                                                                     hover:bg-purple-500/20 transition-colors duration-300"
                                                             whileHover={{ scale: 1.05 }}
                                                         >
-                                                            <Trophy className="w-4 h-4" />
+                                                            <Trophy className="sm:w-4 sm:h-4 w-3 h-3" />
                                                             {t('resume.viewCredential')}
                                                             <ArrowUpRight className="w-4 h-4" />
                                                         </motion.a>
@@ -202,11 +202,11 @@ function Resume() {
                                                                 href={edu.credentialFile}
                                                                 download
                                                                 className="inline-flex items-center gap-2 px-4 py-2 
-                                                                        bg-purple-500/10 rounded-full text-purple-400 text-sm
+                                                                        bg-purple-500/10 rounded-full text-purple-400 sm:text-sm text-[8px] white-space-nowrap
                                                                         hover:bg-purple-500/20 transition-all duration-300"
                                                                 whileHover={{ scale: 1.05 }}
                                                             >
-                                                                <FileText className="w-4 h-4" />
+                                                                <FileText className="sm:w-4 sm:h-4 w-3 h-3" />
                                                                 {t('resume.download')}
                                                             </motion.a>
                                                         )}
@@ -250,19 +250,19 @@ function Resume() {
                                                 </div>
                                             )}
                                             <div className="flex-1">
-                                                <div className="flex justify-between items-start gap-2">
-                                                    <h4 className="text-lg font-semibold text-white max-w-[80%] group-hover:text-purple-400 
+                                                <div className="flex justify-between items-start sm:gap-2 gap-1">
+                                                    <h4 className="sm:text-lg text-base font-semibold text-white sm:max-w-[80%] min-[380px]:max-w-[60%] max-w-[50%] group-hover:text-purple-400 
                                                             transition-colors duration-300">
                                                         {course.title}
                                                     </h4>
                                                     <div className="flex items-center gap-2">
-                                                        <div className="flex items-center gap-2 px-3 py-1 bg-purple-500/10 rounded-full 
-                                                                    text-purple-400 text-sm group-hover:bg-purple-500/20 
+                                                        <div className="flex items-center gap-2 sm:px-3 sm:py-1 px-2 py-1 bg-purple-500/10 rounded-full
+                                                                    text-purple-400 sm:text-sm min-[380px]:text-[8px] text-[6px] whitespace-nowrap group-hover:bg-purple-500/20 
                                                                     transition-all duration-300">
                                                             <Clock className="w-3 h-3" />
                                                             <span>{course.hours} {t('resume.hours')}</span>
                                                         </div>
-                                                        <div className="px-3 py-1 bg-purple-500/10 rounded-full text-purple-400 text-sm
+                                                        <div className="sm:px-3 sm:py-1 px-2 py-1 bg-purple-500/10 rounded-full text-purple-400 sm:text-sm min-[380px]:text-[8px] text-[6px] sm:whitespace-nowrap
                                                                     group-hover:bg-purple-500/20 transition-all duration-300">
                                                             {course.date}
                                                         </div>
@@ -279,13 +279,13 @@ function Resume() {
                                                             href={course.credentialUrl || course.credentialFile}
                                                             target="_blank"
                                                             rel="noopener noreferrer"
-                                                            className="inline-flex items-center gap-2 px-4 py-2 
-                                                                    bg-purple-500/10 rounded-full text-purple-400 text-sm
+                                                            className="inline-flex items-center gap-2 px-4 py-2 whitespace-nowrap
+                                                                    bg-purple-500/10 rounded-full text-purple-400 sm:text-sm text-[8px]
                                                                     hover:bg-purple-500/20 transition-all duration-300
                                                                     group-hover:translate-x-1"
                                                             whileHover={{ scale: 1.05 }}
                                                         >
-                                                            <Trophy className="w-4 h-4" />
+                                                            <Trophy className="sm:w-4 sm:h-4 w-3 h-3" />
                                                             {t('resume.viewCredential')}
                                                             <ArrowUpRight className="w-4 h-4 transition-transform duration-300 
                                                                                 group-hover:translate-x-1" />
@@ -294,12 +294,12 @@ function Resume() {
                                                             <motion.a
                                                                 href={course.credentialFile}
                                                                 download
-                                                                className="inline-flex items-center gap-2 px-4 py-2 
-                                                                        bg-purple-500/10 rounded-full text-purple-400 text-sm
+                                                                className="inline-flex items-center gap-2 px-4 py-2 white-space-nowrap
+                                                                        bg-purple-500/10 rounded-full text-purple-400 sm:text-sm text-[8px]
                                                                         hover:bg-purple-500/20 transition-all duration-300"
                                                                 whileHover={{ scale: 1.05 }}
                                                             >
-                                                                <FileText className="w-4 h-4" />
+                                                                <FileText className="sm:w-4 sm:h-4 w-3 h-3" />
                                                                 {t('resume.download')}
                                                             </motion.a>
                                                         )}

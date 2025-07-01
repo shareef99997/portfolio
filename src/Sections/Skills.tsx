@@ -94,7 +94,7 @@ function Skills() {
                                                 transition-all duration-300"
                                     >
                                         {isImageTechnology(tech) ? (
-                                            <div className="w-5 h-5 rounded-lg overflow-hidden">
+                                            <div className="sm:w-5 sm:h-5 w-4 h-4 rounded-lg overflow-hidden">
                                                 <motion.img
                                                     src={tech.image}
                                                     alt={tech.name}
@@ -108,7 +108,7 @@ function Skills() {
                                                 {(tech as IconTechnology).icon}
                                             </div>
                                         )}
-                                        <span className="text-white/90 text-sm group-hover:text-purple-400 
+                                        <span className="text-white/90 sm:text-sm text-[8px] group-hover:text-purple-400 
                                                     transition-colors duration-300">{tech.name}</span>
                                     </motion.div>
                                 ))}
@@ -146,7 +146,7 @@ function Skills() {
                                 <div className="w-5 h-5 text-purple-400">
                                     {tech.icon}
                                 </div>
-                                <span className="text-white/90 text-sm group-hover:text-purple-400 
+                                <span className="text-white/90 sm:text-sm text-[8px] group-hover:text-purple-400 
                                             transition-colors duration-300">{tech.name}</span>
                             </motion.div>
                         ))}
