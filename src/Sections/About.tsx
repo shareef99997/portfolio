@@ -49,7 +49,7 @@ function About() {
 
     return (
         <section id="about" className="relative py-20 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-b from-slate-500/5 to-transparent" />
             
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
@@ -82,14 +82,14 @@ function About() {
                             animate={inView ? "visible" : "hidden"}
                         >
                             <div className="relative w-[50%] max-w-md mx-auto rounded-2xl overflow-hidden group">
-                                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-transparent z-10" />
+                                <div className="absolute inset-0 bg-gradient-to-br from-slate-500/20 to-transparent z-10" />
                                 <img 
                                     src={personal_image}
                                     alt="Shareef Huzaifa"
                                     className="w-full h-full object-cover grayscale transform group-hover:scale-105 transition-transform duration-500"
                                 />
-                                <div className="absolute -top-4 -right-4 w-16 h-16 bg-purple-500/10 rounded-full blur-xl" />
-                                <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-purple-500/10 rounded-full blur-xl" />
+                                <div className="absolute -top-4 -right-4 w-16 h-16 bg-slate-500/10 rounded-full blur-xl" />
+                                <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-slate-500/10 rounded-full blur-xl" />
                             </div>
                         </motion.div>
 
@@ -103,7 +103,7 @@ function About() {
                         >
                             <p className="text-gray-300 leading-relaxed sm:text-lg text-md">
                                 {t('about.intro')}
-                                <span className="flex items-center gap-2 mt-2 text-purple-300">
+                                <span className="flex items-center gap-2 mt-2 text-slate-300">
                                     <MapPin className="w-4 h-4" />
                                     {t('about.locationValue')} <img src={saudiFlag} alt="Saudi Arabia Flag" className="w-4 h-4 inline-block" />
                                 </span>
@@ -125,13 +125,13 @@ function About() {
                             <div className="grid grid-cols-2 gap-1 sm:gap-4">
                                 {[
                                     { 
-                                        icon: <Calendar className="w-5 h-5 text-purple-400" />,
+                                        icon: <Calendar className="w-5 h-5 text-slate-400" />,
                                         title: t('about.age'),
                                         value: `${calculateAge()} ${language === 'ar' ? 'سنة' : 'years'}`,
                                         emoji: ""
                                     },
                                     { 
-                                        icon: <User className="w-5 h-5 text-purple-400" />,
+                                        icon: <User className="w-5 h-5 text-slate-400" />,
                                         title: t('about.nationality'),
                                         value: t('about.nationalityValue'),
                                         emoji: <img src={sudanFlag} alt="Sudan Flag" className="w-4 h-4 inline-block" />
@@ -143,7 +143,7 @@ function About() {
                                         custom={0.3 + index * 0.1}
                                         initial="hidden"
                                         animate={inView ? "visible" : "hidden"}
-                                        className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-purple-500/10 hover:border-purple-500/20 transition-colors duration-300"
+                                        className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-slate-500/10 hover:border-slate-500/20 transition-colors duration-300"
                                     >
                                         <div className="flex items-center gap-3 mb-2">
                                             {info.icon}
@@ -171,9 +171,9 @@ function About() {
                                         custom={0.4 + index * 0.1}
                                         initial="hidden"
                                         animate={inView ? "visible" : "hidden"}
-                                        className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-purple-500/10 hover:border-purple-500/20 transition-colors duration-300 text-center"
+                                        className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-slate-500/10 hover:border-slate-500/20 transition-colors duration-300 text-center"
                                     >
-                                        <div className="text-purple-400 text-sm mb-1">{stat.label}</div>
+                                        <div className="text-slate-400 text-sm mb-1">{stat.label}</div>
                                         <div className="text-white font-medium">{stat.value}</div>
                                     </motion.div>
                                 ))}
@@ -201,7 +201,7 @@ function About() {
                                                 href={social.href}
                                                 target="_blank" 
                                                 rel="noopener noreferrer"
-                                                className="group relative text-white/60 transition-colors duration-300 hover:drop-shadow-lg hover:drop-shadow-purple-500/20"
+                                                className="group relative text-white/60 transition-colors duration-300 hover:drop-shadow-lg hover:drop-shadow-slate-500/20"
                                             >
                                                 {social.icon}
                                                 <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-black/80 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
@@ -236,22 +236,22 @@ function About() {
                             <div className="grid h-full grid-cols-1 sm:grid-cols-2 gap-4">
                                 {[
                                     { 
-                                        icon: <Database className="w-5 h-5 text-purple-400" />,
+                                        icon: <Database className="w-5 h-5 text-slate-400" />,
                                         title: t('about.expertise.dataAnalysis'),
                                         description: t('about.expertise.dataAnalysisDesc')
                                     },
                                     { 
-                                        icon: <ChartBar className="w-5 h-5 text-purple-400" />,
+                                        icon: <ChartBar className="w-5 h-5 text-slate-400" />,
                                         title: t('about.expertise.businessIntelligence'),
                                         description: t('about.expertise.businessIntelligenceDesc')
                                     },
                                     { 
-                                        icon: <Code className="w-5 h-5 text-purple-400" />,
+                                        icon: <Code className="w-5 h-5 text-slate-400" />,
                                         title: t('about.expertise.softwareDevelopment'),
                                         description: t('about.expertise.softwareDevelopmentDesc')
                                     },
                                     { 
-                                        icon: <Rocket className="w-5 h-5 text-purple-400" />,
+                                        icon: <Rocket className="w-5 h-5 text-slate-400" />,
                                         title: t('about.expertise.careerGoals'),
                                         description: t('about.expertise.careerGoalsDesc')
                                     }
@@ -262,7 +262,7 @@ function About() {
                                         custom={0.5 + index * 0.1}
                                         initial="hidden"
                                         animate={inView ? "visible" : "hidden"}
-                                        className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-purple-500/10 hover:border-purple-500/20 transition-colors duration-300"
+                                        className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-slate-500/10 hover:border-slate-500/20 transition-colors duration-300"
                                     >
                                         <div className="flex items-center gap-3 mb-2">
                                             {area.icon}
@@ -291,7 +291,7 @@ function About() {
                                         href={social.href}
                                         target="_blank" 
                                         rel="noopener noreferrer"
-                                        className="group relative text-white/60 transition-colors duration-300 hover:drop-shadow-lg hover:drop-shadow-purple-500/20"
+                                        className="group relative text-white/60 transition-colors duration-300 hover:drop-shadow-lg hover:drop-shadow-slate-500/20"
                                     >
                                         {social.icon}
                                         <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-black/80 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">

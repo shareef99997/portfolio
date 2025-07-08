@@ -107,7 +107,7 @@ function Hero() {
                                                 ease: "easeInOut"
                                             }
                                         }}
-                                        className="flex items-center justify-center gap-2 text-xl md:text-2xl text-purple-200"
+                                        className="flex items-center justify-center gap-2 text-xl md:text-2xl text-slate-200"
                                     >
                                         <motion.div
                                             initial={{ rotate: -180, opacity: 0 }}
@@ -138,9 +138,9 @@ function Hero() {
                                     custom={0.5}
                                     initial="hidden"
                                     animate={inView ? "visible" : "hidden"}
-                                    className="flex items-center gap-2 bg-white/5 backdrop-blur-sm px-4 py-2 rounded-full border border-purple-500/10"
+                                    className="flex items-center gap-2 bg-white/5 backdrop-blur-sm px-4 py-2 rounded-full border border-slate-500/10"
                                 >
-                                    <div className="w-2 h-2 rounded-full bg-purple-500 animate-pulse" />
+                                    <div className="w-2 h-2 rounded-full bg-slate-500 animate-pulse" />
                                     <span className="text-white/90 text-sm font-medium">{t('hero.certified')}</span>
                                 </motion.div>
                                 <motion.div
@@ -162,10 +162,10 @@ function Hero() {
                                                     stiffness: 300
                                                 }
                                             }}
-                                            className="group relative hover:drop-shadow-lg hover:drop-shadow-purple-500/20"
+                                            className="group relative hover:drop-shadow-lg hover:drop-shadow-slate-500/20"
                                         >
                                             <div className="relative">
-                                                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-transparent rounded-lg blur-sm group-hover:blur-md transition-all duration-300" />
+                                                <div className="absolute inset-0 bg-gradient-to-br from-slate-500/20 to-transparent rounded-lg blur-sm group-hover:blur-md transition-all duration-300" />
                                                 <img 
                                                     src={cert.badgeImage} 
                                                     alt={cert.title} 

@@ -55,7 +55,7 @@ function Projects() {
 
     return (
         <section id="projects" className="relative py-20 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-b from-slate-500/5 to-transparent" />
             
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
@@ -93,7 +93,7 @@ function Projects() {
                             className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300
                                     flex items-center gap-2
                                     ${selectedCategory === category.name
-                                        ? "bg-purple-500 text-white shadow-lg shadow-purple-500/20"
+                                        ? "bg-slate-500 text-white shadow-lg shadow-slate-500/20"
                                         : "bg-white/5 text-gray-300 hover:bg-white/10"
                                     }`}
                         >
@@ -126,9 +126,9 @@ function Projects() {
                                 exit="hidden"
                                 onClick={() => setSelectedProject(project)}
                                 className="group relative bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden
-                                        border border-purple-500/10 hover:border-purple-500/20 
+                                        border border-slate-500/10 hover:border-slate-500/20 
                                         transition-all duration-300 cursor-pointer
-                                        hover:shadow-lg hover:shadow-purple-500/10 flex flex-col"
+                                        hover:shadow-lg hover:shadow-slate-500/10 flex flex-col"
                             >
                                 {/* Project Image */}
                                 <div className="relative h-48 overflow-hidden">
@@ -141,7 +141,7 @@ function Projects() {
                                     />
                                     <div className="absolute top-4 right-4 z-20 flex items-center gap-1 
                                                 bg-black/50 backdrop-blur-sm px-2 py-1 rounded-full">
-                                        <Calendar className="w-4 h-4 text-purple-400" />
+                                        <Calendar className="w-4 h-4 text-slate-400" />
                                         <span className="text-white text-sm">{project.completionDate}</span>
                                     </div>
                                     {/* Featured Badge */}
@@ -151,7 +151,7 @@ function Projects() {
                                             animate={{ opacity: 1, x: 0 }}
                                             transition={{ delay: 0.5 }}
                                             className="absolute top-4 left-4 z-20 flex items-center gap-1 
-                                                    bg-purple-500/80 backdrop-blur-sm px-2 py-1 rounded-full"
+                                                    bg-slate-500/80 backdrop-blur-sm px-2 py-1 rounded-full"
                                         >
                                             <Star className="w-4 h-4 text-yellow-400" />
                                             <span className="text-white text-sm">Featured</span>
@@ -163,7 +163,7 @@ function Projects() {
                                 <div className="p-6 flex flex-col flex-1">
                                     <div className="flex-1">
                                         <div className="flex items-center gap-2 mb-2">
-                                            <div className="flex items-center gap-2 px-3 py-1 bg-purple-500/10 rounded-full text-purple-400 text-sm">
+                                            <div className="flex items-center gap-2 px-3 py-1 bg-slate-500/10 rounded-full text-slate-400 text-sm">
                                                 <img 
                                                     src={project.categoryIcon} 
                                                     alt={project.category} 
@@ -172,7 +172,7 @@ function Projects() {
                                                 {project.categoryLabel ? project.categoryLabel : project.category}
                                             </div>
                                         </div>
-                                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 
+                                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-slate-400 
                                                     transition-colors duration-300">
                                             {project.title}
                                         </h3>
@@ -199,8 +199,8 @@ function Projects() {
                                                     target="_blank"
                                                     rel="noopener noreferrer"
                                                     onClick={(e) => e.stopPropagation()}
-                                                    className="p-2 rounded-full bg-purple-500/10 hover:bg-purple-500/20 
-                                                             text-purple-400 hover:text-purple-300 transition-all duration-300
+                                                    className="p-2 rounded-full bg-slate-500/10 hover:bg-slate-500/20 
+                                                             text-slate-400 hover:text-slate-300 transition-all duration-300
                                                              group-hover:scale-110"
                                                 >
                                                     <ExternalLink className="w-5 h-5" />
@@ -237,8 +237,8 @@ function Projects() {
                                 custom={0.4}
                                 onClick={() => setShowAllProjects(true)}
                                 className="inline-flex items-center gap-2 px-6 py-2 rounded-full text-sm font-medium
-                                        transition-all duration-300 bg-purple-500/10 text-purple-400
-                                        hover:bg-purple-500/20 hover:text-purple-300"
+                                        transition-all duration-300 bg-slate-500/10 text-slate-400
+                                        hover:bg-slate-500/20 hover:text-slate-300"
                             >
                                 {t('projects.showMore')}
                                 <ArrowUpRight className="w-4 h-4" />

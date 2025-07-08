@@ -60,7 +60,7 @@ function ProjectModal({ project, onClose }: ProjectModalProps) {
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.95, opacity: 0 }}
                 className="relative w-[95%] h-[95vh] bg-black/90 rounded-2xl overflow-hidden
-                         border border-purple-500/20 shadow-2xl shadow-purple-500/10"
+                         border border-slate-500/20 shadow-2xl shadow-slate-500/10"
                 onClick={(e) => e.stopPropagation()}
             >
                 {/* Close Button */}
@@ -150,7 +150,7 @@ function ProjectModal({ project, onClose }: ProjectModalProps) {
                                             }}
                                             className={`w-2 h-2 rounded-full transition-all duration-300
                                                     ${currentImageIndex === index 
-                                                        ? "bg-purple-500 w-4" 
+                                                        ? "bg-slate-500 w-4" 
                                                         : "bg-white/30 hover:bg-white/50"}`}
                                         />
                                     ))}
@@ -166,7 +166,7 @@ function ProjectModal({ project, onClose }: ProjectModalProps) {
                         {/* Header */}
                         <div className="flex flex-col gap-4 mb-6">
                             <div className="flex items-center gap-2">
-                                <span className="px-3 py-1 bg-purple-500/10 rounded-full text-purple-400 text-sm">
+                                <span className="px-3 py-1 bg-slate-500/10 rounded-full text-slate-400 text-sm">
                                     <img 
                                         src={project.categoryIcon} 
                                         alt={project.category} 
@@ -207,7 +207,7 @@ function ProjectModal({ project, onClose }: ProjectModalProps) {
                                 <ul className="space-y-2">
                                     {project.features.map((feature, index) => (
                                         <li key={index} className="flex items-start gap-2 text-gray-300">
-                                            <div className="flex-shrink-0 w-2 h-2 mt-1.5 bg-purple-500 rounded-full" />
+                                            <div className="flex-shrink-0 w-2 h-2 mt-1.5 bg-slate-500 rounded-full" />
                                             {feature}
                                         </li>
                                     ))}
@@ -221,7 +221,7 @@ function ProjectModal({ project, onClose }: ProjectModalProps) {
                                 <ul className="space-y-2">
                                     {project.impact.map((insight, index) => (
                                         <li key={index} className="flex items-start gap-2 text-gray-300">
-                                            <div className="flex-shrink-0 w-2 h-2 mt-1.5 bg-purple-500 rounded-full" />
+                                            <div className="flex-shrink-0 w-2 h-2 mt-1.5 bg-slate-500 rounded-full" />
                                             {insight}
                                         </li>
                                     ))}

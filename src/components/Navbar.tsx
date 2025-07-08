@@ -71,7 +71,7 @@ function NavBar() {
                         animate={{ y: 0, opacity: 1 }}
                         exit={{ y: -100, opacity: 0 }}
                         transition={{ duration: 0.3, ease: 'easeOut' }}
-                        className="fixed top-4 md:left-0 right-0 md:mx-auto me-6 w-fit z-50 bg-black/20 backdrop-blur-lg rounded-full border border-purple-500/10 shadow-lg shadow-purple-500/5"
+                        className="fixed top-4 md:left-0 right-0 md:mx-auto me-6 w-fit z-50 bg-black/20 backdrop-blur-lg rounded-full border border-slate-500/10 shadow-lg shadow-slate-500/5"
                     >
                         {/* Desktop Navigation */}
                         <div className="hidden md:flex items-center justify-center px-4 py-2">
@@ -87,8 +87,8 @@ function NavBar() {
                                             onClick={() => scrollToSection(id)}
                                             className={`relative group p-3 rounded-full transition-all duration-300 ${
                                                 activeSection === id 
-                                                    ? 'bg-purple-500 text-white shadow-lg shadow-purple-500/20' 
-                                                    : 'text-white/60 hover:text-white hover:bg-purple-500/10'
+                                                    ? 'bg-slate-500 text-white shadow-lg shadow-slate-500/20' 
+                                                    : 'text-white/60 hover:text-white hover:bg-slate-500/10'
                                             }`}
                                             aria-label={label}
                                         >
@@ -106,7 +106,7 @@ function NavBar() {
                                 >
                                     <button
                                         onClick={toggleLanguage}
-                                        className="relative group p-3 rounded-full text-white/60 hover:text-white hover:bg-purple-500/10 transition-all duration-300"
+                                        className="relative group p-3 rounded-full text-white/60 hover:text-white hover:bg-slate-500/10 transition-all duration-300"
                                         aria-label="Switch Language"
                                     >
                                         <Globe size={20} strokeWidth={2} />
@@ -122,7 +122,7 @@ function NavBar() {
                         <div className="md:hidden flex items-center justify-end px-2 py-2">
                             <button
                                 onClick={() => setIsMobileMenuOpen(true)}
-                                className="p-2 rounded-full text-white/60 hover:text-white hover:bg-purple-500/10 transition-all duration-300"
+                                className="p-2 rounded-full text-white/60 hover:text-white hover:bg-slate-500/10 transition-all duration-300"
                                 aria-label="Open Menu"
                             >
                                 <Menu size={24} strokeWidth={2} />
@@ -149,13 +149,13 @@ function NavBar() {
                             animate={{ x: 0 }}
                             exit={{ x: '100%' }}
                             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-                            className="fixed top-0 right-0 h-full w-64 bg-black/20 backdrop-blur-lg border-l border-purple-500/10 z-50 md:hidden shadow-lg shadow-purple-500/5"
+                            className="fixed top-0 right-0 h-full w-64 bg-black/20 backdrop-blur-lg border-l border-slate-500/10 z-50 md:hidden shadow-lg shadow-slate-500/5"
                         >
-                            <div className="p-4 flex justify-between items-center border-b border-purple-500/10">
+                            <div className="p-4 flex justify-between items-center border-b border-slate-500/10">
                                 <h2 className="text-white font-medium">Menu</h2>
                                 <button
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className="p-2 rounded-full text-white/60 hover:text-white hover:bg-purple-500/10 transition-all duration-300"
+                                    className="p-2 rounded-full text-white/60 hover:text-white hover:bg-slate-500/10 transition-all duration-300"
                                     aria-label="Close Menu"
                                 >
                                     <X size={24} strokeWidth={2} />
@@ -171,8 +171,8 @@ function NavBar() {
                                             onClick={() => scrollToSection(id)}
                                             className={`w-full flex items-center gap-3 p-3 rounded-lg transition-all duration-300 ${
                                                 activeSection === id 
-                                                    ? 'bg-purple-500 text-white shadow-lg shadow-purple-500/20' 
-                                                    : 'text-white/60 hover:text-white hover:bg-purple-500/10'
+                                                    ? 'bg-slate-500 text-white shadow-lg shadow-slate-500/20' 
+                                                    : 'text-white/60 hover:text-white hover:bg-slate-500/10'
                                             }`}
                                         >
                                             <Icon size={20} strokeWidth={2} />
@@ -185,7 +185,7 @@ function NavBar() {
                                 >
                                     <button
                                         onClick={toggleLanguage}
-                                        className="w-full flex items-center gap-3 p-3 rounded-lg text-white/60 hover:text-white hover:bg-purple-500/10 transition-all duration-300"
+                                        className="w-full flex items-center gap-3 p-3 rounded-lg text-white/60 hover:text-white hover:bg-slate-500/10 transition-all duration-300"
                                     >
                                         <Globe size={20} strokeWidth={2} />
                                         <span>{languages.find(lang => lang.code === language)?.label}</span>

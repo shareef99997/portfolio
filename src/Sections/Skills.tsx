@@ -37,7 +37,7 @@ function Skills() {
 
     return (
         <section id="skills" className="relative py-20 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-b from-slate-500/5 to-transparent" />
             
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
@@ -73,8 +73,8 @@ function Skills() {
                             custom={0.2 + index * 0.1}
                             initial="hidden"
                             animate={inView ? "visible" : "hidden"}
-                            className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-500/10 
-                                    hover:border-purple-500/20 transition-all duration-300 flex flex-col"
+                            className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-slate-500/10 
+                                    hover:border-slate-500/20 transition-all duration-300 flex flex-col"
                         >
                             <div className="flex items-center gap-3 mb-4">
                                 {category.icon}
@@ -90,7 +90,7 @@ function Skills() {
                                         initial="hidden"
                                         animate={inView ? "visible" : "hidden"}
                                         className="group flex items-center gap-2 px-3 py-1.5 bg-white/5 
-                                                rounded-full border border-purple-500/10 hover:border-purple-500/20 
+                                                rounded-full border border-slate-500/10 hover:border-slate-500/20 
                                                 transition-all duration-300"
                                     >
                                         {isImageTechnology(tech) ? (
@@ -104,11 +104,11 @@ function Skills() {
                                                 />
                                             </div>
                                         ) : (
-                                            <div className="w-5 h-5 text-purple-400">
+                                            <div className="w-5 h-5 text-slate-400">
                                                 {(tech as IconTechnology).icon}
                                             </div>
                                         )}
-                                        <span className="text-white/90 sm:text-sm text-[8px] group-hover:text-purple-400 
+                                        <span className="text-white/90 sm:text-sm text-[8px] group-hover:text-slate-400 
                                                     transition-colors duration-300">{tech.name}</span>
                                     </motion.div>
                                 ))}
@@ -123,8 +123,8 @@ function Skills() {
                     custom={0.4}
                     initial="hidden"
                     animate={inView ? "visible" : "hidden"}
-                    className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-500/10 
-                            hover:border-purple-500/20 transition-all duration-300"
+                    className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-slate-500/10 
+                            hover:border-slate-500/20 transition-all duration-300"
                 >
                     <div className="flex items-center gap-3 mb-4">
                         {softSkills.icon}
@@ -140,13 +140,13 @@ function Skills() {
                                 initial="hidden"
                                 animate={inView ? "visible" : "hidden"}
                                 className="group flex items-center gap-2 px-3 py-1.5 bg-white/5 
-                                        rounded-full border border-purple-500/10 hover:border-purple-500/20 
+                                        rounded-full border border-slate-500/10 hover:border-slate-500/20 
                                         transition-all duration-300"
                             >
-                                <div className="w-5 h-5 text-purple-400">
+                                <div className="w-5 h-5 text-slate-400">
                                     {tech.icon}
                                 </div>
-                                <span className="text-white/90 sm:text-sm text-[8px] group-hover:text-purple-400 
+                                <span className="text-white/90 sm:text-sm text-[8px] group-hover:text-slate-400 
                                             transition-colors duration-300">{tech.name}</span>
                             </motion.div>
                         ))}

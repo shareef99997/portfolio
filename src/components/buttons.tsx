@@ -13,10 +13,10 @@ export const PrimaryButton = ({ children, onClick, className, type }: { children
             whileTap={{ scale: 0.95 }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className={`relative px-8 py-3 rounded-full bg-gradient-to-r from-purple-600 to-purple-700 text-white font-medium overflow-hidden group transition-all duration-300 border border-purple-500/20 shadow-lg shadow-purple-500/20 ${className}`}
+            className={`relative px-8 py-3 rounded-full bg-gradient-to-r from-slate-600 to-slate-700 text-white font-medium overflow-hidden group transition-all duration-300 border border-slate-500/20 shadow-lg shadow-slate-500/20 ${className}`}
         >
             {/* Animated gradient background */}
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-purple-500 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-gradient-x" />
+            <div className="absolute inset-0 bg-gradient-to-r from-slate-600 via-slate-500 to-slate-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-gradient-x" />
             
             {/* Shine effect */}
             <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent" />

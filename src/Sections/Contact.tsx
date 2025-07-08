@@ -56,15 +56,15 @@ function Contact() {
 
     const contactInfo = [
         {
-            icon: <Mail className="w-5 h-5 text-purple-400" />,
+            icon: <Mail className="w-5 h-5 text-slate-400" />,
             ...contactData.contactInfo[0]
         },
         {
-            icon: <Phone className="w-5 h-5 text-purple-400" />,
+            icon: <Phone className="w-5 h-5 text-slate-400" />,
             ...contactData.contactInfo[1]
         },
         {
-            icon: <MapPin className="w-5 h-5 text-purple-400" />,
+            icon: <MapPin className="w-5 h-5 text-slate-400" />,
             ...contactData.contactInfo[2]
         }
     ];
@@ -104,7 +104,7 @@ function Contact() {
                     },
                 }}
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-b from-slate-500/5 to-transparent" />
             
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
@@ -133,8 +133,8 @@ function Contact() {
                         custom={0.2}
                         initial="hidden"
                         animate={inView ? "visible" : "hidden"}
-                        className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-purple-500/10 
-                                hover:border-purple-500/20 transition-all duration-300"
+                        className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-slate-500/10 
+                                hover:border-slate-500/20 transition-all duration-300"
                     >
                         <form ref={form} onSubmit={handleSubmit} className="space-y-6">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -147,8 +147,8 @@ function Contact() {
                                         id="name"
                                         name="user_name"
                                         required
-                                        className="w-full px-4 py-3 bg-white/5 border border-purple-500/10 rounded-lg
-                                                text-white placeholder-gray-400 focus:outline-none focus:border-purple-500/30
+                                        className="w-full px-4 py-3 bg-white/5 border border-slate-500/10 rounded-lg
+                                                text-white placeholder-gray-400 focus:outline-none focus:border-slate-500/30
                                                 transition-colors duration-300"
                                         placeholder={contactData.name}
                                     />
@@ -162,8 +162,8 @@ function Contact() {
                                         id="email"
                                         name="user_email"
                                         required
-                                        className="w-full px-4 py-3 bg-white/5 border border-purple-500/10 rounded-lg
-                                                text-white placeholder-gray-400 focus:outline-none focus:border-purple-500/30
+                                        className="w-full px-4 py-3 bg-white/5 border border-slate-500/10 rounded-lg
+                                                text-white placeholder-gray-400 focus:outline-none focus:border-slate-500/30
                                                 transition-colors duration-300"
                                         placeholder={contactData.email}
                                     />
@@ -178,8 +178,8 @@ function Contact() {
                                     id="subject"
                                     name="subject"
                                     required
-                                    className="w-full px-4 py-3 bg-white/5 border border-purple-500/10 rounded-lg
-                                            text-white placeholder-gray-400 focus:outline-none focus:border-purple-500/30
+                                    className="w-full px-4 py-3 bg-white/5 border border-slate-500/10 rounded-lg
+                                            text-white placeholder-gray-400 focus:outline-none focus:border-slate-500/30
                                             transition-colors duration-300"
                                     placeholder={contactData.subject}
                                 />
@@ -193,8 +193,8 @@ function Contact() {
                                     name="message"
                                     required
                                     rows={4}
-                                    className="w-full px-4 py-3 bg-white/5 border border-purple-500/10 rounded-lg
-                                            text-white placeholder-gray-400 focus:outline-none focus:border-purple-500/30
+                                    className="w-full px-4 py-3 bg-white/5 border border-slate-500/10 rounded-lg
+                                            text-white placeholder-gray-400 focus:outline-none focus:border-slate-500/30
                                             transition-colors duration-300 resize-none"
                                     placeholder={contactData.message}
                                 />
@@ -230,16 +230,16 @@ function Contact() {
                                     initial="hidden"
                                     animate={inView ? "visible" : "hidden"}
                                     className="flex items-start gap-4 p-6 bg-white/5 backdrop-blur-sm rounded-xl
-                                            border border-purple-500/10 hover:border-purple-500/20 transition-all duration-300
+                                            border border-slate-500/10 hover:border-slate-500/20 transition-all duration-300
                                             group"
                                 >
-                                    <div className="p-3 bg-purple-500/10 rounded-lg group-hover:bg-purple-500/20
+                                    <div className="p-3 bg-slate-500/10 rounded-lg group-hover:bg-slate-500/20
                                                 transition-colors duration-300">
                                         {info.icon}
                                     </div>
                                     <div>
                                         <h3 className="text-white font-medium mb-1">{info.title}</h3>
-                                        <p className="text-gray-400 group-hover:text-purple-400 transition-colors duration-300">
+                                        <p className="text-gray-400 group-hover:text-slate-400 transition-colors duration-300">
                                             {info.value}
                                         </p>
                                     </div>
@@ -262,10 +262,10 @@ function Contact() {
                                         initial="hidden"
                                         animate={inView ? "visible" : "hidden"}
                                         className="group p-4 bg-white/5 backdrop-blur-sm rounded-xl
-                                                border border-purple-500/10 hover:border-purple-500/20
+                                                border border-slate-500/10 hover:border-slate-500/20
                                                 transition-all duration-300"
                                     >
-                                        <div className="text-white/60 group-hover:text-purple-400 transition-colors duration-300">
+                                        <div className="text-white/60 group-hover:text-slate-400 transition-colors duration-300">
                                             {social.icon}
                                         </div>
                                         <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 px-2 py-1

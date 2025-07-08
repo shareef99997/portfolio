@@ -28,7 +28,7 @@ const skillsData = {
         technicalSkills: [
             {
                 title: "Data Analysis & Business Intelligence",
-                icon: <BarChart className="w-6 h-6 text-purple-400" />,
+                icon: <BarChart className="w-6 h-6 text-slate-400" />,
                 description: "Transforming large datasets into strategic insights using advanced analytics, automation, and visual storytelling ",
                 technologies: [
                     { name: "Power BI", image: powerbiIcon },
@@ -49,7 +49,7 @@ const skillsData = {
             },
             {
                 title: "Programming & Development",
-                icon: <Code2 className="w-6 h-6 text-purple-400" />,
+                icon: <Code2 className="w-6 h-6 text-slate-400" />,
                 description: "Building responsive, scalable web and mobile apps using React.js, Flutter, and modern front-end architectures.",
                 technologies: [
                     { name: "HTML", image: htmlIcon },
@@ -65,7 +65,7 @@ const skillsData = {
         ],
         softSkills: {
             title: "Professional Skills",
-            icon: <Users className="w-6 h-6 text-purple-400" />,
+            icon: <Users className="w-6 h-6 text-slate-400" />,
             description: "Strong analytical mindset with expertise in problem-solving and data-driven decision making. Effective communication and collaboration skills.",
             technologies: [
                 { name: "Analytical Thinking", icon: <LineChart className="sm:w-5 sm:h-5 w-4 h-4" /> },
@@ -81,7 +81,7 @@ const skillsData = {
         technicalSkills: [
           {
             title: "تحليل البيانات وذكاء الأعمال",
-            icon: <BarChart className="w-6 h-6 text-purple-400" />,
+            icon: <BarChart className="w-6 h-6 text-slate-400" />,
             description:
               "تحويل البيانات إلى رؤى استراتيجية مع التحليل المتقدم، والأتمتة، وسرد البيانات بصريًا.",
             technologies: [
@@ -103,7 +103,7 @@ const skillsData = {
           },
           {
             title: "البرمجة والتطوير",
-            icon: <Code2 className="w-6 h-6 text-purple-400" />,
+            icon: <Code2 className="w-6 h-6 text-slate-400" />,
             description:
               "بناء تطبيقات ويب وموبايل متجاوبة وقابلة للتوسّع باستخدام React.js وFlutter وهياكل حديثة للواجهة الأمامية.",
             technologies: [
@@ -120,7 +120,7 @@ const skillsData = {
         ],
         softSkills: {
           title: "المهارات المهنية",
-          icon: <Users className="w-6 h-6 text-purple-400" />,
+          icon: <Users className="w-6 h-6 text-slate-400" />,
           description:
             "ذهن تحليلي قوي وخبرة في حل المشكلات واتخاذ قرارات مدعومة بالبيانات. متمكن في التواصل والعمل الجماعي.",
           technologies: [
