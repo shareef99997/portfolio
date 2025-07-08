@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import { X, ChevronLeft, ChevronRight, Calendar, ExternalLink, Star, Github } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, Calendar, ExternalLink, Star, Github, File } from "lucide-react";
 import { Project } from "../types/Types";
 import { PrimaryButton } from "./buttons";
 import { useLanguage } from "../Context/LanguageContext";
@@ -239,6 +239,21 @@ function ProjectModal({ project, onClose }: ProjectModalProps) {
                                     className="!px-4 !py-2 w-full flex items-center justify-center gap-2"
                                 >
                                     <ExternalLink className="w-4 h-4" />
+                                    <span>{t('projectModal.viewProject')}</span>
+                                </PrimaryButton>
+                            )}
+                            {/* View Project File */}
+                            {project.projectFile && (
+                                <PrimaryButton
+                                    onClick={() => {
+                                        const link = document.createElement('a');
+                                        link.href = project.projectFile as string;
+                                        link.download = `${project.title}.pbix`;
+                                        link.click();
+                                    }}
+                                    className="!px-4 !py-2 w-full flex items-center justify-center gap-2"
+                                >
+                                    <File className="w-4 h-4" />
                                     <span>{t('projectModal.viewProject')}</span>
                                 </PrimaryButton>
                             )}

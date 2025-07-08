@@ -14,6 +14,7 @@ export interface Project {
     completionDate: string;
     githubUrl?: string;
     projectUrl?: string;
+    projectFile?: string;
 } 
 
 export type ImageTechnology = {

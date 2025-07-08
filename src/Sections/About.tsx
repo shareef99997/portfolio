@@ -128,14 +128,14 @@ function About() {
                                         icon: <Calendar className="w-5 h-5 text-purple-400" />,
                                         title: t('about.age'),
                                         value: `${calculateAge()} ${language === 'ar' ? 'سنة' : 'years'}`,
-                                        emoji: "🚀"
+                                        emoji: ""
                                     },
                                     { 
                                         icon: <User className="w-5 h-5 text-purple-400" />,
                                         title: t('about.nationality'),
                                         value: t('about.nationalityValue'),
                                         emoji: <img src={sudanFlag} alt="Sudan Flag" className="w-4 h-4 inline-block" />
-                                    }
+                                    },
                                 ].map((info, index) => (
                                     <motion.div
                                         key={index}
