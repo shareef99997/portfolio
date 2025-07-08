@@ -6,7 +6,7 @@ import { useResumeData } from "../Data/ResumeData";
 import { useCertificationsData } from "../Data/CertificationsData";
 import { useLanguage } from "../Context/LanguageContext";
 import { FaHashtag } from "react-icons/fa";
-
+import "../index.css";
 function Resume() {
     const [ref, inView] = useInView({
         threshold: 0.1,
@@ -349,7 +349,7 @@ function Resume() {
                                     animate={{
                                         background: [
                                             "linear-gradient(90deg, transparent 0%, transparent 100%)",
-                                            "linear-gradient(90deg, transparent 0%, rgba(168, 85, 247, 0.4) 50%, transparent 100%)",
+                                            "linear-gradient(90deg, transparent 0%, #a3a3a30e 50%, transparent 100%)",
                                             "linear-gradient(90deg, transparent 0%, transparent 100%)",
                                         ],
                                         x: ["-100%", "100%", "100%"],

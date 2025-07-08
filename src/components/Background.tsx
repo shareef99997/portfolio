@@ -18,7 +18,7 @@ function Background() {
             {/* Base black background */}
             <div className="absolute inset-0 bg-black" />
             
-            {/* Purple gradient overlay */}
+            {/* gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-purple-900/10" />
             
             {/* Grid pattern */}

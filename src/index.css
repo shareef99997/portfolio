@@ -81,6 +81,10 @@ a {
   text-decoration: none;
 }
 
+.certifications_color {
+  background-color: #a3a3a30e;
+}
+
 @media only screen and (max-width: 468px) {
   :root {
     font-size: 80%;
