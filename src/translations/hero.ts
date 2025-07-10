@@ -16,7 +16,7 @@ export const heroTranslations = {
         'hero.roles.dataAnalyst': 'محلل بيانات',
         'hero.roles.biAnalyst': 'محلل ذكاء الأعمال',
         'hero.roles.developer': 'مطور واجهات أمامية',
-        'hero.tagline': 'أصنع من البيانات رؤية، ومن التفاصيل قرارات ذكية.',
+        'hero.tagline': 'أصنع من البيانات رؤية، ومن التفاصيل قرارات ذات قيمة.',
         'hero.learnMore': 'اعرف المزيد',
         'hero.viewResume': 'عرض السيرة الذاتية',
         'hero.certified': 'محترف معتمد',

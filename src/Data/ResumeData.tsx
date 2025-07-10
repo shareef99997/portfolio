@@ -90,7 +90,7 @@ const resumeData = {
               platformLogo: misk,
               credentialUrl: "",
               credentialFile: miskvirtual,
-              description: "Completed a virtual internship with STC simulating real data analysis tasks, focusing on Excel, Power BI, and business insights."
+              description: "Completed a virtual internship with STC simulating real data analysis tasks, focusing on Excel, Python, and business insights."
             },
             {
               title: "Associate Data Analyst in SQL",
@@ -110,7 +110,7 @@ const resumeData = {
               platformLogo: datacamp,
               credentialUrl: "https://www.datacamp.com/completed/statement-of-accomplishment/track/be6f39662e566316bdfb5e038075817b46681ee0",
               credentialFile: dataCampPowerBi,
-              description: "Developed Power BI dashboards, applied advanced DAX, and built interactive reports for real-world datasets."
+              description: "Mastered Power BI Development, applied advanced DAX, and built interactive reports for real-world datasets."
             },
             {
               title: "Data Analyst in Python",
@@ -120,7 +120,7 @@ const resumeData = {
               platformLogo: datacamp,
               credentialUrl: "https://www.datacamp.com/completed/statement-of-accomplishment/track/33d7166c8a5de4d29cc7fd0fa00d2ec997535495",
               credentialFile: dataCampPython,
-              description: "Learned data cleaning, analysis, and visualization using Python libraries like pandas, matplotlib, and seaborn."
+              description: "Mastered data cleaning, analysis, and visualization using Python libraries like pandas, matplotlib, and seaborn."
             },
           ]
           
@@ -133,7 +133,7 @@ const resumeData = {
                 period: "سبتمبر 2024 – حتى الآن",
                 companyLogo: taheiya,
                 description:
-                  "قمت ببناء الواجهة الأمامية لمنصة وساطة تأمينية رئيسية باستخدام React.js، والتي تعد من المشاريع الأساسية للشركة.",
+                  "قمت بالعمل على بناء الواجهة الأمامية لمنصة وساطة تأمينية رئيسية باستخدام React.js، والتي تعد من المشاريع الأساسية للشركة.",
                 highlights: [
                   "صممت هيكلًا معقدًا للواجهة الأمامية باستخدام تقنيات حديثة",
                   "تعاونت مع فريق الباك إند لتنفيذ وتكامل الخصائص بنجاح",
@@ -197,7 +197,7 @@ const resumeData = {
               platformLogo: misk,
               credentialUrl: "",
               credentialFile: miskvirtual,
-              description: "تدريب افتراضي مع STC يحاكي مهام تحليل البيانات الواقعية باستخدام Excel وPower BI لاستخلاص الرؤى التجارية."
+              description: "تدريب افتراضي مع STC يحاكي مهام تحليل البيانات الواقعية باستخدام Excel وPython لاستخلاص الرؤى التجارية."
             },
             {
               title: "محلل بيانات مشارك في SQL",
@@ -217,7 +217,7 @@ const resumeData = {
               platformLogo: datacamp,
               credentialUrl: "https://www.datacamp.com/completed/statement-of-accomplishment/track/be6f39662e566316bdfb5e038075817b46681ee0",
               credentialFile: dataCampPowerBi,
-              description: "تم تطوير لوحات تحكم باستخدام Power BI، وتطبيق DAX المتقدم، وبناء تقارير تفاعلية على مجموعات بيانات حقيقية."
+              description: "تم إتقان لوحات تحكم باستخدام Power BI، وتطبيق DAX المتقدم، وبناء تقارير تفاعلية على مجموعات بيانات حقيقية."
             },
             {
               title: "محلل بيانات باستخدام Python",
@@ -227,7 +227,7 @@ const resumeData = {
               platformLogo: datacamp,
               credentialUrl: "https://www.datacamp.com/completed/statement-of-accomplishment/track/33d7166c8a5de4d29cc7fd0fa00d2ec997535495",
               credentialFile: dataCampPython,
-              description: "تم تعلم تنظيف البيانات وتحليلها وتصورها باستخدام مكتبات Python مثل pandas وmatplotlib وseaborn."
+              description: "تم إتقان تنظيف البيانات وتحليلها وتصورها باستخدام مكتبات Python مثل pandas وmatplotlib وseaborn."
             },
           ]
           

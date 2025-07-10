@@ -20,12 +20,12 @@ export const aboutTranslations = {
         'about.expertise.softwareDevelopment': 'Software Development',
         'about.expertise.softwareDevelopmentDesc': 'Experienced in building web applications and tools using JavaScript and React.js, with a focus on functionality, automation, and user experience.',
         'about.expertise.careerGoals': 'Career Goals',
-        'about.expertise.careerGoalsDesc': 'Aspiring to become a Business Intelligence Analyst and help organizations make data-driven decisions.',
+        'about.expertise.careerGoalsDesc': 'Aspiring to help organizations make data-driven decisions.',
     },
     ar: {
         'about.title': 'عني',
         'about.subtitle': 'تعرف علي',
-        'about.intro': "أنا شريف حذيفة علي، محلل بيانات ومتخصص في ذكاء الأعمال. أمتلك خبرة قوية في Power BI وSQL وPython لتحليل البيانات وتحويلها إلى رؤى واضحة قابلة للتنفيذ. وبفضل خلفيتي في تطوير البرمجيات باستخدام JavaScript وReact.js، أدمج المهارات التقنية مع الذكاء التحليلي لدعم اتخاذ القرارات من خلال الأتمتة والتقارير ولوحات المعلومات.",
+        'about.intro': "أنا شريف حذيفه علي، محلل بيانات ومختص ذكاء الأعمال. أمتلك خبرة في Power BI وSQL وPython لتحليل البيانات وتحويلها إلى رؤى واضحة قابلة للتنفيذ. وبفضل خلفيتي في تطوير البرمجيات باستخدام JavaScript وReact.js، أدمج المهارات التقنية مع الذكاء التحليلي لدعم اتخاذ القرارات من خلال الأتمتة والتقارير ولوحات المعلومات.",
         'about.location': 'الموقع',
         'about.locationValue': 'الرياض، المملكة العربية السعودية',
         'about.age': 'العمر',
@@ -43,6 +43,6 @@ export const aboutTranslations = {
         'about.expertise.softwareDevelopment': 'تطوير البرمجيات',
         'about.expertise.softwareDevelopmentDesc': 'خبرة في بناء تطبيقات الويب باستخدام JavaScript وReact.js مع التركيز على الأداء وتجربة المستخدم والأتمتة.',
         'about.expertise.careerGoals': 'الأهداف المهنية',
-        'about.expertise.careerGoalsDesc': 'أسعى للعمل كمحلل ذكاء أعمال لدعم المؤسسات باتخاذ قرارات مدروسة مبنية على البيانات.',
+        'about.expertise.careerGoalsDesc': 'أسعى لدعم المؤسسات باتخاذ قرارات مدروسة مبنية على البيانات.',
     }
 };

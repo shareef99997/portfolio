@@ -195,13 +195,13 @@ function About() {
                                                 key={index}
                                                 whileHover={{ 
                                                     scale: 1.15,
-                                                    color: "#a855f7",
+                                                    
                                                     transition: { duration: 0.2 }
                                                 }}
                                                 href={social.href}
                                                 target="_blank" 
                                                 rel="noopener noreferrer"
-                                                className="group relative text-white/60 transition-colors duration-300 hover:drop-shadow-lg hover:drop-shadow-slate-500/20"
+                                                className="group relative text-white/60 transition-colors duration-300 hover:drop-shadow-lg hover:drop-shadow-slate-500/20 hover:!text-slate-600"
                                             >
                                                 {social.icon}
                                                 <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-black/80 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
