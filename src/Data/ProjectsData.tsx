@@ -12,6 +12,7 @@ import globalElectronicsWallpaper from '../Assets/Projects/Power BI/Global-Elect
 import atlasLabWallpaper from '../Assets/Projects/Power BI/Atlas-Lab-HR-Project/assets/banner-image-1320x743.webp';
 import motorInsuranceWallpaper from '../Assets/Projects/Power BI/Motor-Insurance-Claims-PowerBI/assets/motor-insurance.jpg';
 import coffeeBeanWallpaper from '../Assets/Projects/Power BI/Coffee-Bean-Sales-Analytics/assets/Coffee-Analysis.jpg';
+import crmWallpaper from '../Assets/Projects/Power BI/CRM-Sales-Analytics/assets/CRM-Analysis.jpg';
 import netflixWallpaper from '../Assets/Projects/SQL/Netflix-SQL-Project/assests/netflix_logo.png';
 import nationsWallpaper from '../Assets/Projects/SQL/World-Nations-SQL-Project/assets/globe-wallpaper.jpg';
 import stcTvWallpaper from '../Assets/Projects/Python/STC-TV-Analytics-Python-Project/assets/STC-01-1536x767.png';
@@ -128,7 +129,13 @@ import coffeeBeanSc3 from '../Assets/Projects/Power BI/Coffee-Bean-Sales-Analyti
 import coffeeBeanSc4 from '../Assets/Projects/Power BI/Coffee-Bean-Sales-Analytics/assets/screenshots/donut_discount.png';
 import coffeeBeanSc5 from '../Assets/Projects/Power BI/Coffee-Bean-Sales-Analytics/assets/screenshots/bar_city.png';
 import coffeeBeanSc6 from '../Assets/Projects/Power BI/Coffee-Bean-Sales-Analytics/assets/screenshots/treemap_product.png';
-import coffeeBeenFile from '../Assets/Projects/Power BI/Coffee-Bean-Sales-Analytics/Coffee-Bean-Sales-Analytics.pbix';
+
+// CRM Sales Analytics Screenshots
+import crmSc1 from '../Assets/Projects/Power BI/CRM-Sales-Analytics/assets/screenshots/Overview.png';
+import crmSc2 from '../Assets/Projects/Power BI/CRM-Sales-Analytics/assets/screenshots/Performance Insights.png';
+import crmSc3 from '../Assets/Projects/Power BI/CRM-Sales-Analytics/assets/screenshots/Sales Analytics.png';
+import crmSc4 from '../Assets/Projects/Power BI/CRM-Sales-Analytics/assets/screenshots/Client Overview.png';
+
 import { useLanguage } from "../Context/LanguageContext";
 
 const projectsData = {
@@ -245,10 +252,9 @@ const projectsData = {
                 completionDate: "May 2025",
                 githubUrl: "https://github.com/shareef99997/Motor-Insurance-Claims-PowerBI",
                 projectUrl: "https://app.powerbi.com/view?r=eyJrIjoiN2Y5YTMwNjctMzM3ZC00MGEwLWJhNTMtNmVmMWVjMjRlOGIwIiwidCI6IjY3NDM4ODYzLThjOTItNGQ0ZC1iMjAyLTIzNmZjMjNhZDk2MCIsImMiOjl9"
-            },
-            
+            },         
             {
-                id: "14",
+                id: "4",
                 title: "Coffee Bean Sales Analytics",
                 description: "An interactive Power BI dashboard analyzing coffee bean sales across Saudi Arabia, with insights on product demand, city-level trends, and discount usage.",
                 longDescription: "This Power BI project provides a focused and visually cohesive analysis of coffee bean sales in 10 Saudi cities during 2023 and 2024. It features a single-page interactive dashboard with dynamic KPIs, product demand visuals, and discount usage insights. The dashboard enables users to explore monthly sales seasonality, city-wise performance, and customer behavior with slicers for year, product, and city.",
@@ -280,11 +286,43 @@ const projectsData = {
                 ],
                 completionDate: "July 2025",
                 githubUrl: "https://github.com/shareef99997/Coffee-Bean-Sales-Analytics",
-                projectFile: coffeeBeenFile
+                projectUrl: "https://app.powerbi.com/view?r=eyJrIjoiMmI3ZTg0YTUtZWNmMS00OTQ1LTg3ZjYtMDRmYjdlYzAyY2I5IiwidCI6IjY3NDM4ODYzLThjOTItNGQ0ZC1iMjAyLTIzNmZjMjNhZDk2MCIsImMiOjl9"
             },
-            
             {
                 id: "5",
+                title: "CRM Sales Analytics",
+                description: "An end-to-end Power BI dashboard analyzing customer sales performance, team productivity, and product trends using CRM pipeline data.",
+                longDescription: "This multi-page Power BI project delivers a comprehensive analysis of CRM sales data across clients, sales teams, and products. It uses clean modeling, advanced DAX, and custom visuals to highlight opportunities, revenue patterns, and client distribution. The dashboard includes consistent layout, dynamic KPIs, and filter-driven exploration. Pages include Sales Analytics, Performance Insights, Client Overview, and a high-level Overview page.",
+                image: crmWallpaper, // replace with actual image variable or filename
+                screenshots: [
+                    crmSc1,
+                    crmSc2,
+                    crmSc3,
+                    crmSc4,
+                ],
+                category: "Power BI",
+                categoryIcon: powerbiIcon,
+                technologies: ["Power BI", "DAX", "Power Query", "Data Modeling"],
+                features: [
+                    "Unified multi-page dashboard layout with app-style navigation",
+                    "Sales funnel and stage performance breakdowns",
+                    "Dynamic cards for top agents, products, and teams",
+                    "Client segmentation by revenue and deal count",
+                    "Close duration analysis by stage and team",
+                    "Interactive filters for year, team, and sales rep"
+                ],
+                impact: [
+                    "Enabled clear visibility of team and product-level sales performance",
+                    "Highlighted top-performing clients and agents by revenue",
+                    "Identified pipeline bottlenecks and deal closing delays",
+                    "Showcased structured BI design using normalized CRM tables"
+                ],
+                completionDate: "August 2025",
+                githubUrl: "https://github.com/shareef99997/CRM-Sales-Analytics",
+                projectUrl: "https://app.powerbi.com/view?r=eyJrIjoiYjZkZDUzZjctMmFlZS00Y2FhLTkwMzYtNDUwM2EyMmVlY2VmIiwidCI6IjY3NDM4ODYzLThjOTItNGQ0ZC1iMjAyLTIzNmZjMjNhZDk2MCIsImMiOjl9"
+            },
+            {
+                id: "6",
                 title: "USA Real Estate Market Analysis",
                 description: "A comprehensive Python data analysis project exploring the U.S. real estate market, providing insights into housing prices, trends, and market dynamics.",
                 longDescription: "This Python project delivers a deep exploratory data analysis of the U.S. real estate market, analyzing a dataset of over 2.2 million property listings. The project includes data cleaning, visualization, and statistical analysis to uncover patterns in housing prices, property sizes, and market trends across different states and cities. The analysis provides valuable insights for both data analysts and business stakeholders.",
@@ -318,11 +356,8 @@ const projectsData = {
                 completionDate: "May 2025",
                 githubUrl: "https://github.com/shareef99997/USA-Real-Estate-Python-Project",
             },
-            
-
-
             {
-                id: "6",
+                id: "7",
                 title: "Nobel Prize Analysis",
                 description: "An advanced Python data analysis project exploring Nobel Prize winners from 1901 to 2023, providing insights into age, gender, and geographical trends.",
                 longDescription: "This Python project delivers a comprehensive analysis of the Nobel Prize winners dataset from 1901 to 2023. Through feature engineering and advanced visualizations, it uncovers trends related to age distribution, gender representation, and geographical patterns across different prize categories. The project includes detailed analysis of prize distribution, age patterns, and gender trends over time.",
@@ -360,7 +395,7 @@ const projectsData = {
                 githubUrl: "https://github.com/shareef99997/Nobel-Prize-Python-Project",
             },
             {
-                id: "7",
+                id: "8",
                 title: "STC TV Analytics",
                 description: "A comprehensive Python project analyzing user behavior, forecasting demand, and building a recommendation system for STC TV streaming platform.",
                 longDescription: "This end-to-end Python project explores user engagement on STC TV, one of the largest streaming platforms in the region. It includes three main components: user behavior analysis, time-series forecasting, and a recommendation system. The project uses real-world data to provide actionable insights for business strategy and user experience improvement.",
@@ -393,7 +428,7 @@ const projectsData = {
                 githubUrl: "https://github.com/shareef99997/STC-TV-Analytics-Python-Project",
             },
             {
-                id: "8",
+                id: "9",
                 title: "World Nations SQL Analysis",
                 description: "An advanced SQL project analyzing global data across 239 countries, providing insights into demographics, economy, and cultural patterns using pure SQL queries.",
                 longDescription: "This SQL project explores global data using pure SQL queries, analyzing population trends, GDP performance, language diversity, and geographic distribution across 239 countries. The project uses a normalized MariaDB schema with 7 interconnected tables to provide comprehensive insights into world nations through complex querying, joins, and aggregations.",
@@ -423,7 +458,7 @@ const projectsData = {
                 githubUrl: "https://github.com/shareef99997/World-Nations-SQL-Project",
             },
             {
-                id: "9",
+                id: "10",
                 title: "Netflix Data Analysis",
                 description: "A PostgreSQL SQL project analyzing Netflix's content catalog, providing insights into content trends, ratings, and regional distribution.",
                 longDescription: "This PostgreSQL project analyzes Netflix's content catalog using advanced SQL techniques. It includes complex queries, string parsing, filtering, subqueries, CTEs, and window functions to extract business insights from semi-structured data. The project covers content type analysis, time and country trends, director and actor statistics, and genre distribution.",
@@ -452,10 +487,8 @@ const projectsData = {
                 completionDate: "May 2025",
                 githubUrl: "https://github.com/shareef99997/Netflix-SQL-Project",
             },
-
-
             {
-                id: "10",
+                id: "11",
                 title: "Customer Churn Analysis",
                 description: "An Excel dashboard project analyzing telecom customer churn using behavioral, demographic, and contractual data, providing executive-level insights and visualizations.",
                 longDescription: "This Excel dashboard project analyzes customer churn for a fictional telecom company using advanced Excel techniques. It includes interactive pivot tables, slicers, conditional formatting, and comprehensive visualizations to provide executive-ready insights on churn rates, age group analysis, and contract risk assessment.",
@@ -486,7 +519,7 @@ const projectsData = {
                 githubUrl: "https://github.com/shareef99997/Customer-Churn-Excel-Project",
             },
             {
-                id: "11",
+                id: "12",
                 title: "Bike Buyers Dashboard",
                 description: "An Excel dashboard project analyzing potential bike buyers' demographics and purchasing behavior, providing insights into income, age, and commute patterns.",
                 longDescription: "This Excel dashboard project analyzes the demographics and behavior of potential bike buyers using advanced Excel techniques. It includes interactive pivot tables, slicers, and comprehensive visualizations to provide insights into purchasing decisions based on income, age, gender, education, and commute distance.",
@@ -518,7 +551,7 @@ const projectsData = {
                 githubUrl: "https://github.com/shareef99997/Bike-Buyers-Excel-Dashboard",
             },
             {
-                id: "12",
+                id: "13",
                 title: "Semsar - Home Services App",
                 description: "A Flutter-based home services marketplace connecting users with qualified service providers for home care, mechanics, electricity, plumbing, and barbering services.",
                 longDescription: "Semsar is a Flutter mobile application that serves as a marketplace for home services. Users can browse and book various services including home care, mechanics, electricity, plumbing, and barbering. The app features a streamlined booking process, order tracking, and status updates.",
@@ -555,7 +588,7 @@ const projectsData = {
                 githubUrl: "https://github.com/shareef99997/SEMSAR",
             },
             {
-                id: "13",
+                id: "14",
                 title: "Drip-Store - E-commerce App",
                 description: "A comprehensive Flutter e-commerce application offering a wide range of products including clothing, furniture, and more, with advanced shopping features and user management.",
                 longDescription: "Drip-Store is a full-featured Flutter e-commerce application that allows users to browse and purchase a variety of products across multiple categories. The app includes advanced shopping features such as multi-item ordering, wishlist management, location-based delivery, and comprehensive user profile management.",
@@ -593,10 +626,9 @@ const projectsData = {
                 ],
                 completionDate: "January 2024",
                 githubUrl: "https://github.com/shareef99997/drip",
-            },
-            
+            },         
             {
-                id: "14",
+                id: "15",
                 title: "26 Ideas - Digital Marketing Agency",
                 description: "A modern React-based website for a digital marketing agency featuring a responsive design, SEO optimization, and comprehensive marketing services showcase.",
                 longDescription: "The official website for 26 Ideas, a leading digital marketing agency in Saudi Arabia. Built with React, this website features a sleek, modern design with smooth animations, optimized performance, and full SEO capabilities. The site includes sections for showcasing services, company culture, and client testimonials.",
@@ -634,7 +666,7 @@ const projectsData = {
                 projectUrl: "https://it.26ideas.sa/"
             },
             {
-                id: "15",
+                id: "16",
                 title: "House Idea - Real Estate Marketing",
                 description: "A modern React website for a real estate marketing agency featuring impressive animations, property showcase, and comprehensive service offerings.",
                 longDescription: "The official website for House Idea Real Estate, a leading real estate marketing agency. Built with React, this website features a stunning design with smooth animations, interactive property showcase, and comprehensive marketing services. The site includes sections for showcasing projects, company expertise, and client testimonials.",
@@ -783,7 +815,6 @@ const projectsData = {
                 githubUrl: "https://github.com/shareef99997/Motor-Insurance-Claims-PowerBI",
                 projectUrl: "https://app.powerbi.com/view?r=eyJrIjoiN2Y5YTMwNjctMzM3ZC00MGEwLWJhNTMtNmVmMWVjMjRlOGIwIiwidCI6IjY3NDM4ODYzLThjOTItNGQ0ZC1iMjAyLTIzNmZjMjNhZDk2MCIsImMiOjl9"
             },
-
             {
                 id: "4",
                 title: "تحليل مبيعات حبوب القهوة",
@@ -817,11 +848,43 @@ const projectsData = {
                 ],
                 completionDate: "يوليو 2025",
                 githubUrl: "https://github.com/shareef99997/Coffee-Bean-Sales-Analytics",
-                projectFile: coffeeBeenFile
+                projectUrl: "https://app.powerbi.com/view?r=eyJrIjoiMmI3ZTg0YTUtZWNmMS00OTQ1LTg3ZjYtMDRmYjdlYzAyY2I5IiwidCI6IjY3NDM4ODYzLThjOTItNGQ0ZC1iMjAyLTIzNmZjMjNhZDk2MCIsImMiOjl9"
             },            
-
             {
                 id: "5",
+                title: "تحليل مبيعات العملاء (CRM)",
+                description: "لوحة معلومات تفاعلية باستخدام Power BI لتحليل مبيعات العملاء، أداء الفرق، واتجاهات المنتجات من خلال بيانات نظام إدارة علاقات العملاء.",
+                longDescription: "يقدم هذا المشروع متعدد الصفحات في Power BI تحليلًا شاملًا لبيانات مبيعات العملاء من نظام CRM، ويغطي أداء الفرق، سلوك العملاء، والمبيعات حسب المنتج. يعتمد المشروع على نمذجة بيانات منظمة وقياسات DAX متقدمة، ويتميّز بتصميم موحّد يشبه التطبيقات مع تنقل جانبي ومرشحات ديناميكية. يشمل التقرير صفحات: تحليلات المبيعات، رؤى الأداء، نظرة على العملاء، وصفحة ملخص عامة.",
+                image: crmWallpaper,
+                screenshots: [
+                    crmSc1,
+                    crmSc2,
+                    crmSc3,
+                    crmSc4,
+                ],
+                category: "Power BI",
+                categoryIcon: powerbiIcon,
+                technologies: ["Power BI", "DAX", "Power Query", "نمذجة البيانات"],
+                features: [
+                    "تصميم موحّد متعدد الصفحات بأسلوب تطبيقات",
+                    "تحليل أداء المبيعات حسب مراحل الصفقة",
+                    "بطاقات ديناميكية لأفضل المندوبين والمنتجات والفرق",
+                    "تصنيف العملاء حسب الإيرادات وعدد الصفقات",
+                    "تحليل مدة إغلاق الصفقة حسب المرحلة والفريق",
+                    "مرشحات تفاعلية للسنة والفريق والمندوب"
+                ],
+                impact: [
+                    "توفير رؤية واضحة لأداء الفرق والمبيعات حسب المنتج",
+                    "تحديد أفضل العملاء والمندوبين من حيث الإيرادات",
+                    "اكتشاف عنق الزجاجة في المراحل وتأخير الإغلاق",
+                    "عرض تصميم BI منظم باستخدام جداول CRM المهيكلة"
+                ],
+                completionDate: "أغسطس 2025",
+                githubUrl: "https://github.com/shareef99997/CRM-Sales-Analytics",
+                projectUrl: "https://app.powerbi.com/view?r=eyJrIjoiYjZkZDUzZjctMmFlZS00Y2FhLTkwMzYtNDUwM2EyMmVlY2VmIiwidCI6IjY3NDM4ODYzLThjOTItNGQ0ZC1iMjAyLTIzNmZjMjNhZDk2MCIsImMiOjl9"
+            },
+            {
+                id: "6",
                 title: "تحليل سوق العقارات في الولايات المتحدة",
                 description: "مشروع تحليل بيانات شامل برمجة Python يستكشف سوق العقارات في الولايات المتحدة، ويقدم رؤى حول أسعار المنازل، التوجهات، وديناميكيات السوق.",
                 longDescription: "هذا المشروع برمجة Python يقدم تحليل استكشافي عميق لسوق العقارات في الولايات المتحدة، حيث يحلل مجموعة بيانات تزيد على 2.2 مليون إدراج عقاري. يتضمن المشروع تنظيف البيانات، والتحليل البصري، والتحليل الإحصائي لاكتشاف أنماط في أسعار المنازل، وأحجام العقارات، وتوجهات السوق في مختلف الولايات والمدن. يوفر التحليل رؤى قيمة لكل من محللي البيانات والمساهمين في الأعمال.",
@@ -856,7 +919,7 @@ const projectsData = {
                 githubUrl: "https://github.com/shareef99997/USA-Real-Estate-Python-Project",
             },
             {
-                id: "6",
+                id: "7",
                 title: "تحليل جوائز نوبل",
                 description: "مشروع تحليل بيانات متقدم برمجة Python يستكشف الفائزين بجوائز نوبل من 1901 إلى 2023، ويقدم رؤى حول توزيع الأعمار، والجنس، والأنماط الجغرافية.",
                 longDescription: "هذا المشروع برمجة Python يقدم تحليل شامل لمجموعة بيانات الفائزين بجوائز نوبل من 1901 إلى 2023. من خلال هندسة الميزات والتصورات المتقدمة، يكشف عن توجهات مرتبطة بتوزيع الأعمار، وتمثيل الجنس، وأنماط جغرافية عبر فئات الجوائز المختلفة. يتضمن المشروع تحليلًا تفصيليًا لتوزيع الجوائز، وأنماط الأعمار، والأنماط الجغرافية عبر الزمن.",
@@ -894,7 +957,7 @@ const projectsData = {
                 githubUrl: "https://github.com/shareef99997/Nobel-Prize-Python-Project",
             },
             {
-                id: "7",
+                id: "8",
                 title: "تحليل STC TV",
                 description: "مشروع شامل برمجة Python يحلل سلوك المستخدم، ويتوقع الطلب، ويبني نظام توصية لمنصة البث STC TV.",
                 longDescription: "هذا مشروع من البداية إلى النهاية برمجة Python يستكشف سلوك المستخدم على STC TV، واحدة من أكبر منصات البث في المنطقة. يتضمن ثلاثة مكونات رئيسية: تحليل سلوك المستخدم، وتنبؤ الطلب، ونظام توصية. يستخدم المشروع بيانات حقيقية لتوفير رؤى قابلة للتنفيذ لاستراتيجية الأعمال وتحسين تجربة المستخدم.",
@@ -927,7 +990,7 @@ const projectsData = {
                 githubUrl: "https://github.com/shareef99997/STC-TV-Analytics-Python-Project",
             },
             {
-                id: "8",
+                id: "9",
                 title: "تحليل دول العالم باستخدام SQL",
                 description: "مشروع متقدم في SQL يحلل البيانات العالمية عبر 239 دولة، ويقدم رؤى حول الديموغرافيا، والاقتصاد، والأنماط الثقافية باستخدام استعلامات SQL البحتة.",
                 longDescription: "هذا المشروع SQL يستكشف البيانات العالمية باستخدام استعلامات SQL البحتة، حيث يحلل توجهات السكان، وأداء الناتج المحلي الإجمالي، وتنوع اللغات، والتوزيع الجغرافي عبر 239 دولة. يستخدم المشروع مخطط قاعدة بيانات مطبقة في MariaDB مع 7 جداول متصلة لتوفير رؤى شاملة حول دول العالم من خلال استعلامات معقدة، وانضمامات، وتوافقات.",
@@ -957,7 +1020,7 @@ const projectsData = {
                 githubUrl: "https://github.com/shareef99997/World-Nations-SQL-Project",
             },
             {
-                id: "9",
+                id: "10",
                 title: "تحليل Netflix باستخدام SQL",
                 description: "مشروع PostgreSQL يحلل مكتبة محتوى Netflix، ويقدم رؤى حول توجهات المحتوى، والتقييمات، وتوزيع المناطق.",
                 longDescription: "هذا المشروع PostgreSQL يحلل مكتبة محتوى Netflix باستخدام تقنيات SQL المتقدمة. يتضمن استعلامات معقدة، وتحليل النصوص، وتصفية، واستعلامات فرعية، وعمليات CTE، ووظائف نوافذ لاستخراج رؤى أعمال من بيانات شبه منظمة. يغطي المشروع تحليل نوع المحتوى، وتوجهات الزمن والمنطقة، وإحصائيات المخرجين والممثلين، وتوزيع الأنواع.",
@@ -987,7 +1050,7 @@ const projectsData = {
                 githubUrl: "https://github.com/shareef99997/Netflix-SQL-Project",
             },
             {
-                id: "10",
+                id: "11",
                 title: "تحليل تناقص العملاء في شركة الاتصالات",
                 description: "لوحة قياس في Excel تحلل تناقص العملاء في شركة اتصالات افتراضية باستخدام البيانات السلوكية، والديموغرافية، والتعاقدية، وتقدم رؤى تنفيذية وتصورات.",
                 longDescription: "هذا لوحة قياس في Excel يحلل تناقص العملاء لشركة اتصالات افتراضية باستخدام تقنيات متقدمة في Excel. يتضمن جداول محورية تفاعلية، وفواصل، وتنسيق مشروط، وتصورات شاملة لتوفير رؤى تنفيذية جاهزة حول معدلات التناقص، وتحليل الفئة العمرية، وتقييم المخاطر التعاقدية.",
@@ -1018,7 +1081,7 @@ const projectsData = {
                 githubUrl: "https://github.com/shareef99997/Customer-Churn-Excel-Project",
             },
             {
-                id: "11",
+                id: "12",
                 title: "لوحة قياس مشتري الدراجات",
                 description: "لوحة قياس في Excel تحلل ديموغرافية مشتري الدراجات المحتملين وسلوك الشراء، وتقدم رؤى حول الدخل، العمر، وأنماط التنقل.",
                 longDescription: "هذا لوحة قياس في Excel يحلل ديموغرافية مشتري الدراجات المحتملين وسلوكهم باستخدام تقنيات متقدمة في Excel. يتضمن جداول محورية تفاعلية، وفواصل، وتصورات شاملة لتوفير رؤى حول قرارات الشراء على أساس الدخل، العمر، الجنس، التعليم، ومسافة التنقل.",
@@ -1050,7 +1113,7 @@ const projectsData = {
                 githubUrl: "https://github.com/shareef99997/Bike-Buyers-Excel-Dashboard",
             },
             {
-                id: "12",
+                id: "13",
                 title: "تطبيق سمسار - سوق الخدمات المنزلية",
                 description: "تطبيق موبايل مبني على Flutter يربط المستخدمين مع مقدمي خدمات مؤهلين للخدمات المنزلية مثل الرعاية المنزلية، والصيانة، والكهرباء، والسباكة، وتصفيف الشعر.",
                 longDescription: "سمسار هو تطبيق موبايل مبني على Flutter يعمل كسوق للخدمات المنزلية. يمكن للمستخدمين تصفح وحجز خدمات مختلفة مثل الرعاية المنزلية، والصيانة، والكهرباء، والسباكة، وتصفيف الشعر. التطبيق يوفر عملية حجز مبسطة، وتتبع الطلبات، وتحديثات الحالة.",
@@ -1087,7 +1150,7 @@ const projectsData = {
                 githubUrl: "https://github.com/shareef99997/SEMSAR",
             },
             {
-                id: "13",
+                id: "14",
                 title: "تطبيق Drip-Store - متجر إلكتروني",
                 description: "تطبيق إلكتروني شامل مبني على Flutter يقدم مجموعة واسعة من المنتجات بما في ذلك الملابس، والأثاث، والمزيد، مع ميزات تسوق متقدمة وإدارة المستخدمين.",
                 longDescription: "Drip-Store هو تطبيق إلكتروني متكامل مبني على Flutter يتيح للمستخدمين تصفح وشراء مجموعة متنوعة من المنتجات عبر فئات متعددة. التطبيق يشمل ميزات تسوق متقدمة مثل إدارة السلة المتعددة، وقائمة الأمنيات، وإدارة الموقع، وإدارة الملف الشخصي الشاملة.",
@@ -1127,7 +1190,7 @@ const projectsData = {
                 githubUrl: "https://github.com/shareef99997/drip",
             },
             {
-                id: "14",
+                id: "15",
                 title: "26 Ideas - وكالة التسويق الرقمي",
                 description: "موقع وكالة تسويق رقمية مبني على React يعرض خدمات التسويق الرقمي مع تصميم متجاوب وتحسين محركات البحث.",
                 longDescription: "الموقع الرسمي لـ 26 Ideas، وكالة تسويق رقمي رائدة في المملكة العربية السعودية. تم بناء الموقع باستخدام React ويتضمن تصميماً عصرياً مع تحركات سلسة، أداء محسّن، وتحسينات محركات البحث. يتضمن الموقع أقساماً لعرض الخدمات، ثقافة الشركة، وشهادات العملاء.",
@@ -1165,7 +1228,7 @@ const projectsData = {
                 projectUrl: "https://it.26ideas.sa/"
             },
             {
-                id: "15",
+                id: "16",
                 title: "House Idea - تسويق العقارات",
                 description: "موقع تسويق عقاري مبني على React يعرض الممتلكات بشكل تفاعلي مع تصميم عصري وحركات سلسة.",
                 longDescription: "الموقع الرسمي لـ House Idea Real Estate، وكالة تسويق عقاري رائدة. تم بناء الموقع باستخدام React ويتضمن تصميماً مذهلاً مع تحركات سلسة، عرض تفاعلي للممتلكات، وخدمات تسويقية شاملة. يتضمن الموقع أقساماً لعرض المشاريع، خبرات الشركة، وشهادات العملاء.",
